@@ -24,16 +24,16 @@ public:
 		for (int i = 0; i < s.length(); i++)
 		{
 			cout << i << endl;
-			bool is_new = true;
+			bool is_new_char = true;
 			for (int j = 0; j < substr.length(); j++)
 			{
 				if (s.at(i) == substr.at(j))
 				{
-					is_new = false;
+					is_new_char = false;
 					break;
 				}
 			}
-			if (is_new)
+			if (is_new_char)
 			{
 				substr = substr + s.at(i);
 			}
