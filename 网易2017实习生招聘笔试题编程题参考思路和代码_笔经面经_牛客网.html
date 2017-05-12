@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)https://www.nowcoder.com/discuss/22696 -->
+<html class="cye-disabled cye-lm"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>网易2017实习生招聘笔试题编程题参考思路和代码_笔经面经_牛客网</title>
+<meta name="description" content="网易2017实习生招聘笔试题编程题参考思路和代码,奇怪的表达式求值
+分析
+直接模拟过去就完了。
+参考...,百度阿里腾讯谷歌小米笔试面试分享">
+<meta name="keywords" content="网易2017实习生招聘笔试题编程题参考思路和代码,C++工程师,iOS工程师,,笔经面经,笔经,面经,牛客网,IT笔试面试题库">
+<script>
+var _czc = _czc || [];
+_czc.push(["_setAccount", "1253353781"]);
+</script>
+<link rel="stylesheet" href="./网易2017实习生招聘笔试题编程题参考思路和代码_笔经面经_牛客网_files/discuss.css">
+<style id="nightModeStyle">
+html.cye-enabled.cye-nm:not(*:-webkit-full-screen) body,
+ html.cye-enabled.cye-nm:not(*:-webkit-full-screen) #cye-workaround-body {-webkit-filter:contrast(42%) brightness(33%) invert(1);}</style><style id="cyebody">html.cye-enabled.cye-lm body{background-color:#cce8cf !important;border-color:rgb(51, 58, 51) !important;background-image:none !important;color:#000000  !important}</style><style id="cyediv">html.cye-enabled.cye-lm div{background-color:#cce8cf !important;border-color:rgb(51, 58, 51) !important;background-image:none !important;color:#000000  !important}</style><style id="cyetable">html.cye-enabled.cye-lm th{background-color:#cce8cf !important;border-color:rgb(51, 58, 51) !important;background-image:none !important;color:#000000  !important}html.cye-enabled.cye-lm td{background-color:#cce8cf !important;border-color:rgb(51, 58, 51) !important;background-image:none !important;color:#000000  !important}</style><style id="cyeselect">html.cye-enabled.cye-lm select{background-color:#cce8cf !important;border-color:rgb(51, 58, 51) !important;background-image:none !important;color:#000000  !important}</style><style id="cyeul">html.cye-enabled.cye-lm ul{background-color:#cce8cf !important;border-color:rgb(51, 58, 51) !important;background-image:none !important;color:#000000  !important}</style><style id="cyeChangeByClick">html.cye-enabled.cye-lm .cye-lm-tag,html.cye-enabled.cye-lm.cye-lm-tag{background-color:#cce8cf !important;border-color:rgb(51, 58, 51) !important;background-image:none !important;color:#000000  !important}</style><script charset="utf-8" async="" src="./网易2017实习生招聘笔试题编程题参考思路和代码_笔经面经_牛客网_files/discussInPublic.js.下载"></script><script charset="utf-8" async="" src="./网易2017实习生招聘笔试题编程题参考思路和代码_笔经面经_牛客网_files/hEditor.js.下载"></script><script charset="utf-8" async="" src="./网易2017实习生招聘笔试题编程题参考思路和代码_笔经面经_牛客网_files/kindeditor.js.下载"></script><script charset="utf-8" async="" src="./网易2017实习生招聘笔试题编程题参考思路和代码_笔经面经_牛客网_files/index.js.下载"></script><link href="./网易2017实习生招聘笔试题编程题参考思路和代码_笔经面经_牛客网_files/nowcoder.css" rel="stylesheet"></head>
+<body>
+<div class="nk-container     ">
+<div class="nowcoder-header">
+<div class="header-main clearfix">
+<a class="nowcoder-logo" href="https://www.nowcoder.com/" title="牛客网"></a>
+<ul class="nowcoder-navbar">
+<li>
+<a href="https://www.nowcoder.com/" class="nav-home">首页</a>
+</li>
+<li>
+<a href="https://www.nowcoder.com/contestRoom" class="nav-exam">题库</a>
+<ul class="sub-nav">
+<li><a href="https://www.nowcoder.com/contestRoom">公司真题</a></li>
+<li><a href="https://www.nowcoder.com/kaoyan">考研真题</a></li>
+<li><a href="https://www.nowcoder.com/intelligentTest">专项练习</a></li>
+<li><a href="https://www.nowcoder.com/activity/oj">在线编程</a></li>
+<li><a href="https://www.nowcoder.com/activity/topics">精华专题</a></li>
+<li><a href="https://www.nowcoder.com/questionCenter">试题广场</a></li>
+</ul>
+</li>
+<li>
+<a href="https://www.nowcoder.com/courses" class="nav-exam">课程</a>
+</li>
+<li>
+<a href="https://www.nowcoder.com/ranking" class="nav-ranking">排行榜</a>
+</li>
+<li>
+<span class="ico-nav-new"></span>
+<a href="https://www.nowcoder.com/recommend" class="nav-discuss">求职</a>
+</li>
+<li class="active">
+<a href="https://www.nowcoder.com/discuss" class="nav-discuss">讨论区</a>
+</li>
+</ul>
+<ul class="nowcoder-navbar nowcoder-other-nav">
+<li class="nav-search">
+<a href="javascript:void(0);" class="icon-search">搜索</a>
+<div class="nav-search-wrap">
+<form method="get" action="https://www.nowcoder.com/search">
+<label class="nav-search-ico icon-search js-search"></label>
+<input class="nav-search-txt" name="query" type="text" autocomplete="off">
+<input type="hidden" name="type" value="question">
+<input type="submit" class="nk-invisible">
+<input type="hidden" name="token" value=""></form>
+</div>
+<div class="nav-search-tips" style="display:none;"></div>
+</li>
+<li>
+<a href="https://www.nowcoder.com/app" class="icon-mobile-phone">APP</a>
+</li>
+<li class="nav-msg">
+<a class="icon-envelope" href="https://www.nowcoder.com/sns/message/7963796/conversation-list?" data-unread-conv="">消息</a>
+</li>
+<li class="profile-item">
+<a href="https://www.nowcoder.com/profile" class="nav-profile">
+<div class="img-box"><img src="./网易2017实习生招聘笔试题编程题参考思路和代码_笔经面经_牛客网_files/7963796_1489816221002_39E824ED7CBFD8D9DDAF1366369174AD@0e_100w_100h_0c_1i_1o_90Q_1x"></div>
+</a>
+<ul class="sub-nav">
+<li><a href="https://www.nowcoder.com/profile" class="nav-profile-page">个人主页</a></li>
+<li><a href="https://www.nowcoder.com/profile/7963796/account" class="nav-set">帐号设置</a></li>
+<li><a href="https://www.nowcoder.com/activity/reward" class="nav-coins">我的牛币</a></li>
+<li><a href="javascript:void(0);" class="nav-out nc-logout">退出登录</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="nk-main clearfix">
+<div class="crumbs-path">
+<a href="https://www.nowcoder.com/">首页</a>
+<span>&gt;</span>
+<a href="https://www.nowcoder.com/discuss?type=2">笔经面经</a>
+<span>&gt;</span>
+<span class="crumbs-end">网易2017实习生招聘笔试题编程题参考思路和代码</span>
+</div>
+<!--主体内容-->
+<div class="nk-content">
+<div class="module-box discuss-topic js-copy-mark" data-mark-info="作者：NotDeep">
+<div class="discuss-topic-head">
+<h1 class="discuss-title">网易2017实习生招聘笔试题编程题参考思路和代码</h1>
+<div class="discuss-author clearfix">
+<a href="https://www.nowcoder.com/profile/906271" class="answer-head" data-card-uid="906271" data-card-index="1"><img src="./网易2017实习生招聘笔试题编程题参考思路和代码_笔经面经_牛客网_files/906271_1473141815994_A3E772A3ED50B41DD15C2B1359AFFC0D@0e_100w_100h_0c_1i_1o_90Q_1x" alt="头像"></a>
+<div class="post-detail">
+<a class="post-name level-color-7" href="https://www.nowcoder.com/profile/906271" data-card-uid="906271" data-card-index="2">NotDeep</a>
+<div class="post-legend">
+<span class="post-time">
+发布于  今天 16:17:27
+</span>
+<div class="feed-legend">
+<span style="cursor:pointer;" class="nc-req-auth js-post-replay">回复<span class="feed-legend-num">7</span></span>
+<span class="feed-legend-pipe">|</span>
+<span style="cursor:pointer;" class="js-post-like nc-req-auth">赞 4</span>
+<span class="feed-legend-pipe">|</span>
+<span>浏览<span class="feed-legend-num">987</span></span>
+</div>
+</div>
+</div>
+</div>
+<h1 class="discuss-title js-fixed-title fixed-title" style="top: 54px;">网易2017实习生招聘笔试题编程题参考思路和代码<div class="discuss-tool-bar"><a href="javascript:void(0);" class="icon-thumbs-up js-fix-like nc-req-auth "></a><a href="javascript:void(0);" class="icon-star js-fix-follow nc-req-auth"></a><a href="javascript:void(0);" class="icon-comment nc-req-auth js-post-replay"></a></div></h1></div>
+<div class="post-topic-main">
+<div class="post-topic-des">
+<h2 id="-">奇怪的表达式求值</h2>
+<h3 id="-">分析</h3>
+<p>直接模拟过去就完了。</p>
+<h3 id="-code">参考code</h3>
+<pre><code class="lang-C++">#include &lt;bits/stdc++.h&gt;
+
+using namespace std;
+
+string s;
+int main(){
+    cin &gt;&gt; s;
+    int ans = s[0] - '0';
+    for(int i = 1; i &lt; (int)(s.size() - 1); i+=2){
+        if(s[i] == '*')
+            ans = ans * (s[i + 1] - '0');
+        else if(s[i] == '+')
+            ans = ans + (s[i + 1] - '0');
+        else {
+            ans = ans - (s[i + 1] - '0');
+        }
+    }
+    cout &lt;&lt; ans &lt;&lt; endl;
+}
+</code></pre>
+<h2 id="-">分饼干</h2>
+<h3 id="-">分析</h3>
+<p>枚举每个位置的数字,然后记录满足要求的答案数就可。</p>
+<h3 id="-code">参考code</h3>
+<pre><code class="lang-C++">#include &lt;bits/stdc++.h&gt;
+
+using namespace std;
+
+long long n1[10001], n2[10001];
+int main(){
+    string s;
+    int n;
+    cin &gt;&gt; s &gt;&gt; n;
+    long long ret = 0;
+    n1[0] = 1;
+    for(int i = 0; i &lt; s.size(); i++){
+        memset(n2, 0, sizeof(n2));
+        for(int j = 0; j &lt; n; j++){
+            for(int k = 0; k &lt; 10; k++){
+                if(isdigit(s[i]) &amp;&amp; s[i] - '0' != k) continue;
+                n2[ ( ( j * 10) + k ) % n] += n1[j];
+            }
+        }
+        memcpy(n1,n2,sizeof(n1));
+    }
+    cout &lt;&lt; n1[0] &lt;&lt; endl;
+}
+</code></pre>
+<h2 id="-">消除重复元素</h2>
+<h3 id="-">分析</h3>
+<p>根据题意模拟一下就行</p>
+<h3 id="-code">参考code</h3>
+<pre><code class="lang-C++">#include &lt;bits/stdc++.h&gt;
+
+using namespace std;
+
+int n;
+int a[105];
+map&lt;int,int&gt; m;
+vector&lt;int&gt; ret;
+int main(){
+    cin &gt;&gt; n;
+    for(int i = 0; i &lt; n; i++) cin &gt;&gt; a[i];
+    for(int i = 0; i &lt; n; i++) m[a[i]]++;
+
+    for(int i = 0; i &lt; n; i++){
+        m[a[i]]--;
+        if(!m[a[i]])
+            ret.push_back(a[i]);
+    }
+    int len = ret.size();
+    for(int i = 0; i &lt; len; i++){
+        if(i == len - 1) printf("%d\n",ret[i]);
+        else printf("%d ",ret[i]);
+    }
+    return 0;
+}
+</code></pre>
+<h2 id="-">赶去公司</h2>
+<h3 id="-">分析</h3>
+<p>枚举去每个出租车点打车需要的总时间,最后和完全步行总时间取个最小值即可。</p>
+<h3 id="-code">参考code</h3>
+<pre><code class="lang-C++">#include &lt;bits/stdc++.h&gt;
+
+using namespace std;
+
+
+int n,tx[55],ty[55],gx,gy,walkTime,taxiTime;
+int main(){
+    cin &gt;&gt; n;
+    for(int i = 0; i &lt; n; i++) cin &gt;&gt; tx[i];
+    for(int i = 0; i &lt; n; i++) cin &gt;&gt; ty[i];
+    cin &gt;&gt; gx &gt;&gt; gy;
+    cin &gt;&gt; walkTime &gt;&gt; taxiTime;
+    int ans = (abs(gx - 0) + abs(gy - 0)) * walkTime;
+    for(int i = 0; i &lt; n; i++){
+        int res = (abs(tx[i] - 0) + abs(ty[i] - 0)) * walkTime;
+        res += (abs(tx[i] - gx) + abs(ty[i] - gy)) * taxiTime;
+        ans = min(ans, res);
+    }
+    cout &lt;&lt; ans &lt;&lt; endl;
+    return 0;
+}
+</code></pre>
+<h2 id="-">小易记单词</h2>
+<h3 id="-">分析</h3>
+<p>用set模拟一下即可</p>
+<h3 id="-code">参考code</h3>
+<pre><code class="lang-C++">#include &lt;bits/stdc++.h&gt;
+
+using namespace std;
+
+int m, n;
+set&lt;string&gt; S1;
+set&lt;string&gt; S2;
+int main() {
+    cin &gt;&gt; n &gt;&gt; m;
+    for(int i = 0; i &lt; n; i++) {
+        string x;
+        cin &gt;&gt; x;
+        S1.insert(x);
+    }
+    for(int i = 0; i &lt; n; i++) {
+        string x;
+        cin &gt;&gt; x;
+        S2.insert(x);
+    }
+    int ans = 0;
+    for(auto &amp;x : S1) {
+        if(S2.find(x) != S2.end()) ans += x.size() * x.size();
+    }
+    cout &lt;&lt; ans &lt;&lt; endl;
+    return 0;
+}
+</code></pre>
+<h2 id="-">涂棋盘</h2>
+<h3 id="-">分析</h3>
+<p>暴力枚举维护答案即可。</p>
+<h3 id="-code">参考code</h3>
+<pre><code class="lang-C++">#include &lt;bits/stdc++.h&gt;
+
+using namespace std;
+
+vector &lt;string&gt; mp;
+int n;
+int solve(vector &lt;string&gt; grid) {
+    int w = 0, b = 0, W = 0, B = 0, MAX = 0;
+    for(int i = 0; i &lt; n; i++) {
+        w = 0; b = 0; W = 0; B = 0;
+        for(int j = 0; j &lt; n; j++) {
+            if(grid[j][i]=='B') {
+                b++; w = 0;
+                if(b &gt; B) B = b;
+             }
+            if(grid[j][i]=='W') {
+                w++; b = 0;
+                if(w &gt; W) W = w;
+            }
+        }
+        if(B &gt; MAX) MAX = B;
+        if(W &gt; MAX) MAX = W;
+    }
+    return MAX;
+}
+int main() {
+    cin &gt;&gt; n;
+    for(int i = 0; i &lt; n; i++) {
+        string s;
+        cin &gt;&gt; s;
+        mp.push_back(s);
+    }
+    cout &lt;&lt; solve(mp) &lt;&lt; endl;
+    return 0;
+}
+</code></pre>
+<h2 id="-">集合</h2>
+<h3 id="-">分析</h3>
+<p>枚举所有值组成的pair,约分之后丢进set去重即可。</p>
+<h3 id="-code">参考code</h3>
+<pre><code class="lang-C++">#include &lt;bits/stdc++.h&gt;
+
+using namespace std;
+
+int w, x, y, z;
+set&lt;pair&lt;int, int&gt; &gt; S;
+int main(){
+    cin &gt;&gt; w &gt;&gt; x &gt;&gt; y &gt;&gt; z;
+    for(int i = w; i &lt;= x; i++) {
+        for(int j = y; j &lt;= z; j++) {
+            int ii = i, jj = j;
+            int di = __gcd(i, j);
+            ii /= di; jj /= di;
+            S.insert(make_pair(ii, jj));
+        }
+    }
+    cout &lt;&lt; S.size() &lt;&lt; endl;
+    return 0;
+}
+</code></pre>
+<h2 id="-">工作安排</h2>
+<h3 id="-">分析</h3>
+<p>暴力枚举每个位置工作的安排情况记录答案即可。</p>
+<h3 id="-code">参考code</h3>
+<pre><code class="lang-C++">#include &lt;bits/stdc++.h&gt;
+
+using namespace std;
+
+vector&lt;string&gt; a; 
+int n;
+int b[10]; 
+int ret;
+void dfs(int i) {
+    if(i == a.size()) {
+        ret++;
+    } else {
+        for(int j = 0; j &lt; a[i].size(); j++) {
+            if(b[a[i][j] - '0']) {
+                b[a[i][j] - '0'] = 0;
+                dfs(i + 1);
+                b[a[i][j] - '0'] = 1;
+            }
+        }
+    }
+} 
+int main() {
+    cin &gt;&gt; n;
+    for(int i = 0; i &lt; n; i++) {
+        string x; cin &gt;&gt; x;
+        a.push_back(x);
+    }
+    for(int i = 0; i &lt; 10; i++) b[i] = 1;
+    ret = 0;
+    dfs(0);
+    cout &lt;&lt; ret &lt;&lt; endl;
+    return 0;
+}
+</code></pre>
+<h2 id="-">调整队形</h2>
+<h3 id="-">分析</h3>
+<p>由于我们只有目标状态只可能是两种,形如:
+BBBBBGGGGG
+GGGGGBBBBB
+于是我们对于串中第一个'B'然后计算把它swap到第一个位置需要多少次,第二个'B'swap到第二个位置需要多少次...依次类推..
+然后对于'G'同理,最后取个较小值即为答案。</p>
+<h3 id="-code">参考code</h3>
+<pre><code class="lang-C++">#include &lt;bits/stdc++.h&gt;
+
+using namespace std;
+
+string s;
+int main(){
+    cin &gt;&gt; s;
+    int rb = 0, rg = 0;
+    int b = 0, g = 0;
+    for(int i = 0; i &lt; s.size(); i++) {
+        if(s[i] == 'B') {
+            rb += i - b; ++b;
+        } else {
+            rg += i - g; ++g;
+        }
+    }
+    cout &lt;&lt; min(rb, rg) &lt;&lt; endl;
+    return 0;
+}
+</code></pre>
+<h2 id="-">双核处理</h2>
+<h3 id="-">分析</h3>
+<p>首先我们观察到数据量都是1024的倍数,所以我们可以对于所有都除以一个1024,然后最后再算回来。
+这显然是一个经典的动态规划的问题,直接搞就好了。
+过不了的大概因为是用的贪心做法,可以尝试自己构造一波反例。。</p>
+<h3 id="-code">参考code</h3>
+<pre><code class="lang-C++">#include &lt;bits/stdc++.h&gt;
+
+using namespace std;
+
+int vis[204800];
+vector&lt;int&gt; a;
+int n;
+int solve(vector&lt;int&gt; vec) {
+    int i, j, len = 0;
+    for(int i = 0; i &lt; vec.size(); ++i)  len += (vec[i] /= 1024);
+    memset(vis, 0, sizeof(vis[0]) * (len / 2 + 1));
+
+    vis[0] = 1;
+    for(i = 0; i &lt; vec.size(); ++i) { 
+        for(j =  len / 2 - vec[i]; j &gt;= 0; --j) {
+            if(vis[j] &amp;&amp; !vis[j + vec[i]]) {
+                vis[j + vec[i]] = 1;
+            }
+        }
+    }
+    i = len / 2;
+    while(i &gt;= 0 &amp;&amp; !vis[i])
+        --i;
+    return (len - i) * 1024;
+}
+int main(){
+    cin &gt;&gt; n;
+    for(int i = 0; i &lt; n; i++) {
+        int x; cin &gt;&gt; x;
+        a.push_back(x);
+    }
+    cout &lt;&lt; solve(a) &lt;&lt; endl;
+    return 0;
+}
+</code></pre>
+<h2 id="-">魔力手环</h2>
+<h3 id="-">分析</h3>
+<p>把手环数字转为一个向量,然后乘</p>
+<pre><code class="lang-C++">     [1 1 0 0 0]
+     [0 1 1 0 0]
+     [0 0 1 1 0]
+     [0 0 0 1 1]
+     [1 0 0 0 1]
+</code></pre>
+<p>这个矩阵N次即可。。用个矩阵快速幂,边算边求模。</p>
+<h3 id="-code">参考code</h3>
+<pre><code class="lang-C++">#include &lt;bits/stdc++.h&gt;
+
+using namespace std;
+
+void mult(int A[50][50], int B[50][50], int C[50][50], int n) {
+    int T[50][50];
+    memset(T, 0, sizeof(T));
+    for(int i = 0; i &lt; n; i++) {
+        for(int j = 0; j &lt; n; j++) {
+            for(int k = 0; k &lt; n; k++) {
+                T[i][j] = (T[i][j] + A[i][k] * B[k][j]) % 100;
+            }
+        }
+    }
+    memcpy(C, T, sizeof(T));
+}
+void mypower(int A[50][50], int R[50][50], int n, int m) {
+    if(n == 0) {
+        memset(R, 0, sizeof(int) * 2500);
+        for(int i = 0; i &lt; m; i++) R[i][i] = 1;
+    } else if(n % 2 == 0) {
+        mypower(A, R, n/2, m);
+        mult(R, R, R, m);
+    } else {
+        mypower(A, R, n - 1, m);
+        mult(A, R, R, m);
+    }
+}
+vector&lt;int&gt; solve(vector&lt;int&gt; seq, int m) {
+    int A[50][50], R[50][50], n = (int)seq.size();
+    memset(A, 0, sizeof(A));
+    for(int i = 0; i &lt; n; i++) A[i][i] = A[i][(i + 1) % n] = 1;
+    mypower(A, R, m, n);
+    vector&lt;int&gt; res;
+    for(int i = 0; i &lt; n; i++) {
+        int sum = 0;
+        for(int j = 0; j &lt; n; j++) sum = (sum + R[i][j] * seq[j]) % 100;
+        res.push_back(sum);
+    }
+    return res;
+}
+int main () {
+    int n, k;
+    vector&lt;int&gt; x;
+    cin &gt;&gt; n &gt;&gt; k;
+    for(int i = 0; i &lt; n; i++) {
+        int tmp; cin &gt;&gt; tmp;
+        x.push_back(tmp);
+    }
+    vector&lt;int&gt; ans = solve(x, k);
+    for(int i = 0; i &lt; ans.size(); i++) i == 0 ? cout &lt;&lt; ans[i] : cout &lt;&lt; " " &lt;&lt; ans[i];
+    return 0;
+}
+</code></pre>
+<h2 id="-">堆砖块</h2>
+<h3 id="-">分析</h3>
+<p>从没有砖块开始分析。考虑每块砖块放入的决策,放入左边,放入右边和不使用这块砖块三种情况。
+然后做个dp,这里用滚动数组优化了下空间。</p>
+<h3 id="-code">参考code</h3>
+<pre><code class="lang-C++">#include &lt;bits/stdc++.h&gt;
+
+using namespace std;
+
+const int maxn = 500010;
+int n;
+vector&lt;int&gt; a;
+int dp[2][maxn];
+int solve(vector&lt;int&gt; v) {
+    int res = 0;
+    memset(dp, 0, sizeof(dp));
+    int p = 0;
+    for(int i = 0; i &lt; v.size(); i++) {
+        dp[p][v[i]] = max(dp[1-p][v[i]] , v[i]);
+        for(int ix = 0; ix &lt; maxn; ix++) {
+            if(dp[1 - p][ix]) {
+                if(dp[p][ix] &lt; dp[1 - p][ix]) dp[p][ix] = dp[1-p][ix];
+                dp[p][ix + v[i]] = max(dp[p][ix + v[i]], max(dp[1 - p][ix + v[i]], dp[1 - p][ix] + v[i]));
+                dp[p][abs(ix - v[i])] = max(dp[p][abs(ix - v[i])], max(dp[1 - p][abs(ix - v[i])], max(dp[1-p][ix] - ix + v[i], dp[1 - p][ix])));
+            }
+        }
+        p = 1 - p;
+    }
+    if(dp[1 - p][0]) res = dp[1 - p][0];
+    else res = -1;
+    return res;
+}
+int main() {
+    cin &gt;&gt; n;
+    for(int i = 0; i &lt; n; i++) {
+        int x; cin &gt;&gt; x;
+        a.push_back(x);
+    }
+    cout &lt;&lt; solve(a) &lt;&lt; endl;
+    return 0;
+}
+</code></pre>
+
+</div>
+<div class="clearfix">
+<ul class="oprt-tool clearfix">
+<li>
+<a class="oprt-item oprt-collect js-click-follow nc-req-auth" href="javascript:void(0);">收藏</a>
+</li>
+<li class="oprt-item-share">
+<a class="oprt-item oprt-share" href="javascript:void(0);">分享</a>
+<div class="tooltip top">
+<div class="tooltip-arrow"></div>
+<div class="tooltip-inner">
+<span class="q-share-to">
+<a href="javascript:void(0);" class="js-share-link share-wb" data-share="weibo"></a>
+<a href="javascript:void(0);" class="js-share-link share-tx" data-share="qzone"></a>
+<a href="javascript:void(0);" class="js-share-wx share-wx"></a>
+</span>
+</div>
+</div>
+</li>
+<li>
+<a href="javascript:void(0);" class="js-post-like nc-req-auth oprt-item oprt-like">赞(4)</a>
+</li>
+<li>
+<a class="js-post-replay oprt-item oprt-reply nc-req-auth" href="javascript:void(0);">回帖</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="post-menu">
+</div>
+</div>
+<div class="module-box js-comment-list">
+<div class="module-head clearfix">
+<h1>7条回帖</h1>
+<a class="btn btn-primary float-right nc-req-auth js-post-replay" href="javascript:void(0);">
+<i class="ico-submit"></i>
+回帖
+</a>
+</div>
+<div class="module-body clearfix"><div id="jsCpn_1_component_0"><div class=" js-tips" style="display: none;"></div><div class="js-content" style=""><ul class="answer-list discuss-topic-answers js-list"><li id="jsCpn_18_component_0" class=" answer-list-item clearfix js-copy-mark" data-mark-info="作者：Houskii"><div class="answer-content clearfix"><a class="answer-head" data-card-uid="515959" href="https://www.nowcoder.com/profile/515959" data-card-index="3"><img alt="Houskii头像" src="./网易2017实习生招聘笔试题编程题参考思路和代码_笔经面经_牛客网_files/515959_1482246541813_475AEC817DA08B2AF3F180A617EF51D5@0e_100w_100h_0c_1i_1o_90Q_1x"></a><div class="answer-detail"><p><a href="https://www.nowcoder.com/profile/515959" data-card-uid="515959" class="js-copy-tip answer-name level-color-7" data-card-index="4">Houskii</a><span class="post-floor">1#</span></p><div class="answer-brief">果姐姐好快</div><div class="answer-legend js-action"><span class="answer-time">发表于 今天 16:18:06</span><a href="javascript:void(0);" class="js-cmt-action" data-action="reply">回复(0)</a><a href="javascript:void(0);" class="js-cmt-action" data-action="like">赞(0)</a></div><div class="reply-box js-sub-cmt-list" style="display:none;"></div></div></div></li><li id="jsCpn_19_component_1" class=" answer-list-item clearfix js-copy-mark" data-mark-info="作者：我家的狗不咬人"><div class="answer-content clearfix"><a class="answer-head" data-card-uid="450315" href="https://www.nowcoder.com/profile/450315" data-card-index="5"><img alt="我家的狗不咬人头像" src="./网易2017实习生招聘笔试题编程题参考思路和代码_笔经面经_牛客网_files/450315_1475116367502_C21C18731D0C9B0BDD14C81BD06F1640@0e_100w_100h_0c_1i_1o_90Q_1x"></a><div class="answer-detail"><p><a href="https://www.nowcoder.com/profile/450315" data-card-uid="450315" class="js-copy-tip answer-name level-color-7" data-card-index="6">我家的狗不咬人</a><span class="post-floor">2#</span></p><div class="answer-brief">厉害了，果姐！</div><div class="answer-legend js-action"><span class="answer-time">发表于 今天 16:22:54</span><a href="javascript:void(0);" class="js-cmt-action" data-action="reply">回复(0)</a><a href="javascript:void(0);" class="js-cmt-action" data-action="like">赞(0)</a></div><div class="reply-box js-sub-cmt-list" style="display:none;"></div></div></div></li><li id="jsCpn_20_component_2" class=" answer-list-item clearfix js-copy-mark" data-mark-info="作者：Java_Lct"><div class="answer-content clearfix"><a class="answer-head" data-card-uid="4732496" href="https://www.nowcoder.com/profile/4732496" data-card-index="7"><img alt="Java_Lct头像" src="./网易2017实习生招聘笔试题编程题参考思路和代码_笔经面经_牛客网_files/4732496_1480923796234_D638D1B9F29A9DF9F988538D4AFAD93B@0e_100w_100h_0c_1i_1o_90Q_1x"></a><div class="answer-detail"><p><a href="https://www.nowcoder.com/profile/4732496" data-card-uid="4732496" class="js-copy-tip answer-name level-color-6" data-card-index="8">Java_Lct</a><span class="post-floor">3#</span></p><div class="answer-brief">魔力手环那个不超时吗</div><div class="answer-legend js-action"><span class="answer-time">发表于 今天 16:23:39</span><a href="javascript:void(0);" class="js-cmt-action" data-action="reply">回复(2)</a><a href="javascript:void(0);" class="js-cmt-action" data-action="like">赞(0)</a></div><div class="reply-box js-sub-cmt-list" style=""><div id="jsCpn_21_component_1"><div class=" js-tips" style="display: none;"></div><div class="js-content" style=""><ul class="reply-list js-list"><li id="jsCpn_30_component_0" class=" ui-subcmt-item js-copy-mark" data-mark-info="作者：WavinFlag"><div class="reply-main clearfix"><div class="reply-person" style="margin-right:5px;"><a href="https://www.nowcoder.com/profile/5718636" data-card-uid="5718636" class="js-copy-tip level-color-7" data-card-index="9">WavinFlag</a>：</div><div class="reply-content">同问，k最大可达20亿我真是吓哭了……</div></div><div class="answer-legend reply-info js-sub-action"><span class="reply-time">今天 16:27:30</span><a href="javascript:void(0);" class="reply-answer js-cmt-action" data-action="reply">回复</a><a href="javascript:void(0);" class="reply-like js-cmt-action" data-action="like">赞(0)</a></div><div class="js-sub-reply" style="display:none;"></div></li><li id="jsCpn_31_component_1" class=" ui-subcmt-item js-copy-mark" data-mark-info="作者：恭喜您顺利获得一个实习offer"><div class="reply-main clearfix"><div class="reply-person" style="margin-right:5px;"><a href="https://www.nowcoder.com/profile/409095" data-card-uid="409095" class="js-copy-tip level-color-8" data-card-index="10">恭喜您顺利获得一个实习offer</a>：</div><div class="reply-content">矩阵相乘，相当于不是迭代k次，迭代lgk次。。</div></div><div class="answer-legend reply-info js-sub-action"><span class="reply-time">今天 16:27:43</span><a href="javascript:void(0);" class="reply-answer js-cmt-action" data-action="reply">回复</a><a href="javascript:void(0);" class="reply-like js-cmt-action" data-action="like">赞(0)</a></div><div class="js-sub-reply" style="display:none;"></div></li></ul></div><div class="js-pager-box" style="display:none;"><div id="jsCpn_32_component_1" class=" pagination" style="display: none;"><ul></ul></div></div><div class="js-reply-box" style=""><div id="jsCpn_22_component_0" class=" reply-editbox clearfix" style="margin-top:10px;"><div class="reply-write"><textarea placeholder="请输入你的观点" class="reply-input reply-input-textarea js-ipt" style="resize: none; height: 20px; width: 538px;"></textarea></div><a class="btn btn-primary reply-btn js-reply" href="javascript:void(0);">回复</a></div></div></div></div></div></div></li><li id="jsCpn_23_component_3" class=" answer-list-item clearfix js-copy-mark" data-mark-info="作者：恭喜您顺利获得一个实习offer"><div class="answer-content clearfix"><a class="answer-head" data-card-uid="409095" href="https://www.nowcoder.com/profile/409095" data-card-index="11"><img alt="恭喜您顺利获得一个实习offer头像" src="./网易2017实习生招聘笔试题编程题参考思路和代码_笔经面经_牛客网_files/409095_1479438002585_2BD8A0F9C2B661550CFD3E5BAE6248D3@0e_100w_100h_0c_1i_1o_90Q_1x"></a><div class="answer-detail"><p><a href="https://www.nowcoder.com/profile/409095" data-card-uid="409095" class="js-copy-tip answer-name level-color-8" data-card-index="12">恭喜您顺利获得一个实习offer</a><span class="post-floor">4#</span></p><div class="answer-brief">两个小时有一个多小时都在做那道神奇的手环。。哎。。</div><div class="answer-legend js-action"><span class="answer-time">发表于 今天 16:26:43</span><a href="javascript:void(0);" class="js-cmt-action" data-action="reply">回复(2)</a><a href="javascript:void(0);" class="js-cmt-action" data-action="like">赞(0)</a></div><div class="reply-box js-sub-cmt-list" style=""><div id="jsCpn_24_component_2"><div class=" js-tips" style="display: none;"></div><div class="js-content" style=""><ul class="reply-list js-list"><li id="jsCpn_33_component_2" class=" ui-subcmt-item js-copy-mark" data-mark-info="作者：sssoooppp"><div class="reply-main clearfix"><div class="reply-person" style="margin-right:5px;"><a href="https://www.nowcoder.com/profile/6508105" data-card-uid="6508105" class="js-copy-tip level-color-6" data-card-index="13">sssoooppp</a>：</div><div class="reply-content">然后做出来了么</div></div><div class="answer-legend reply-info js-sub-action"><span class="reply-time">今天 16:35:23</span><a href="javascript:void(0);" class="reply-answer js-cmt-action" data-action="reply">回复</a><a href="javascript:void(0);" class="reply-like js-cmt-action" data-action="like">赞(0)</a></div><div class="js-sub-reply" style="display:none;"></div></li><li id="jsCpn_34_component_3" class=" ui-subcmt-item js-copy-mark" data-mark-info="作者：恭喜您顺利获得一个实习offer"><div class="reply-main clearfix"><div class="reply-person" style="margin-right:5px;"><a href="https://www.nowcoder.com/profile/409095" data-card-uid="409095" class="js-copy-tip level-color-8" data-card-index="14">恭喜您顺利获得一个实习offer</a> 回复 <a href="https://www.nowcoder.com/profile/6508105" data-card-uid="6508105" class="level-color-6" data-card-index="15">sssoooppp</a>：</div><div class="reply-content">当然木有了。。</div></div><div class="answer-legend reply-info js-sub-action"><span class="reply-time">今天 16:37:57</span><a href="javascript:void(0);" class="reply-answer js-cmt-action" data-action="reply">回复</a><a href="javascript:void(0);" class="reply-like js-cmt-action" data-action="like">赞(0)</a></div><div class="js-sub-reply" style="display:none;"></div></li></ul></div><div class="js-pager-box" style="display:none;"><div id="jsCpn_35_component_2" class=" pagination" style="display: none;"><ul></ul></div></div><div class="js-reply-box" style=""><div id="jsCpn_25_component_1" class=" reply-editbox clearfix" style="margin-top:10px;"><div class="reply-write"><textarea placeholder="请输入你的观点" class="reply-input reply-input-textarea js-ipt" style="resize: none; height: 20px; width: 538px;"></textarea></div><a class="btn btn-primary reply-btn js-reply" href="javascript:void(0);">回复</a></div></div></div></div></div></div></li><li id="jsCpn_26_component_4" class=" answer-list-item clearfix js-copy-mark" data-mark-info="作者：Murcy2.0"><div class="answer-content clearfix"><a class="answer-head" data-card-uid="9687084" href="https://www.nowcoder.com/profile/9687084" data-card-index="16"><img alt="Murcy2.0头像" src="./网易2017实习生招聘笔试题编程题参考思路和代码_笔经面经_牛客网_files/9687084_1480932608936_0564D4EC4885448FC55B26B11C1AE743@0e_100w_100h_0c_1i_1o_90Q_1x"></a><div class="answer-detail"><p><a href="https://www.nowcoder.com/profile/9687084" data-card-uid="9687084" class="js-copy-tip answer-name level-color-7" data-card-index="17">Murcy2.0</a><span class="post-floor">5#</span></p><div class="answer-brief">魔力手环解法好骚啊...gg</div><div class="answer-legend js-action"><span class="answer-time">发表于 今天 16:27:05</span><a href="javascript:void(0);" class="js-cmt-action" data-action="reply">回复(0)</a><a href="javascript:void(0);" class="js-cmt-action" data-action="like">赞(0)</a></div><div class="reply-box js-sub-cmt-list" style="display:none;"></div></div></div></li><li id="jsCpn_27_component_5" class=" answer-list-item clearfix js-copy-mark" data-mark-info="作者：Kirshry"><div class="answer-content clearfix"><a class="answer-head" data-card-uid="834496" href="https://www.nowcoder.com/profile/834496" data-card-index="18"><img alt="Kirshry头像" src="./网易2017实习生招聘笔试题编程题参考思路和代码_笔经面经_牛客网_files/512m.png@0e_100w_100h_0c_1i_1o_90Q_1x.png"></a><div class="answer-detail"><p><a href="https://www.nowcoder.com/profile/834496" data-card-uid="834496" class="js-copy-tip answer-name level-color-7" data-card-index="19">Kirshry</a><span class="post-floor">6#</span></p><div class="answer-brief">魔力手环快速幂不服不行</div><div class="answer-legend js-action"><span class="answer-time">发表于 今天 16:32:49</span><a href="javascript:void(0);" class="js-cmt-action" data-action="reply">回复(0)</a><a href="javascript:void(0);" class="js-cmt-action" data-action="like">赞(0)</a></div><div class="reply-box js-sub-cmt-list" style="display:none;"></div></div></div></li><li id="jsCpn_28_component_6" class=" answer-list-item clearfix js-copy-mark" data-mark-info="作者：向宇同桌"><div class="answer-content clearfix"><a class="answer-head" data-card-uid="68" href="https://www.nowcoder.com/profile/68" data-card-index="20"><img alt="向宇同桌头像" src="./网易2017实习生招聘笔试题编程题参考思路和代码_笔经面经_牛客网_files/68_1437377794671_68_1437377793730_avatar.jpg@0e_100w_100h_0c_1i_1o_90Q_1x"></a><div class="answer-detail"><p><a href="https://www.nowcoder.com/profile/68" data-card-uid="68" class="js-copy-tip answer-name level-color-7" data-card-index="21">向宇同桌</a><span class="post-floor">7#</span></p><div class="answer-brief">魔力手环碉堡</div><div class="answer-legend js-action"><span class="answer-time">发表于 今天 16:36:27</span><a href="javascript:void(0);" class="js-cmt-action" data-action="reply">回复(0)</a><a href="javascript:void(0);" class="js-cmt-action" data-action="like">赞(0)</a></div><div class="reply-box js-sub-cmt-list" style="display:none;"></div></div></div></li></ul></div><div class="js-pager-box" style="display:none;"><div id="jsCpn_29_component_0" class=" pagination" style="display: none;"><ul></ul></div></div><div class="js-reply-box" style="display:none;"></div></div></div>
+</div>
+<div class="module-box">
+<div class="module-body">
+<div class="editor-box">
+<div class="js-editor"><div id="jsCpn_2_HEditor_0" style="position:relative;"><div class="ke-container ke-container-nowcoder" style="width: 648px;"><div style="display: block; width: auto;" class="ke-toolbar" unselectable="on"><div id="jsCpn_16_select_0" role="group" class="btn-group btn-group-sm"><button class="btn btn-default dropdown-toggle"><span class="dropdown-value">代码语言</span><span class="caret"></span></button><ul class="dropdown-menu"></ul></div><a class="ico-to-html js-2-md">使用MD编辑器</a><span class="ke-outline" data-name="source" title="HTML代码" unselectable="on"><span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-source" unselectable="on"></span></span><span class="ke-outline" data-name="preview" title="预览" unselectable="on"><span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-preview" unselectable="on"></span></span><span class="ke-inline-block ke-separator"></span><span class="ke-outline" data-name="bold" title="粗体(Ctrl+B)" unselectable="on"><span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-bold" unselectable="on"></span></span><span class="ke-outline" data-name="italic" title="斜体(Ctrl+I)" unselectable="on"><span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-italic" unselectable="on"></span></span><span class="ke-outline" data-name="underline" title="下划线(Ctrl+U)" unselectable="on"><span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-underline" unselectable="on"></span></span><span class="ke-inline-block ke-separator"></span><span class="ke-outline" data-name="bockquote" title="引用" unselectable="on"><span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-bockquote" unselectable="on"></span></span><span class="ke-outline" data-name="insertorderedlist" title="编号" unselectable="on"><span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-insertorderedlist" unselectable="on"></span></span><span class="ke-outline" data-name="insertunorderedlist" title="项目符号" unselectable="on"><span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-insertunorderedlist" unselectable="on"></span></span><span class="ke-inline-block ke-separator"></span><span class="ke-outline" data-name="image" title="图片" unselectable="on"><span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-image" unselectable="on"></span></span><span class="ke-inline-block ke-separator"></span><span class="ke-outline" data-name="table" title="表格" unselectable="on"><span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-table" unselectable="on"></span></span><span class="ke-outline" data-name="subscript" title="下标" unselectable="on"><span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-subscript" unselectable="on"></span></span><span class="ke-outline" data-name="superscript" title="上标" unselectable="on"><span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-superscript" unselectable="on"></span></span><span class="ke-outline" data-name="removeformat" title="删除格式" unselectable="on"><span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-removeformat" unselectable="on"></span></span></div><div style="display: block; height: 141px; overflow: hidden;" class="ke-edit"><iframe class="ke-edit-iframe" hidefocus="true" allowtransparency="true" frameborder="0" tabindex="" style="width: 100%; height: 141px;" src="./网易2017实习生招聘笔试题编程题参考思路和代码_笔经面经_牛客网_files/saved_resource.html"></iframe><textarea class="ke-edit-textarea" hidefocus="true" tabindex="" style="width: 100%; height: 141px; display: none;"></textarea></div><div class="ke-statusbar"><span class="ke-inline-block ke-statusbar-center-icon" style="visibility: hidden;"></span><span class="ke-inline-block ke-statusbar-right-icon" style="visibility: hidden;"></span></div></div><div style="display: none;"></div></div></div>
+<div class="txtarea-foot clearfix">
+<a href="javascript:void(0);" class="btn btn-large float-right btn-primary btn-modify-sure nc-req-auth" id="jsPubPoint">回帖</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="nk-bar">
+<div class="module-box">
+<div class="module-head clearfix">
+<h1>本文相关内容</h1>
+</div>
+<div class="module-body">
+<div class="tags-box">
+<a class="tag-label" href="https://www.nowcoder.com/community/640" target="_blank">C++工程师</a>
+<a class="tag-label" href="https://www.nowcoder.com/community/641" target="_blank">iOS工程师</a>
+</div>
+</div>
+</div>
+<div class="module-box side-topic-box" id="jsSideTopicList">
+<div class="module-head clearfix">
+<div class="module-head-oprt">
+<span class="mho-page topic-slide-progress"></span>
+<a href="javascript:void(0);" class="mho-pre js-topic-mho-pre" title="上一页"></a>
+<a href="javascript:void(0);" class="mho-next js-topic-mho-next" title="下一页"></a>
+</div>
+<h1>热门推荐</h1>
+</div>
+<div class="module-body">
+<div class="topic-slide-box">
+<ul class="side-topic-list" style="margin-top: -321px;"><li>
+<a href="https://www.nowcoder.com/jump?type=ad&amp;url=https%3A%2F%2Fwww.nowcoder.com%2Fcourses%2Fsemester%2Fmedium">
+<img src="./网易2017实习生招聘笔试题编程题参考思路和代码_笔经面经_牛客网_files/826546_1483534607215_238x923.png" alt="">
+</a>
+</li><li>
+<a href="https://www.nowcoder.com/jump?type=ad&amp;url=https%3A%2F%2Fwww.nowcoder.com%2Fcourses%2Fsemester%2Felementary">
+<img src="./网易2017实习生招聘笔试题编程题参考思路和代码_笔经面经_牛客网_files/826546_1483534580222_238x92.png" alt="">
+</a>
+</li><li>
+<a href="https://www.nowcoder.com/jump?type=ad&amp;url=https%3A%2F%2Fwww.nowcoder.com%2Factivity%2FMockExam2017%2F%3Ffrom%3Dcbl">
+<img src="./网易2017实习生招聘笔试题编程题参考思路和代码_笔经面经_牛客网_files/826546_1488608633604_238x92.jpg" alt="">
+</a>
+</li><li>
+<a href="https://www.nowcoder.com/jump?type=ad&amp;url=https%3A%2F%2Fwww.nowcoder.com%2Fcourses%2Fsemester%2Fsenior">
+<img src="./网易2017实习生招聘笔试题编程题参考思路和代码_笔经面经_牛客网_files/826546_1483534632567_238x922.png" alt="">
+</a>
+</li><li>
+<a href="https://www.nowcoder.com/jump?type=ad&amp;url=https%3A%2F%2Fwww.nowcoder.com%2Fcourses%2Fsemester%2Fmedium">
+<img src="./网易2017实习生招聘笔试题编程题参考思路和代码_笔经面经_牛客网_files/826546_1483534607215_238x923.png" alt="">
+</a>
+</li><li>
+<a href="https://www.nowcoder.com/jump?type=ad&amp;url=https%3A%2F%2Fwww.nowcoder.com%2Fcourses%2Fsemester%2Felementary">
+<img src="./网易2017实习生招聘笔试题编程题参考思路和代码_笔经面经_牛客网_files/826546_1483534580222_238x92.png" alt="">
+</a>
+</li></ul>
+</div>
+</div>
+</div>
+<!--主体内容结束-->
+<div class="nk-bar">
+<div class="module-box">
+<div class="module-head clearfix">
+<h1>笔经面经近期热帖</h1>
+</div>
+<div class="module-body">
+<ul class="list-module">
+<li class="clearfix">
+<div class="list-title"><a class="list-name" href="https://www.nowcoder.com/discuss/5941">【面经】阿里+百度+CVTE面经合集（offer均已收到）</a>
+</div>
+<div class="list-legend">
+<span class="comm-num">回复
+<a href="https://www.nowcoder.com/discuss/5941">
+(283)
+</a>
+</span>
+发表于 <a href="https://www.nowcoder.com/discuss/5941">
+2016-05-23 03:16:39
+</a>
+</div>
+</li>
+<li class="clearfix">
+<div class="list-title"><a class="list-name" href="https://www.nowcoder.com/discuss/18270">从春招到秋招，一个本科生的求职之路。</a>
+</div>
+<div class="list-legend">
+<span class="comm-num">回复
+<a href="https://www.nowcoder.com/discuss/18270">
+(190)
+</a>
+</span>
+发表于 <a href="https://www.nowcoder.com/discuss/18270">
+2016-11-03 12:59:00
+</a>
+</div>
+</li>
+<li class="clearfix">
+<div class="list-title"><a class="list-name" href="https://www.nowcoder.com/discuss/3038">网易内推（C++/C研发）offer之路</a>
+</div>
+<div class="list-legend">
+<span class="comm-num">回复
+<a href="https://www.nowcoder.com/discuss/3038">
+(57)
+</a>
+</span>
+发表于 <a href="https://www.nowcoder.com/discuss/3038">
+2015-09-21 22:19:12
+</a>
+</div>
+</li>
+<li class="clearfix">
+<div class="list-title"><a class="list-name" href="https://www.nowcoder.com/discuss/15168">【数据挖掘面经】腾讯+百度+华为（均拿到sp offer）</a>
+</div>
+<div class="list-legend">
+<span class="comm-num">回复
+<a href="https://www.nowcoder.com/discuss/15168">
+(57)
+</a>
+</span>
+发表于 <a href="https://www.nowcoder.com/discuss/15168">
+2016-10-13 23:10:29
+</a>
+</div>
+</li>
+<li class="clearfix">
+<div class="list-title"><a class="list-name" href="https://www.nowcoder.com/discuss/11495">阿里、百度、腾讯、华为面经（均已拿到offer）</a>
+</div>
+<div class="list-legend">
+<span class="comm-num">回复
+<a href="https://www.nowcoder.com/discuss/11495">
+(57)
+</a>
+</span>
+发表于 <a href="https://www.nowcoder.com/discuss/11495">
+2016-09-22 15:19:20
+</a>
+</div>
+</li>
+<li class="clearfix">
+<div class="list-title"><a class="list-name" href="https://www.nowcoder.com/discuss/1937">计算机网络之面试常考</a>
+</div>
+<div class="list-legend">
+<span class="comm-num">回复
+<a href="https://www.nowcoder.com/discuss/1937">
+(56)
+</a>
+</span>
+发表于 <a href="https://www.nowcoder.com/discuss/1937">
+2015-08-10 14:51:57
+</a>
+</div>
+</li>
+<li class="clearfix">
+<div class="list-title"><a class="list-name" href="https://www.nowcoder.com/discuss/21599">2017年校招全国统一模拟笔试(第一场)编程题参考代码汇总</a>
+</div>
+<div class="list-legend">
+<span class="comm-num">回复
+<a href="https://www.nowcoder.com/discuss/21599">
+(46)
+</a>
+</span>
+发表于 <a href="https://www.nowcoder.com/discuss/21599">
+2017-03-07 21:08:54
+</a>
+</div>
+</li>
+<li class="clearfix">
+<div class="list-title"><a class="list-name" href="https://www.nowcoder.com/discuss/20607">Java工程师校招面经总结</a>
+</div>
+<div class="list-legend">
+<span class="comm-num">回复
+<a href="https://www.nowcoder.com/discuss/20607">
+(42)
+</a>
+</span>
+发表于 <a href="https://www.nowcoder.com/discuss/20607">
+2017-01-09 11:30:05
+</a>
+</div>
+</li>
+<li class="clearfix">
+<div class="list-title"><a class="list-name" href="https://www.nowcoder.com/discuss/22561">2017年校招全国统一模拟笔试(第二场)编程题参考代码汇总</a>
+</div>
+<div class="list-legend">
+<span class="comm-num">回复
+<a href="https://www.nowcoder.com/discuss/22561">
+(29)
+</a>
+</span>
+发表于 <a href="https://www.nowcoder.com/discuss/22561">
+2017-03-23 21:07:47
+</a>
+</div>
+</li>
+<li class="clearfix">
+<div class="list-title"><a class="list-name" href="https://www.nowcoder.com/discuss/18612">非计算机专业的秋招之路</a>
+</div>
+<div class="list-legend">
+<span class="comm-num">回复
+<a href="https://www.nowcoder.com/discuss/18612">
+(25)
+</a>
+</span>
+发表于 <a href="https://www.nowcoder.com/discuss/18612">
+2016-11-07 22:12:02
+</a>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!--主体内容结束-->
+<div class="fixed-menu" style="display: block; bottom: 285px;">
+<ul>
+<li>
+<a href="https://www.nowcoder.com/discuss/22696#top" class="gotop" title="回到顶部" id="gotop"></a>
+</li>
+<li>
+<a class="fixed-wb" target="_blank" href="http://www.weibo.com/nowcoder"></a>
+</li>
+<li>
+<a href="tencent://groupwpa/?subcmd=all&amp;param=7B2267726F757055696E223A3135373539343730352C2274696D655374616D70223A313431333130373737387D0A" class="qq" title="QQ"></a>
+</li>
+<li>
+<a href="javascript:void(0);" class="wx"></a>
+<div class="wx-qrcode">
+<img src="./网易2017实习生招聘笔试题编程题参考思路和代码_笔经面经_牛客网_files/wx-rcode.jpg" alt="二维码">
+<p>扫描二维码，关注牛客网</p>
+</div>
+</li>
+<li>
+<a href="https://www.nowcoder.com/discuss/30" class="feedback" title="意见反馈"></a>
+<a href="https://www.nowcoder.com/discuss/30" class="feedback-letter">意见反馈</a>
+</li>
+<li>
+<a href="javascript:void(0);" class="qrcode"></a>
+<div class="wx-qrcode">
+<img src="./网易2017实习生招聘笔试题编程题参考思路和代码_笔经面经_牛客网_files/app.png" alt="二维码">
+<p>下载牛客APP，随时随地刷题</p>
+</div>
+</li>
+</ul>
+<div class="phone-qrcode" style="">
+<a href="javascript:void(0);" class="qrcode-close">x</a>
+<img src="./网易2017实习生招聘笔试题编程题参考思路和代码_笔经面经_牛客网_files/app.png" alt="二维码" style="width:70px;height:70px;">
+<p>扫一扫下载牛客APP</p>
+</div>
+</div>
+<div class="ft-wrap">
+<div class="ft-cont clearfix">
+<div class="ft-main">
+<ul class="ft-links">
+<li><a href="https://www.nowcoder.com/html/aboutus">关于我们</a></li>
+<li><a href="https://www.nowcoder.com/html/joinus">加入我们</a></li>
+<li><a href="https://www.nowcoder.com/discuss/30" target="_blank">意见反馈</a></li>
+<li><a href="https://hr.nowcoder.com/">企业服务</a></li>
+<li><a href="https://www.nowcoder.com/html/cooperation">网站合作</a></li>
+<li><a href="https://www.nowcoder.com/html/disclaimer">免责声明</a></li>
+<li><a href="https://www.nowcoder.com/html/links">友情链接</a></li>
+</ul>
+<ul class="webrights">
+<li><span style="color:#a9b8ca;">浙ICP备14000860号-2</span></li>
+<li>
+<span style="color:#a9b8ca;">
+<img src="./网易2017实习生招聘笔试题编程题参考思路和代码_笔经面经_牛客网_files/ghs.png" style="width:18px;height:18px;">
+<a style="font-size:12px;" class="ft-info-item" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11011402010078">京公网安备 11011402010078号</a>
+</span>
+</li>
+<li><a href="javascript:void(0);">牛客网©2017 All Rights Reserved</a></li>
+</ul>
+</div>
+<dl class="ft-web-info">
+<dt class="ft-web-name">牛客网，程序员必备求职神器</dt>
+<dd class="ft-info-item">QQ群：169195721</dd>
+<dd class="ft-info-item">微 信：www_nowcoder_com
+<a href="javascript:;" class="btn btn-primary btn-xs">关注
+<div class="tooltip top">
+<div class="tooltip-arrow"></div>
+<div class="tooltip-inner"><img width="80" src="./网易2017实习生招聘笔试题编程题参考思路和代码_笔经面经_牛客网_files/wx-rcode(1).jpg"></div>
+</div>
+</a>
+</dd>
+<dd class="ft-info-item">微 博：牛客网
+<a href="http://weibo.com/nowcoder" class="btn btn-primary btn-xs" target="_blank">关注
+</a>
+</dd>
+</dl>
+<div class="ft-app">
+<div class="ft-qrcode-box">
+<img width="128" src="./网易2017实习生招聘笔试题编程题参考思路和代码_笔经面经_牛客网_files/app_download.png">
+</div>
+<p>扫一扫，把题目装进口袋</p>
+</div>
+</div>
+</div>
+<div class="ad-window-sm js-global-tips" style="display:none;">
+<a href="javascript:void(0);" class="ad-close">X</a>
+<div class="ad-live-active"></div>
+<a class="link-green js-global-tips-href" target="_blank" href="https://www.nowcoder.com/discuss/22696">点击查看&gt;&gt;</a>
+</div>
+
+</div>
+<script>
+window.isLogin = true;
+window.globalInfo = {
+ownerId: '7963796',
+ownerName: 'VVingerfly',
+ownerTinyHead: 'https://images.nowcoder.com/images/20170318/7963796_1489816221002_39E824ED7CBFD8D9DDAF1366369174AD@0e_100w_100h_0c_1i_1o_90Q_1x',
+ownerMainHead: 'https://images.nowcoder.com/images/20170318/7963796_1489816221002_39E824ED7CBFD8D9DDAF1366369174AD@0e_200w_200h_0c_1i_1o_90Q_1x',
+ownerEmail: 'vvei587@163.com',
+ownerPhone: '',
+ownerType: '1',
+status: '0',
+honorLevel: '5',
+gender: '男',
+isCompleteInfo: true,
+canLoadInIframe: 'false'
+};
+</script>
+<script type="text/javascript">
+window.ncJsVersion = "1.01.48";
+window.ncJsPluginVersion = "1.0.6";
+</script>
+<script src="./网易2017实习生招聘笔试题编程题参考思路和代码_笔经面经_牛客网_files/sea.js.下载" type="text/javascript"></script>
+<script src="./网易2017实习生招聘笔试题编程题参考思路和代码_笔经面经_牛客网_files/nc.cpn.js.下载" type="text/javascript"></script>
+<script src="./网易2017实习生招聘笔试题编程题参考思路和代码_笔经面经_牛客网_files/base.js.下载" type="text/javascript"></script>
+<script type="text/javascript">
+if (!window.seajs) {
+var oBody = document.body;
+var aChild = oBody.childNodes;
+var oDv = document.createElement('div');
+oDv.innerHTML = [
+'<div style="text-align:center;">',
+'<div style="font-size:18px;margin:20px 0;font-weight: bold;">',
+'静态文件加载出错，请检查当前网络情况是否正常，或者按照下面步骤修改电脑的DNS',
+'<br />推荐使用以下DNS: 223.5.5.5(首选) 和 223.6.6.6(备用)',
+'</div>',
+'<img style="border:1px solid #ccc;" src="//ww2.sinaimg.cn/mw690/44b25cb0jw1f5vt92tsz1j20o03d97dt.jpg" />',
+'</div>'].join('');
+aChild.length === 0 && oBody.appendChild(oDv);
+aChild.length > 0 && oBody.insertBefore(oDv, aChild[0]);
+}
+seajs.use('nowcoder/1.2.751/javascripts/site/common/index');
+seajs.use('nowcoder/1.2.751/javascripts/site/common/nav');
+</script>
+<span id="cnzz_stat_icon_1253353781" style="display:none;"><a href="http://www.cnzz.com/stat/website.php?web_id=1253353781" target="_blank" title="站长统计">站长统计</a></span>
+<script type="text/javascript">
+(function (window, undefined) {
+window.post = {
+id: 22696,
+postType: 2,
+entityType: 8,
+isAdmin: false,
+isLiked:  false ,
+isFollowed:  false ,
+authorId: 906271,
+hostId: 7963796,
+isActivated: true,
+isGilded: true
+};
+window.comment = {
+count: 7,
+all: [{"commentCnt":0,"edited":false,"createTime":1490429886000,"toCommentId":0,"updateTime":1490429886000,"isDisLiked":false,"thumbNail":"https://images.nowcoder.com/images/20161220/515959_1482246541813_475AEC817DA08B2AF3F180A617EF51D5@0e_50w_50h_0c_1i_1o_90Q_1x","authorId":515959,"content":"果姐姐好快","id":437555,"headImg":"https://images.nowcoder.com/images/20161220/515959_1482246541813_475AEC817DA08B2AF3F180A617EF51D5@0e_100w_100h_0c_1i_1o_90Q_1x","toUserName":"","toUserId":0,"likes":0,"authorName":"Houskii","isLiked":false,"dislikes":0,"authorHonorLevel":7}, {"commentCnt":0,"edited":false,"createTime":1490430174000,"toCommentId":0,"updateTime":1490430174000,"isDisLiked":false,"thumbNail":"https://images.nowcoder.com/images/20160929/450315_1475116367502_C21C18731D0C9B0BDD14C81BD06F1640@0e_50w_50h_0c_1i_1o_90Q_1x","authorId":450315,"content":"厉害了，果姐！","id":437593,"headImg":"https://images.nowcoder.com/images/20160929/450315_1475116367502_C21C18731D0C9B0BDD14C81BD06F1640@0e_100w_100h_0c_1i_1o_90Q_1x","toUserName":"","toUserId":0,"likes":0,"authorName":"我家的狗不咬人","isLiked":false,"dislikes":0,"authorHonorLevel":7}, {"commentCnt":2,"edited":false,"createTime":1490430219000,"toCommentId":0,"updateTime":1490430219000,"isDisLiked":false,"thumbNail":"https://images.nowcoder.com/images/20161205/4732496_1480923796234_D638D1B9F29A9DF9F988538D4AFAD93B@0e_50w_50h_0c_1i_1o_90Q_1x","authorId":4732496,"content":"魔力手环那个不超时吗","id":437600,"headImg":"https://images.nowcoder.com/images/20161205/4732496_1480923796234_D638D1B9F29A9DF9F988538D4AFAD93B@0e_100w_100h_0c_1i_1o_90Q_1x","toUserName":"","toUserId":0,"likes":0,"authorName":"Java_Lct","isLiked":false,"dislikes":0,"authorHonorLevel":6}, {"commentCnt":2,"edited":false,"createTime":1490430403000,"toCommentId":0,"updateTime":1490430403000,"isDisLiked":false,"thumbNail":"https://images.nowcoder.com/images/20161118/409095_1479438002585_2BD8A0F9C2B661550CFD3E5BAE6248D3@0e_50w_50h_0c_1i_1o_90Q_1x","authorId":409095,"content":"两个小时有一个多小时都在做那道神奇的手环。。哎。。","id":437636,"headImg":"https://images.nowcoder.com/images/20161118/409095_1479438002585_2BD8A0F9C2B661550CFD3E5BAE6248D3@0e_100w_100h_0c_1i_1o_90Q_1x","toUserName":"","toUserId":0,"likes":0,"authorName":"恭喜您顺利获得一个实习offer","isLiked":false,"dislikes":0,"authorHonorLevel":8}, {"commentCnt":0,"edited":false,"createTime":1490430425000,"toCommentId":0,"updateTime":1490430425000,"isDisLiked":false,"thumbNail":"https://images.nowcoder.com/images/20161205/9687084_1480932608936_0564D4EC4885448FC55B26B11C1AE743@0e_50w_50h_0c_1i_1o_90Q_1x","authorId":9687084,"content":"魔力手环解法好骚啊...gg","id":437638,"headImg":"https://images.nowcoder.com/images/20161205/9687084_1480932608936_0564D4EC4885448FC55B26B11C1AE743@0e_100w_100h_0c_1i_1o_90Q_1x","toUserName":"","toUserId":0,"likes":0,"authorName":"Murcy2.0","isLiked":false,"dislikes":0,"authorHonorLevel":7}, {"commentCnt":0,"edited":false,"createTime":1490430769000,"toCommentId":0,"updateTime":1490430769000,"isDisLiked":false,"thumbNail":"https://images.nowcoder.com/head/512m.png@0e_50w_50h_0c_1i_1o_90Q_1x.png","authorId":834496,"content":"魔力手环快速幂不服不行","id":437662,"headImg":"https://images.nowcoder.com/head/512m.png@0e_100w_100h_0c_1i_1o_90Q_1x.png","toUserName":"","toUserId":0,"likes":0,"authorName":"Kirshry","isLiked":false,"dislikes":0,"authorHonorLevel":7}, {"commentCnt":0,"edited":false,"createTime":1490430987000,"toCommentId":0,"updateTime":1490430987000,"isDisLiked":false,"thumbNail":"https://images.nowcoder.com/images/20150720/68_1437377794671_68_1437377793730_avatar.jpg@0e_50w_50h_0c_1i_1o_90Q_1x","authorId":68,"content":"魔力手环碉堡","id":437678,"headImg":"https://images.nowcoder.com/images/20150720/68_1437377794671_68_1437377793730_avatar.jpg@0e_100w_100h_0c_1i_1o_90Q_1x","toUserName":"","toUserId":0,"likes":0,"authorName":"向宇同桌","isLiked":false,"dislikes":0,"authorHonorLevel":7}],
+draft: {"content":""},
+pageSize: 20,
+curPage: 1,
+totalPage: 1
+};
+seajs.use('nowcoder/1.2.751/javascripts/site/discuss/discussInPublic.js');
+})(window);
+</script>
+
+
+<audio controls="controls" style="display: none;"></audio><div class="js-editor-img-bar editor-img-bar" style="display:none;width:60px;"><a href="javascript:void(0);" title="放大" class="icon-zoom-in"></a><a href="javascript:void(0);" title="缩小" class="icon-zoom-out"></a></div><script src="./网易2017实习生招聘笔试题编程题参考思路和代码_笔经面经_牛客网_files/stat.php" type="text/javascript"></script><script src="./网易2017实习生招聘笔试题编程题参考思路和代码_笔经面经_牛客网_files/core.php" charset="utf-8" type="text/javascript"></script></body><div id="cyeBlackMaskLayer" style="background-color: rgb(19, 19, 19); position: fixed; width: 1980px; height: 1080px; z-index: -2147483648;"></div><div id="cye-workaround-body" style="position: absolute; left: 0px; top: 0px; z-index: -2147483646; background: none 0% 0% / auto repeat scroll padding-box border-box rgb(255, 255, 255); height: 13618px; width: 1903px;"></div><div id="cye-workaround-body-image" style="position: absolute; left: 0px; top: 0px; z-index: -2147483645; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0); height: 13618px; width: 1903px;"></div><style type="text/css">#yddContainer{display:block;font-family:Microsoft YaHei;position:relative;width:100%;height:100%;top:-4px;left:-4px;font-size:12px;border:1px solid}#yddTop{display:block;height:22px}#yddTopBorderlr{display:block;position:static;height:17px;padding:2px 28px;line-height:17px;font-size:12px;color:#5079bb;font-weight:bold;border-style:none solid;border-width:1px}#yddTopBorderlr .ydd-sp{position:absolute;top:2px;height:0;overflow:hidden}.ydd-icon{left:5px;width:17px;padding:0px 0px 0px 0px;padding-top:17px;background-position:-16px -44px}.ydd-close{right:5px;width:16px;padding-top:16px;background-position:left -44px}#yddKeyTitle{float:left;text-decoration:none}#yddMiddle{display:block;margin-bottom:10px}.ydd-tabs{display:block;margin:5px 0;padding:0 5px;height:18px;border-bottom:1px solid}.ydd-tab{display:block;float:left;height:18px;margin:0 5px -1px 0;padding:0 4px;line-height:18px;border:1px solid;border-bottom:none}.ydd-trans-container{display:block;line-height:160%}.ydd-trans-container a{text-decoration:none;}#yddBottom{position:absolute;bottom:0;left:0;width:100%;height:22px;line-height:22px;overflow:hidden;background-position:left -22px}.ydd-padding010{padding:0 10px}#yddWrapper{color:#252525;z-index:10001;background:url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ab20.png);}#yddContainer{background:#fff;border-color:#4b7598}#yddTopBorderlr{border-color:#f0f8fc}#yddWrapper .ydd-sp{background-image:url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ydd-sprite.png)}#yddWrapper a,#yddWrapper a:hover,#yddWrapper a:visited{color:#50799b}#yddWrapper .ydd-tabs{color:#959595}.ydd-tabs,.ydd-tab{background:#fff;border-color:#d5e7f3}#yddBottom{color:#363636}#yddWrapper{min-width:250px;max-width:400px;}</style></html>

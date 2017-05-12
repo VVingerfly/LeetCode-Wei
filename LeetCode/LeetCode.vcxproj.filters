@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{59c2524a-291d-41ef-a5e4-98f42a4ad52e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\NetEase">
+      <UniqueIdentifier>{8332843e-a6ec-47cb-9aa3-b48ac89f612b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\LeetCode">
+      <UniqueIdentifier>{e7d7b733-3b5e-4d3d-8e4d-16ad42d8676c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Tencent">
+      <UniqueIdentifier>{cd8617d4-91f2-4877-8114-81791bf8877c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\HuaWei">
+      <UniqueIdentifier>{a549a2be-7c1a-488e-ba9b-f893cb4fc289}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sort">
+      <UniqueIdentifier>{0008a9b4-cabe-4096-872f-53ed19f0a9a7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\NetEase5.cpp">
+      <Filter>src\NetEase</Filter>
+    </ClCompile>
+    <ClCompile Include="src\NetEase1.cpp">
+      <Filter>src\NetEase</Filter>
+    </ClCompile>
+    <ClCompile Include="src\NetEase2.cpp">
+      <Filter>src\NetEase</Filter>
+    </ClCompile>
+    <ClCompile Include="src\NetEase3.cpp">
+      <Filter>src\NetEase</Filter>
+    </ClCompile>
+    <ClCompile Include="src\NetEase6.cpp">
+      <Filter>src\NetEase</Filter>
+    </ClCompile>
+    <ClCompile Include="src\NetEase7.cpp">
+      <Filter>src\NetEase</Filter>
+    </ClCompile>
+    <ClCompile Include="src\NetEase8.cpp">
+      <Filter>src\NetEase</Filter>
+    </ClCompile>
+    <ClCompile Include="src\HuaWei2.cpp">
+      <Filter>src\HuaWei</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Sort\sort_algo.cpp">
+      <Filter>Sort</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Q1_TwoSum.h">
+      <Filter>src\LeetCode</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Q2_AddTwoNums.h">
+      <Filter>src\LeetCode</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Q3_LongestSubstring.h">
+      <Filter>src\LeetCode</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Q4_MedianOfTwoSortedArrays.h">
+      <Filter>src\LeetCode</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Q5_LongestPalindromicSubstring.h">
+      <Filter>src\LeetCode</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Q6_ZigZagConversion.h">
+      <Filter>src\LeetCode</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Q7_ReverseInteger.h">
+      <Filter>src\LeetCode</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Q8_StringToInteger.h">
+      <Filter>src\LeetCode</Filter>
+    </ClInclude>
+    <ClInclude Include="src\LeetCode.h">
+      <Filter>src\LeetCode</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TencentQ1.h">
+      <Filter>src\Tencent</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Sort\sort_algo.h">
+      <Filter>Sort</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

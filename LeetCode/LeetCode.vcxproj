@@ -19,14 +19,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{36D4F4BF-CDE1-4162-A51E-91376D754C36}</ProjectGuid>
+    <ProjectGuid>{95070477-DBA9-4C7E-B016-DECC7794511B}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Q2_AddTwoNums</RootNamespace>
+    <RootNamespace>LeetCode</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
@@ -142,13 +142,38 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <None Include="Q2.md" />
+    <ClCompile Include="src\HuaWei2.cpp" />
+    <ClCompile Include="src\main.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\NetEase1.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\NetEase2.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\NetEase3.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\NetEase5.cpp" />
+    <ClCompile Include="src\NetEase6.cpp" />
+    <ClCompile Include="src\NetEase7.cpp" />
+    <ClCompile Include="src\NetEase8.cpp" />
+    <ClCompile Include="src\Sort\sort_algo.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Q2_AddTwoNums.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Q2_AddTwoNums.h" />
+    <ClInclude Include="src\LeetCode.h" />
+    <ClInclude Include="src\Q1_TwoSum.h" />
+    <ClInclude Include="src\Q2_AddTwoNums.h" />
+    <ClInclude Include="src\Q3_LongestSubstring.h" />
+    <ClInclude Include="src\Q4_MedianOfTwoSortedArrays.h" />
+    <ClInclude Include="src\Q5_LongestPalindromicSubstring.h" />
+    <ClInclude Include="src\Q6_ZigZagConversion.h" />
+    <ClInclude Include="src\Q7_ReverseInteger.h" />
+    <ClInclude Include="src\Q8_StringToInteger.h" />
+    <ClInclude Include="src\Sort\sort_algo.h" />
+    <ClInclude Include="src\TencentQ1.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

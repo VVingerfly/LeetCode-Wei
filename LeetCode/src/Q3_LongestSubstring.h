@@ -14,7 +14,6 @@ using std::cout;
 using std::string;
 using std::unordered_map;
 
-void testQ3();
 
 class A3_LongestSubstring 
 {
@@ -80,3 +79,18 @@ public:
 		return maxLength;
 	}
 };
+
+
+void TestQ3()
+{
+	string str1 = "pwwkew";
+	string str2 = "b";
+	string str3 = "abcabcbb";
+	string str4 = "dvdf";
+
+	string str = str4;
+	A3_LongestSubstring solution;
+	int result = solution.lengthOfLongestSubstring(str);
+	cout << "input string: " << str << endl;
+	cout << "length of longest substring: " << result << endl;
+}

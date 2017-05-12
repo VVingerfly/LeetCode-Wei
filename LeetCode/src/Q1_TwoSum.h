@@ -12,8 +12,6 @@
 using std::vector;
 using std::unordered_map;
 
-void testQ1();
-
 class A1_TwoSum 
 {
 public:
@@ -38,3 +36,23 @@ public:
 	}
 };
 
+void TestQ1()
+{
+	//vector<int> nums = { 2, 7, 11, 15 };
+	//int target = 9;
+	//vector<int> nums = { 3, 2, 4 };
+	//int target = 6;
+	vector<int> nums = { 3, 3 };
+	int target = 6;
+
+	A1_TwoSum solution;
+	vector<int> result = solution.twoSum(nums, target);
+
+	for (size_t i = 0; i < result.size(); i++)
+	{
+		std::cout << result.at(i) << " ";
+	}
+	std::cout << std::endl;
+	std::cout << nums[result[0]] << " + " << nums[result[1]] << " = " << target << std::endl;
+
+}

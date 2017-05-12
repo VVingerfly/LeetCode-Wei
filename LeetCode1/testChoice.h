@@ -6,6 +6,11 @@
 //===============================================================
 
 #pragma once
+
+#include <iostream>
+using std::cout;
+using std::endl;
+
 //#define RUN_TEST_ALL
 
 #ifdef RUN_TEST_ALL
@@ -24,11 +29,13 @@
 #include "Q1_TwoSum/Q1_TwoSum.h"
 #pragma comment(lib, "Q1_TwoSum.lib")
 #endif
+
 //===============================================================
 #ifdef RUN_TEST_Q2
-#include "Q1_TwoSum/Q1_TwoSum.h"
-#pragma comment(lib, "Q1_TwoSum.lib")
+#include "Q2_AddTwoNums/Q2_AddTwoNums.h"
+#pragma comment(lib, "Q2_AddTwoNums.lib")
 #endif
+
 //===============================================================
 #ifdef RUN_TEST_Q3
 #include "Q3_LongestSubstring/Q3_LongestSubstring.h"
@@ -42,9 +49,9 @@
 void test()
 {
 #ifdef RUN_TEST_Q1
-	cout << "===============================================================" << endl;
+	cout << "====================== Solution 1 =============================" << endl;
 	testQ1();
-	cout << "===============================================================" << endl;
+	cout << "===============================================================" << endl << endl;
 #endif //RUN_TEST_Q1
 
 #ifdef RUN_TEST_Q2
