@@ -14,7 +14,7 @@ int main()
 	//TestQ7();
 	//TestQ8();
 
-
+	
 	CSortAlgo sortAlgo;
 	sortAlgo.randon_nums(8);
 	sortAlgo.test_sort();
