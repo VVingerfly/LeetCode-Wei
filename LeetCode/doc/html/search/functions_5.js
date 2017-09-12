@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['quick_5fsort',['quick_sort',['../class_c_sort_algo.html#ad37a6f012070a0a39dcdb5d6beed4c93',1,'CSortAlgo']]]
+  ['insert_5fsort',['insert_sort',['../class_c_sort_algo.html#a3095752baa5f6d51934e89baf62d7361',1,'CSortAlgo']]]
 ];

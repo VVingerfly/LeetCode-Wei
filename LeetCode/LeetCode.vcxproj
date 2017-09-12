@@ -142,38 +142,32 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\HuaWei2.cpp" />
-    <ClCompile Include="src\main.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="src\NetEase1.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="src\NetEase2.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="src\NetEase3.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="src\NetEase5.cpp" />
-    <ClCompile Include="src\NetEase6.cpp" />
-    <ClCompile Include="src\NetEase7.cpp" />
-    <ClCompile Include="src\NetEase8.cpp" />
+    <ClCompile Include="src\CppNote\CNote1.cpp" />
+    <ClCompile Include="src\CppNote\CNote2.cpp" />
+    <ClCompile Include="src\Huawei\HuaWei1.cpp" />
+    <ClCompile Include="src\Huawei\HuaWei2.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\NetEase\NetEase1.cpp" />
+    <ClCompile Include="src\NetEase\NetEase2.cpp" />
+    <ClCompile Include="src\NetEase\NetEase3.cpp" />
+    <ClCompile Include="src\NetEase\NetEase5.cpp" />
+    <ClCompile Include="src\NetEase\NetEase6.cpp" />
+    <ClCompile Include="src\NetEase\NetEase7.cpp" />
+    <ClCompile Include="src\NetEase\NetEase8.cpp" />
     <ClCompile Include="src\Sort\sort_algo.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\LeetCode.h" />
-    <ClInclude Include="src\Q1_TwoSum.h" />
-    <ClInclude Include="src\Q2_AddTwoNums.h" />
-    <ClInclude Include="src\Q3_LongestSubstring.h" />
-    <ClInclude Include="src\Q4_MedianOfTwoSortedArrays.h" />
-    <ClInclude Include="src\Q5_LongestPalindromicSubstring.h" />
-    <ClInclude Include="src\Q6_ZigZagConversion.h" />
-    <ClInclude Include="src\Q7_ReverseInteger.h" />
-    <ClInclude Include="src\Q8_StringToInteger.h" />
+    <ClInclude Include="src\global.h" />
+    <ClInclude Include="src\LeetCode\LeetCode.h" />
+    <ClInclude Include="src\LeetCode\Q1_TwoSum.h" />
+    <ClInclude Include="src\LeetCode\Q2_AddTwoNums.h" />
+    <ClInclude Include="src\LeetCode\Q3_LongestSubstring.h" />
+    <ClInclude Include="src\LeetCode\Q4_MedianOfTwoSortedArrays.h" />
+    <ClInclude Include="src\LeetCode\Q5_LongestPalindromicSubstring.h" />
+    <ClInclude Include="src\LeetCode\Q6_ZigZagConversion.h" />
+    <ClInclude Include="src\LeetCode\Q7_ReverseInteger.h" />
+    <ClInclude Include="src\LeetCode\Q8_StringToInteger.h" />
     <ClInclude Include="src\Sort\sort_algo.h" />
-    <ClInclude Include="src\TencentQ1.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

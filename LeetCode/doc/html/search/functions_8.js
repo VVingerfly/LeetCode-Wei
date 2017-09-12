@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['test_5fsort',['test_sort',['../class_c_sort_algo.html#a2eb6522682aab00c1df2eb3798912c97',1,'CSortAlgo']]]
+  ['print_5fnums',['print_nums',['../class_c_sort_algo.html#a73fd2ee73bc017fdd76eb8bdab10c02d',1,'CSortAlgo']]],
+  ['printsortstr',['printSortStr',['../_q6___zig_zag_conversion_8h.html#a17087dc89575dce9c0d8a7e10d81ed95',1,'Q6_ZigZagConversion.h']]]
 ];

@@ -199,7 +199,7 @@ void CSortAlgo::quick_sort(vector<int> &nums, int left, int right)
 	}
 }
 
-/*! @brief 快速排序
+/*! @brief 归并排序
 
  * 算法之原理： 归并排序具体工作原理如下（假设序列共有n个元素）：
  * 将序列每相邻两个数字进行归并操作（merge)，形成floor(n / 2)个序列，排序后每个序列包含两个元素
