@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['heap_5fsort',['heap_sort',['../class_c_sort_algo.html#ad81a03f9e4a3d1d0a3690485c35acd44',1,'CSortAlgo']]]
+  ['bubble_5fsort',['bubble_sort',['../class_c_sort_algo.html#a0ce54b0167d658aedf0f603979761c88',1,'CSortAlgo']]]
 ];

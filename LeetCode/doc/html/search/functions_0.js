@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['bubble_5fsort',['bubble_sort',['../class_c_sort_algo.html#a0ce54b0167d658aedf0f603979761c88',1,'CSortAlgo']]]
+  ['addtwonumbers',['addTwoNumbers',['../class_a2___add_two_nums.html#a9325b7b0abb76432f07a56bdc21b7f4e',1,'A2_AddTwoNums']]]
 ];

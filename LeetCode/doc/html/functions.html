@@ -5,13 +5,29 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.12"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: Class Members</title>
+<title>myLeetCode: Class Members</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -21,9 +37,25 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">myLeetCode
    </div>
+   <div id="projectbrief">my leetcode results and some other notes for hunting jobs</div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -33,16 +65,21 @@
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-</script>
-<div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('functions.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -58,9 +95,24 @@ $(function() {
 </div>
 
 <div class="contents">
-<div class="textblock">Here is a list of all documented class members with links to the class documentation for each member:</div><ul>
+<div class="textblock">Here is a list of all class members with links to the classes they belong to:</div><ul>
+<li>addTwoNumbers()
+: <a class="el" href="class_a2___add_two_nums.html#a9325b7b0abb76432f07a56bdc21b7f4e">A2_AddTwoNums</a>
+</li>
 <li>bubble_sort()
 : <a class="el" href="class_c_sort_algo.html#a0ce54b0167d658aedf0f603979761c88">CSortAlgo</a>
+</li>
+<li>convert()
+: <a class="el" href="class_a6___zig_zag_conversion.html#a8855072331e751d24d709d7870239b41">A6_ZigZagConversion</a>
+</li>
+<li>CSortAlgo()
+: <a class="el" href="class_c_sort_algo.html#aab87fed7a7078ff451e7bbd46e4b6214">CSortAlgo</a>
+</li>
+<li>findMedianSortedArrays()
+: <a class="el" href="class_a4___median_of_two_sorted_arrays.html#ab093a00fda335f08798cf798d3f17099">A4_MedianOfTwoSortedArrays</a>
+</li>
+<li>heap_adjust()
+: <a class="el" href="class_c_sort_algo.html#a4e914cae14c15e8a75c7cea33ed9b439">CSortAlgo</a>
 </li>
 <li>heap_sort()
 : <a class="el" href="class_c_sort_algo.html#ad81a03f9e4a3d1d0a3690485c35acd44">CSortAlgo</a>
@@ -68,8 +120,29 @@ $(function() {
 <li>insert_sort()
 : <a class="el" href="class_c_sort_algo.html#a3095752baa5f6d51934e89baf62d7361">CSortAlgo</a>
 </li>
+<li>lengthOfLongestSubstring()
+: <a class="el" href="class_a3___longest_substring.html#afbd5622e1e0e1b75d9dddd93c7804930">A3_LongestSubstring</a>
+</li>
+<li>ListNode()
+: <a class="el" href="struct_list_node.html#aaad9b553e2f936726f5b35ff2734125d">ListNode</a>
+</li>
+<li>longestPalindrome()
+: <a class="el" href="class_a5___longest_palindromic_substring.html#aef25c5f7204d18ecd7857ec58c067825">A5_LongestPalindromicSubstring</a>
+</li>
+<li>merge()
+: <a class="el" href="class_c_sort_algo.html#a148af9c8ca6ff69d7eead2464dbbffe5">CSortAlgo</a>
+</li>
 <li>merge_sort()
 : <a class="el" href="class_c_sort_algo.html#a25109772bb378cf42f34813e06d8a9d1">CSortAlgo</a>
+</li>
+<li>myAtoi()
+: <a class="el" href="class_a8___string_to_integer.html#a1cf5f1bb2ab0d25d1e0dcc790da08a85">A8_StringToInteger</a>
+</li>
+<li>next
+: <a class="el" href="struct_list_node.html#ad78b392c2ddc25c3243d0c2f30692fb1">ListNode</a>
+</li>
+<li>nums_
+: <a class="el" href="class_c_sort_algo.html#ae796c28480b9ea83543635bd13fd14fc">CSortAlgo</a>
 </li>
 <li>print_nums()
 : <a class="el" href="class_c_sort_algo.html#a73fd2ee73bc017fdd76eb8bdab10c02d">CSortAlgo</a>
@@ -80,19 +153,49 @@ $(function() {
 <li>randon_nums()
 : <a class="el" href="class_c_sort_algo.html#a3e16fa837f31b55a907c2ae08010441c">CSortAlgo</a>
 </li>
+<li>reverse()
+: <a class="el" href="class_a7___reverse_integer.html#a7b5d6f00e1ca3aecc2a44976e325e85a">A7_ReverseInteger</a>
+</li>
 <li>select_sort()
 : <a class="el" href="class_c_sort_algo.html#aeef7ae8fed73aa9997f4e2443fcfdf4b">CSortAlgo</a>
+</li>
+<li>test()
+: <a class="el" href="class_c_note2.html#a3dcb8c88f10a459456ae5118fd9b5630">CNote2</a>
 </li>
 <li>test_sort()
 : <a class="el" href="class_c_sort_algo.html#a2eb6522682aab00c1df2eb3798912c97">CSortAlgo</a>
 </li>
+<li>twoSum()
+: <a class="el" href="class_a1___two_sum.html#a0880ed347006e7309ae96ef961e2ca2d">A1_TwoSum</a>
+</li>
+<li>val
+: <a class="el" href="struct_list_node.html#a58389d1d1fc5430c2f4ce7c5d5dc48b3">ListNode</a>
+</li>
+<li>~CNote2_base1()
+: <a class="el" href="class_c_note2_1_1_c_note2__base1.html#a029b7c7f5fddc9ab064d929b943cd208">CNote2::CNote2_base1</a>
+</li>
+<li>~CNote2_base2()
+: <a class="el" href="class_c_note2_1_1_c_note2__base2.html#a72f09013b560aa4f12b239bfc0e7ffbd">CNote2::CNote2_base2</a>
+</li>
+<li>~CNote2_derived1()
+: <a class="el" href="class_c_note2_1_1_c_note2__derived1.html#ad3fcb8ed1f59ed402bca3628f508f10a">CNote2::CNote2_derived1</a>
+</li>
+<li>~CNote2_derived2()
+: <a class="el" href="class_c_note2_1_1_c_note2__derived2.html#ac8523dec5b92119fb76f41f1e4969114">CNote2::CNote2_derived2</a>
+</li>
+<li>~CSortAlgo()
+: <a class="el" href="class_c_sort_algo.html#aa39cce7a6c672e0a728c78eae2b27006">CSortAlgo</a>
+</li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.12
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.12 </li>
+  </ul>
+</div>
 </body>
 </html>
