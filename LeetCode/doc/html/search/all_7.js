@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['leetcode_2eh',['LeetCode.h',['../_leet_code_8h.html',1,'']]],
-  ['lengthoflongestsubstring',['lengthOfLongestSubstring',['../class_a3___longest_substring.html#afbd5622e1e0e1b75d9dddd93c7804930',1,'A3_LongestSubstring']]],
-  ['listnode',['ListNode',['../struct_list_node.html',1,'ListNode'],['../struct_list_node.html#aaad9b553e2f936726f5b35ff2734125d',1,'ListNode::ListNode()']]],
-  ['longestpalindrome',['longestPalindrome',['../class_a5___longest_palindromic_substring.html#aef25c5f7204d18ecd7857ec58c067825',1,'A5_LongestPalindromicSubstring']]]
+  ['insert_5fsort',['insert_sort',['../class_c_sort_algo.html#a3095752baa5f6d51934e89baf62d7361',1,'CSortAlgo']]],
+  ['insertlisthead',['insertListHead',['../class_c_sohu1.html#ae25c33dc2665f49b60ca1dbb00de595b',1,'CSohu1']]],
+  ['isuglynumber',['IsUglyNumber',['../class_alg_ugly_number.html#a93a0c31e35d3e12b9a5bee98c22162d3',1,'AlgUglyNumber']]]
 ];

@@ -19,6 +19,15 @@
     <Filter Include="LeetCode">
       <UniqueIdentifier>{90bb451e-de8c-49ff-a18c-54c9b5ab6c03}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Alg">
+      <UniqueIdentifier>{6b94f8dd-dff6-4a0b-8b83-f17c43afd869}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Company">
+      <UniqueIdentifier>{d2faa236-483e-4917-9277-9e00e62ea40a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Company\Sohu">
+      <UniqueIdentifier>{7103a245-8a72-4f8a-b6ca-e462031a79e4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Sort\sort_algo.cpp">
@@ -54,11 +63,38 @@
     <ClCompile Include="src\NetEase\NetEase8.cpp">
       <Filter>NetEase</Filter>
     </ClCompile>
-    <ClCompile Include="src\main.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="src\CppNote\CNote2.cpp">
       <Filter>CppNote</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Alg\UglyNumber.cpp">
+      <Filter>Alg</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CppNote\CNote3.cpp">
+      <Filter>CppNote</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CppNote\CNote4.cpp">
+      <Filter>CppNote</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LeetCode\LeetCodeMain.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Sort\sort_main.cpp">
+      <Filter>Sort</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Alg\LeastCommonMultiple.cpp">
+      <Filter>Alg</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Company\Sohu\Sohu1.cpp">
+      <Filter>Company\Sohu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Company\Sohu\Sohu2.cpp">
+      <Filter>Company\Sohu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Company\Sohu\Sohu3.cpp">
+      <Filter>Company\Sohu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Alg\GreatestCommonDivisor.cpp">
+      <Filter>Alg</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -94,6 +130,27 @@
     </ClInclude>
     <ClInclude Include="src\global.h">
       <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\LeetCode\Q120_Triangle.h">
+      <Filter>LeetCode</Filter>
+    </ClInclude>
+    <ClInclude Include="src\LeetCode\Q085_MaximalRectangle.h">
+      <Filter>LeetCode</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CppNote\CNoteDefs.h">
+      <Filter>CppNote</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Alg\AlgDefs.h">
+      <Filter>Alg</Filter>
+    </ClInclude>
+    <ClInclude Include="src\NetEase\NetEaseDefs.h">
+      <Filter>NetEase</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Huawei\HuaWeiDefs.h">
+      <Filter>Huawei</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Company\Sohu\SohuDefs.h">
+      <Filter>Company\Sohu</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

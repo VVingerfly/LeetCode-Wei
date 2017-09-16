@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['main',['main',['../_c_note2_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'CNote2.cpp']]],
-  ['merge',['merge',['../class_c_sort_algo.html#a148af9c8ca6ff69d7eead2464dbbffe5',1,'CSortAlgo']]],
-  ['merge_5fsort',['merge_sort',['../class_c_sort_algo.html#a25109772bb378cf42f34813e06d8a9d1',1,'CSortAlgo']]],
-  ['myatoi',['myAtoi',['../class_a8___string_to_integer.html#a1cf5f1bb2ab0d25d1e0dcc790da08a85',1,'A8_StringToInteger']]]
+  ['insert_5fsort',['insert_sort',['../class_c_sort_algo.html#a3095752baa5f6d51934e89baf62d7361',1,'CSortAlgo']]],
+  ['insertlisthead',['insertListHead',['../class_c_sohu1.html#ae25c33dc2665f49b60ca1dbb00de595b',1,'CSohu1']]],
+  ['isuglynumber',['IsUglyNumber',['../class_alg_ugly_number.html#a93a0c31e35d3e12b9a5bee98c22162d3',1,'AlgUglyNumber']]]
 ];

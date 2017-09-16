@@ -1,14 +1,9 @@
 var searchData=
 [
-  ['test',['test',['../class_c_note2.html#a3dcb8c88f10a459456ae5118fd9b5630',1,'CNote2']]],
-  ['test_5fsort',['test_sort',['../class_c_sort_algo.html#a2eb6522682aab00c1df2eb3798912c97',1,'CSortAlgo']]],
-  ['testq1',['TestQ1',['../_q1___two_sum_8h.html#a874b62929bee56575bafbbe76f9e1979',1,'Q1_TwoSum.h']]],
-  ['testq2',['testQ2',['../_q2___add_two_nums_8h.html#ab5f2eec3970a2713a80c002422c76b73',1,'Q2_AddTwoNums.h']]],
-  ['testq3',['TestQ3',['../_q3___longest_substring_8h.html#ad2325de6ce5de31f384abbba07222a24',1,'Q3_LongestSubstring.h']]],
-  ['testq4',['TestQ4',['../_q4___median_of_two_sorted_arrays_8h.html#a22e9b0a5ce9b6e0d69ed8d82ac388a2b',1,'Q4_MedianOfTwoSortedArrays.h']]],
-  ['testq5',['TestQ5',['../_q5___longest_palindromic_substring_8h.html#a5c78f67011a92c447c596bee6ec9f286',1,'Q5_LongestPalindromicSubstring.h']]],
-  ['testq6',['TestQ6',['../_q6___zig_zag_conversion_8h.html#a3ac6429375877dc4ae2b104ba89e6e24',1,'Q6_ZigZagConversion.h']]],
-  ['testq7',['TestQ7',['../_q7___reverse_integer_8h.html#a383b3ebdb465e75332e407c4cec68820',1,'Q7_ReverseInteger.h']]],
-  ['testq8',['TestQ8',['../_q8___string_to_integer_8h.html#afffb86c5d125829d0d0fdede7ff067cb',1,'Q8_StringToInteger.h']]],
-  ['twosum',['twoSum',['../class_a1___two_sum.html#a0880ed347006e7309ae96ef961e2ca2d',1,'A1_TwoSum']]]
+  ['randon_5fnums',['randon_nums',['../class_c_sort_algo.html#a3e16fa837f31b55a907c2ae08010441c',1,'CSortAlgo']]],
+  ['reverse',['reverse',['../class_a7___reverse_integer.html#a7b5d6f00e1ca3aecc2a44976e325e85a',1,'A7_ReverseInteger']]],
+  ['reverselist',['reverseList',['../class_c_sohu1.html#a54931b09aa6cd22e44d0d011e49d6bb1',1,'CSohu1']]],
+  ['reverselistrecursive',['reverseListRecursive',['../class_c_sohu1.html#a325cd3e06f4675c12714ce7d48e69125',1,'CSohu1']]],
+  ['runtest',['runTest',['../class_c_sohu1.html#a54dc2886075490c2ad1fa8e7ba5615f4',1,'CSohu1::runTest()'],['../class_c_sohu2.html#aab5e2f082ebe108d7e98e7052e30f10a',1,'CSohu2::runTest()'],['../class_c_sohu3.html#a26111b6644ad6ad1d6f9b91b6e819e44',1,'CSohu3::runTest()'],['../class_a85___maximal_rectangle.html#a3815d67819aa4bee9628c41ee96bb342',1,'A85_MaximalRectangle::runTest()'],['../class_a120___triangle.html#ae884b74d8d8781fbb489a9ad14ba7bce',1,'A120_Triangle::runTest()']]],
+  ['runtest2',['runTest2',['../class_a85___maximal_rectangle.html#aace77ed542faea5e139e15a2eee9b9a3',1,'A85_MaximalRectangle']]]
 ];

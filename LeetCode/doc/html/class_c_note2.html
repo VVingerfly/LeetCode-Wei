@@ -125,7 +125,11 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>如果要删除的是一个指向派生类对象的基类指针，则需要虚析构函数。 </p>
-<dl class="section note"><dt>Note</dt><dd>当我们<code>delete</code>动态分配的对象的指针时将执行析构函数。如果该指针指向继承体系中的某个类型， 则有可能出现指针的静态类型与被删除对象的动态类型不符的情况。例如，如果我们<code>delete一个<code>Base*</code>类型的指针，</code> 则该指针有可能实际指向了一个<code>Derived</code>类型的对象。如果这样的话，编译器就必须清楚它要执行的是<code>Derived</code>的析构函数， 和其他函数一样，我们通过将基类中将析构函数定义为虚函数以确保执行正确的析构函数版本： <div class="fragment"><div class="line"><span class="keyword">class </span>Base</div><div class="line">{</div><div class="line"><span class="keyword">public</span>:</div><div class="line">  <span class="comment">// 如果我们删除的是一个指向派生类对象的基类指针，则需要虚析构函数</span></div><div class="line">  <span class="keyword">virtual</span> ~Base() = <span class="keywordflow">default</span>; <span class="comment">//动态绑定析构函数</span></div><div class="line">};</div></div><!-- fragment --> </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>当我们<code>delete</code>动态分配的对象的指针时将执行析构函数。如果该指针指向继承体系中的某个类型， 则有可能出现指针的静态类型与被删除对象的动态类型不符的情况。例如，如果我们<code>delete一个<code>Base*</code>类型的指针，</code> 则该指针有可能实际指向了一个<code>Derived</code>类型的对象。如果这样的话，编译器就必须清楚它要执行的是<code>Derived</code>的析构函数， 和其他函数一样，我们通过在基类中将析构函数定义为虚函数以确保执行正确的析构函数版本： <div class="fragment"><div class="line"><span class="keyword">class </span>Base</div><div class="line">{</div><div class="line"><span class="keyword">public</span>:</div><div class="line">  <span class="comment">// 如果我们删除的是一个指向派生类对象的基类指针，则需要虚析构函数</span></div><div class="line">  <span class="keyword">virtual</span> ~Base() = <span class="keywordflow">default</span>; <span class="comment">//动态绑定析构函数</span></div><div class="line">};</div></div><!-- fragment --> 调用的顺序：<ul>
+<li>构造函数：先调用父类的，再调用子类的构造函数</li>
+<li>析构函数：先调用子类的，再调用父类的析构函数 </li>
+</ul>
+</dd></dl>
 <dl class="section see"><dt>See also</dt><dd>C++ Primer Chapter 15.7.1 虚析构函数 </dd></dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a3dcb8c88f10a459456ae5118fd9b5630"></a>
