@@ -8,5 +8,12 @@
 #include "Q7_ReverseInteger.h"
 #include "Q8_StringToInteger.h"
 
+
+#include "Q062_UniquePaths.h"
+#include "Q063_UniquePathsII.h"
+
+
 #include "Q085_MaximalRectangle.h"
 #include "Q120_Triangle.h"
+
+#include "Q322_CoinChange.h"

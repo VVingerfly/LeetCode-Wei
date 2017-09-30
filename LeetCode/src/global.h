@@ -1,9 +1,10 @@
 #pragma once
 
-//#define RUN_NETEASE
+//#define RUN_NetEase
 //#define RUN_HuaWei
-#define RUN_Sohu
-
+//#define RUN_Sohu
+//#define RUN_XiaoMi
+//#define RUN_SenseTime
 
 //#define RUN_Alg
 //#define RUN_Sort

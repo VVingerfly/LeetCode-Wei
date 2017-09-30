@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['q085_5fmaximalrectangle_5fh_5f',['Q085_MaximalRectangle_h_',['../_q085___maximal_rectangle_8h.html#ab8a5af9786704b9c258daf8f28a8b0e1',1,'Q085_MaximalRectangle.h']]],
-  ['q120_5ftriangle_5fh_5f_5f',['Q120_Triangle_h__',['../_q120___triangle_8h.html#af60998af44cd26986c4a705081902b3e',1,'Q120_Triangle.h']]]
+  ['max',['max',['../_q085___maximal_rectangle_8h.html#ac39d9cef6a5e030ba8d9e11121054268',1,'Q085_MaximalRectangle.h']]],
+  ['maxvex',['MAXVEX',['../_shortest_path_dijkstra_8cpp.html#aa5ab9adeb284b9c82c7a4a4423403fb8',1,'MAXVEX():&#160;ShortestPathDijkstra.cpp'],['../_shortest_path_floyd_8cpp.html#aa5ab9adeb284b9c82c7a4a4423403fb8',1,'MAXVEX():&#160;ShortestPathFloyd.cpp']]],
+  ['min',['min',['../_ugly_number_8cpp.html#abb702d8b501669a23aa0ab3b281b9384',1,'min():&#160;UglyNumber.cpp'],['../_q085___maximal_rectangle_8h.html#abb702d8b501669a23aa0ab3b281b9384',1,'min():&#160;Q085_MaximalRectangle.h'],['../_q120___triangle_8h.html#abb702d8b501669a23aa0ab3b281b9384',1,'min():&#160;Q120_Triangle.h']]]
 ];

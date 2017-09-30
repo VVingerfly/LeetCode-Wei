@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['point',['Point',['../class_c_note4_1_1_point.html',1,'CNote4']]]
+  ['mgraph',['MGraph',['../struct_alg_floyd_1_1_m_graph.html',1,'AlgFloyd']]],
+  ['mgraph',['MGraph',['../struct_alg_dij_1_1_m_graph.html',1,'AlgDij']]]
 ];

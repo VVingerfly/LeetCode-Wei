@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['test_5fleetcode',['TEST_LeetCode',['../main_8cpp.html#aab6511f1f0fd9e2ba50fb4e6c898ee54',1,'main.cpp']]]
+  ['run_5f',['RUN_',['../main_8cpp.html#a58281606101496f7efb19b77f383880f',1,'main.cpp']]],
+  ['run_5fleetcode',['RUN_LeetCode',['../global_8h.html#a4652e918066d829053e05fb465c22f77',1,'global.h']]]
 ];

@@ -10,12 +10,6 @@
     <Filter Include="CppNote">
       <UniqueIdentifier>{5728bcd1-5f4f-40f1-a4a6-4c3232327cca}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Huawei">
-      <UniqueIdentifier>{7f0ddb4b-75ee-419a-b033-2e28180794a3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="NetEase">
-      <UniqueIdentifier>{aff67c83-1a49-49b8-9071-9bd0e8b3ff15}</UniqueIdentifier>
-    </Filter>
     <Filter Include="LeetCode">
       <UniqueIdentifier>{90bb451e-de8c-49ff-a18c-54c9b5ab6c03}</UniqueIdentifier>
     </Filter>
@@ -28,6 +22,18 @@
     <Filter Include="Company\Sohu">
       <UniqueIdentifier>{7103a245-8a72-4f8a-b6ca-e462031a79e4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Company\NetEase">
+      <UniqueIdentifier>{0e3c700b-7e04-4f53-9266-bc62c76f78e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Company\HuaWei">
+      <UniqueIdentifier>{861e23a1-93cc-485b-b70c-99682c39ba09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Company\XiaoMi">
+      <UniqueIdentifier>{1df3181e-b542-4e6a-8fcd-2076f2f5fddc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Company\SenseTime">
+      <UniqueIdentifier>{7d2a913b-970a-4af6-8234-12e189e69a97}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Sort\sort_algo.cpp">
@@ -35,33 +41,6 @@
     </ClCompile>
     <ClCompile Include="src\CppNote\CNote1.cpp">
       <Filter>CppNote</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Huawei\HuaWei1.cpp">
-      <Filter>Huawei</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Huawei\HuaWei2.cpp">
-      <Filter>Huawei</Filter>
-    </ClCompile>
-    <ClCompile Include="src\NetEase\NetEase1.cpp">
-      <Filter>NetEase</Filter>
-    </ClCompile>
-    <ClCompile Include="src\NetEase\NetEase2.cpp">
-      <Filter>NetEase</Filter>
-    </ClCompile>
-    <ClCompile Include="src\NetEase\NetEase3.cpp">
-      <Filter>NetEase</Filter>
-    </ClCompile>
-    <ClCompile Include="src\NetEase\NetEase5.cpp">
-      <Filter>NetEase</Filter>
-    </ClCompile>
-    <ClCompile Include="src\NetEase\NetEase6.cpp">
-      <Filter>NetEase</Filter>
-    </ClCompile>
-    <ClCompile Include="src\NetEase\NetEase7.cpp">
-      <Filter>NetEase</Filter>
-    </ClCompile>
-    <ClCompile Include="src\NetEase\NetEase8.cpp">
-      <Filter>NetEase</Filter>
     </ClCompile>
     <ClCompile Include="src\CppNote\CNote2.cpp">
       <Filter>CppNote</Filter>
@@ -94,6 +73,90 @@
       <Filter>Company\Sohu</Filter>
     </ClCompile>
     <ClCompile Include="src\Alg\GreatestCommonDivisor.cpp">
+      <Filter>Alg</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Company\NetEase\NetEase1.cpp">
+      <Filter>Company\NetEase</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Company\NetEase\NetEase2.cpp">
+      <Filter>Company\NetEase</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Company\NetEase\NetEase3.cpp">
+      <Filter>Company\NetEase</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Company\NetEase\NetEase5.cpp">
+      <Filter>Company\NetEase</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Company\NetEase\NetEase6.cpp">
+      <Filter>Company\NetEase</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Company\NetEase\NetEase7.cpp">
+      <Filter>Company\NetEase</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Company\NetEase\NetEase8.cpp">
+      <Filter>Company\NetEase</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Company\NetEase\NetEase9.cpp">
+      <Filter>Company\NetEase</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Company\NetEase\NetEase10.cpp">
+      <Filter>Company\NetEase</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Company\NetEase\NetEase11.cpp">
+      <Filter>Company\NetEase</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Company\NetEase\NetEase12.cpp">
+      <Filter>Company\NetEase</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Company\NetEase\NetEase13.cpp">
+      <Filter>Company\NetEase</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Company\HuaWei\HuaWei1.cpp">
+      <Filter>Company\HuaWei</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Company\HuaWei\HuaWei2.cpp">
+      <Filter>Company\HuaWei</Filter>
+    </ClCompile>
+    <ClCompile Include="src\test.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Alg\ShortestPathFloyd.cpp">
+      <Filter>Alg</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Alg\MiniSpanTreePrim.cpp">
+      <Filter>Alg</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Alg\MiniSpanTreeKruskal.cpp">
+      <Filter>Alg</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Alg\StringMatchKMP.cpp">
+      <Filter>Alg</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Alg\ShortestPathDijkstra.cpp">
+      <Filter>Alg</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Company\XiaoMi\XiaoMi1.cpp">
+      <Filter>Company\XiaoMi</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Company\XiaoMi\XiaoMi2.cpp">
+      <Filter>Company\XiaoMi</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Company\XiaoMi\XiaoMi3.cpp">
+      <Filter>Company\XiaoMi</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Company\SenseTime\SenseTime1.cpp">
+      <Filter>Company\SenseTime</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Company\SenseTime\SenseTime2.cpp">
+      <Filter>Company\SenseTime</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CppNote\CNote5.cpp">
+      <Filter>CppNote</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Alg\SecondMaxNumber.cpp">
+      <Filter>Alg</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Alg\MinNumber.cpp">
       <Filter>Alg</Filter>
     </ClCompile>
   </ItemGroup>
@@ -143,14 +206,35 @@
     <ClInclude Include="src\Alg\AlgDefs.h">
       <Filter>Alg</Filter>
     </ClInclude>
-    <ClInclude Include="src\NetEase\NetEaseDefs.h">
-      <Filter>NetEase</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Huawei\HuaWeiDefs.h">
-      <Filter>Huawei</Filter>
-    </ClInclude>
     <ClInclude Include="src\Company\Sohu\SohuDefs.h">
       <Filter>Company\Sohu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Company\NetEase\NetEaseDefs.h">
+      <Filter>Company\NetEase</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Company\HuaWei\HuaWeiDefs.h">
+      <Filter>Company\HuaWei</Filter>
+    </ClInclude>
+    <ClInclude Include="src\LeetCode\Q9_PalindromeNumber.h">
+      <Filter>LeetCode</Filter>
+    </ClInclude>
+    <ClInclude Include="src\LeetCode\Q10_.h">
+      <Filter>LeetCode</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Company\XiaoMi\XiaoMiDefs.h">
+      <Filter>Company\XiaoMi</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Company\SenseTime\SenseTimeDefs.h">
+      <Filter>Company\SenseTime</Filter>
+    </ClInclude>
+    <ClInclude Include="src\LeetCode\Q062_UniquePaths.h">
+      <Filter>LeetCode</Filter>
+    </ClInclude>
+    <ClInclude Include="src\LeetCode\Q063_UniquePathsII.h">
+      <Filter>LeetCode</Filter>
+    </ClInclude>
+    <ClInclude Include="src\LeetCode\Q322_CoinChange.h">
+      <Filter>LeetCode</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

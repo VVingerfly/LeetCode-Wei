@@ -19,5 +19,10 @@ var dir_5fe29c079002bd39396063c0743d7fd5 =
       [ "CNote4", "class_c_note4.html", "class_c_note4" ],
       [ "Point", "class_c_note4_1_1_point.html", "class_c_note4_1_1_point" ]
     ] ],
+    [ "CNote5.cpp", "_c_note5_8cpp.html", [
+      [ "CNote5", "class_c_note5.html", "class_c_note5" ],
+      [ "CNote5_base", "class_c_note5_1_1_c_note5__base.html", "class_c_note5_1_1_c_note5__base" ],
+      [ "CNote5_derived", "class_c_note5_1_1_c_note5__derived.html", "class_c_note5_1_1_c_note5__derived" ]
+    ] ],
     [ "CNoteDefs.h", "_c_note_defs_8h.html", null ]
 ];

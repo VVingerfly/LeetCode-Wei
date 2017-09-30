@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['max',['max',['../_q085___maximal_rectangle_8h.html#ac39d9cef6a5e030ba8d9e11121054268',1,'Q085_MaximalRectangle.h']]],
-  ['min',['min',['../_ugly_number_8cpp.html#abb702d8b501669a23aa0ab3b281b9384',1,'min():&#160;UglyNumber.cpp'],['../_q085___maximal_rectangle_8h.html#abb702d8b501669a23aa0ab3b281b9384',1,'min():&#160;Q085_MaximalRectangle.h'],['../_q120___triangle_8h.html#abb702d8b501669a23aa0ab3b281b9384',1,'min():&#160;Q120_Triangle.h']]]
+  ['inf',['INF',['../_shortest_path_dijkstra_8cpp.html#a12c2040f25d8e3a7b9e1c2024c618cb6',1,'ShortestPathDijkstra.cpp']]],
+  ['infinity',['INFINITY',['../_shortest_path_floyd_8cpp.html#a956e2723d559858d08644ac99146e910',1,'ShortestPathFloyd.cpp']]]
 ];

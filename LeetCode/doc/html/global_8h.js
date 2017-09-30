@@ -1,4 +1,4 @@
 var global_8h =
 [
-    [ "RUN_Sohu", "global_8h.html#a80fab8fd7515555e7586511d9ab1d4ce", null ]
+    [ "RUN_LeetCode", "global_8h.html#a4652e918066d829053e05fb465c22f77", null ]
 ];

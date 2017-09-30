@@ -1,6 +1,19 @@
 var searchData=
 [
+  ['searchcol',['searchCol',['../class_c_net_ease12.html#a447c947a5bb65695b8d0ba57d94e5d92',1,'CNetEase12']]],
+  ['searchdiag',['searchDiag',['../class_c_net_ease12.html#a2ba5236ab9b363c0223ff832bc20f65e',1,'CNetEase12']]],
+  ['searchrow',['searchRow',['../class_c_net_ease12.html#ab7e6a142dd4b9eeec7636876fe6b5d81',1,'CNetEase12']]],
   ['select_5fsort',['select_sort',['../class_c_sort_algo.html#aeef7ae8fed73aa9997f4e2443fcfdf4b',1,'CSortAlgo']]],
+  ['sensetime1',['SenseTime1',['../class_sense_time1.html',1,'']]],
+  ['sensetime1_2ecpp',['SenseTime1.cpp',['../_sense_time1_8cpp.html',1,'']]],
+  ['sensetime2',['SenseTime2',['../class_sense_time2.html',1,'']]],
+  ['sensetime2_2ecpp',['SenseTime2.cpp',['../_sense_time2_8cpp.html',1,'']]],
+  ['sensetimedefs_2eh',['SenseTimeDefs.h',['../_sense_time_defs_8h.html',1,'']]],
+  ['shortestpath_5fdijkstra',['ShortestPath_Dijkstra',['../class_alg_dij.html#ac32df846b94bd1d82306613acc62f156',1,'AlgDij']]],
+  ['shortestpath_5ffloyd',['ShortestPath_Floyd',['../class_alg_floyd.html#af8fb6e87fb262b3c4ec08a95e6aa3d8f',1,'AlgFloyd']]],
+  ['shortestpathdijkstra_2ecpp',['ShortestPathDijkstra.cpp',['../_shortest_path_dijkstra_8cpp.html',1,'']]],
+  ['shortestpathfloyd_2ecpp',['ShortestPathFloyd.cpp',['../_shortest_path_floyd_8cpp.html',1,'']]],
+  ['shortpathtable',['ShortPathTable',['../class_alg_dij.html#a3800ed934c3aff7e2187d5ee15d4c043',1,'AlgDij::ShortPathTable()'],['../class_alg_floyd.html#ae5a1084503d0d0d86b6cd4db1673557c',1,'AlgFloyd::ShortPathTable()']]],
   ['sohu1_2ecpp',['Sohu1.cpp',['../_sohu1_8cpp.html',1,'']]],
   ['sohu2_2ecpp',['Sohu2.cpp',['../_sohu2_8cpp.html',1,'']]],
   ['sohu3_2ecpp',['Sohu3.cpp',['../_sohu3_8cpp.html',1,'']]],
@@ -9,5 +22,7 @@ var searchData=
   ['sort_5falgo_2ecpp',['sort_algo.cpp',['../sort__algo_8cpp.html',1,'']]],
   ['sort_5falgo_2eh',['sort_algo.h',['../sort__algo_8h.html',1,'']]],
   ['sort_5fmain_2ecpp',['sort_main.cpp',['../sort__main_8cpp.html',1,'']]],
-  ['str_5fbrackets',['str_brackets',['../class_c_sohu2.html#a136368865cf3ea06ad8283203f2afc60',1,'CSohu2']]]
+  ['str_5fbrackets',['str_brackets',['../class_c_sohu2.html#a136368865cf3ea06ad8283203f2afc60',1,'CSohu2']]],
+  ['stringmatchkmp_2ecpp',['StringMatchKMP.cpp',['../_string_match_k_m_p_8cpp.html',1,'']]],
+  ['substrcount',['subStrCount',['../class_c_net_ease12.html#a845574d2acd7724170b212baee417c12',1,'CNetEase12::subStrCount()'],['../class_xiao_mi1.html#a86f329d1560c565bfa3bc06423f61111',1,'XiaoMi1::subStrCount()']]]
 ];
