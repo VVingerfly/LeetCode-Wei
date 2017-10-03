@@ -1,10 +1,7 @@
 
-#pragma once
-#include "../global.h"
-
-#ifdef CNOTE1
-
+#include "CNoteDefs.h"
 #include <iostream>
+
 /**
  * @brief 成员变量的初始化顺序只与它们在类中声明的顺序有关，与在初始化列表中的顺序无关。
  *
@@ -24,6 +21,7 @@ public:
 	void Print() { std::cout << "n1: " << n1 << ", n2: " << n2 << std::endl; }
 };
 
+#ifdef RUN_CNOTE1
 int main()
 {
 	CNote1 a;
@@ -32,5 +30,4 @@ int main()
 	b.Print();
 	return 0;
 }
-
 #endif

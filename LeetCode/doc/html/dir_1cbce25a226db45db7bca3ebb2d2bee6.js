@@ -6,5 +6,6 @@ var dir_1cbce25a226db45db7bca3ebb2d2bee6 =
     [ "NetEase5.cpp", "_net_ease5_8cpp.html", null ],
     [ "NetEase6.cpp", "_net_ease6_8cpp.html", null ],
     [ "NetEase7.cpp", "_net_ease7_8cpp.html", null ],
-    [ "NetEase8.cpp", "_net_ease8_8cpp.html", null ]
+    [ "NetEase8.cpp", "_net_ease8_8cpp.html", null ],
+    [ "NetEaseDefs.h", "_net_ease_defs_8h.html", null ]
 ];

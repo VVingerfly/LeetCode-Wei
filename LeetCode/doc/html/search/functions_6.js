@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['lengthoflongestsubstring',['lengthOfLongestSubstring',['../class_a3___longest_substring.html#afbd5622e1e0e1b75d9dddd93c7804930',1,'A3_LongestSubstring']]],
-  ['listnode',['ListNode',['../struct_list_node.html#aaad9b553e2f936726f5b35ff2734125d',1,'ListNode']]],
-  ['longestpalindrome',['longestPalindrome',['../class_a5___longest_palindromic_substring.html#aef25c5f7204d18ecd7857ec58c067825',1,'A5_LongestPalindromicSubstring']]]
+  ['heap_5fadjust',['heap_adjust',['../class_c_sort_algo.html#a4e914cae14c15e8a75c7cea33ed9b439',1,'CSortAlgo']]],
+  ['heap_5fsort',['heap_sort',['../class_c_sort_algo.html#ad81a03f9e4a3d1d0a3690485c35acd44',1,'CSortAlgo']]]
 ];

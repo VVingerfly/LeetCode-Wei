@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['findmediansortedarrays',['findMedianSortedArrays',['../class_a4___median_of_two_sorted_arrays.html#ab093a00fda335f08798cf798d3f17099',1,'A4_MedianOfTwoSortedArrays']]]
+  ['evalsqrtnbisection',['evalSqrtNBisection',['../class_c_sohu3.html#aa9916a88ffb06e04c96dd81f7b03ce49',1,'CSohu3']]],
+  ['evalsqrtnnewton',['evalSqrtNNewton',['../class_c_sohu3.html#a1b44455066c2840f9cfc40675a8dd12f',1,'CSohu3']]]
 ];
