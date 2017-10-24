@@ -9,7 +9,7 @@
 //#define RUN_AlgDij
 //#define  RUN_AlgFloyd
 //#define  RUN_AlgSecondMax
-#define  RUN_AlgMinNum
+//#define  RUN_AlgMinNum
 
-
+#define RUN_AlgMedianNum
 #endif // RUN_Alg

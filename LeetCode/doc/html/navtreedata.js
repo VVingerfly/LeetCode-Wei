@@ -26,7 +26,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_alg_defs_8h.html",
-"class_c_sort_algo.html#a2eb6522682aab00c1df2eb3798912c97"
+"class_c_note4.html#a1e24241c70cca91b5ad963bed99b9800"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

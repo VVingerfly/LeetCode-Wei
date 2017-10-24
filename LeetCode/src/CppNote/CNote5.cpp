@@ -41,12 +41,12 @@ public:
 
 
 #ifdef RUN_CNOTE5
-int main()
-{
-
-	CNote5 cn5;
-	cn5.runTest();
-
-	return 0;
-}
+//int main()
+//{
+//
+//	CNote5 cn5;
+//	cn5.runTest();
+//
+//	return 0;
+//}
 #endif

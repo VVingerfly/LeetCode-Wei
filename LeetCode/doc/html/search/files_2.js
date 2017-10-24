@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['global_2eh',['global.h',['../global_8h.html',1,'']]],
-  ['greatestcommondivisor_2ecpp',['GreatestCommonDivisor.cpp',['../_greatest_common_divisor_8cpp.html',1,'']]]
+  ['didi1_2ecpp',['Didi1.cpp',['../_didi1_8cpp.html',1,'']]],
+  ['didi2_2ecpp',['Didi2.cpp',['../_didi2_8cpp.html',1,'']]]
 ];

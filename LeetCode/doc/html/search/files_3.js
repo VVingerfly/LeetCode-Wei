@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['huawei1_2ecpp',['HuaWei1.cpp',['../_hua_wei1_8cpp.html',1,'']]],
-  ['huawei2_2ecpp',['HuaWei2.cpp',['../_hua_wei2_8cpp.html',1,'']]],
-  ['huaweidefs_2eh',['HuaWeiDefs.h',['../_hua_wei_defs_8h.html',1,'']]]
+  ['global_2eh',['global.h',['../global_8h.html',1,'']]],
+  ['greatestcommondivisor_2ecpp',['GreatestCommonDivisor.cpp',['../_greatest_common_divisor_8cpp.html',1,'']]]
 ];

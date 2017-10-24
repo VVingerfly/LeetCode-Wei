@@ -142,6 +142,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Alg\MedianNumber.cpp" />
     <ClCompile Include="src\Alg\MinNumber.cpp" />
     <ClCompile Include="src\Alg\SecondMaxNumber.cpp" />
     <ClCompile Include="src\Alg\ShortestPathDijkstra.cpp" />
@@ -198,6 +199,7 @@
     <ClInclude Include="src\LeetCode\Q063_UniquePathsII.h" />
     <ClInclude Include="src\LeetCode\Q10_.h" />
     <ClInclude Include="src\LeetCode\Q120_Triangle.h" />
+    <ClInclude Include="src\LeetCode\Q160_IntersectionOfTwoLinkedLists.h" />
     <ClInclude Include="src\LeetCode\Q1_TwoSum.h" />
     <ClInclude Include="src\LeetCode\Q2_AddTwoNums.h" />
     <ClInclude Include="src\LeetCode\Q322_CoinChange.h" />

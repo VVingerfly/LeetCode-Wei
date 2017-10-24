@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['val',['val',['../struct_list_node.html#a58389d1d1fc5430c2f4ce7c5d5dc48b3',1,'ListNode']]],
-  ['validwordcount',['validWordCount',['../class_c_net_ease12.html#ab82566ff192c8357e819f8d7f8ebeaf8',1,'CNetEase12']]],
-  ['value',['value',['../struct_c_sohu1_1_1_list_node.html#a1445f2574b122ff164b4d44baf0f977b',1,'CSohu1::ListNode']]],
-  ['vexs',['vexs',['../struct_alg_dij_1_1_m_graph.html#a4bcc9b19356e564cd4b7d0036aa9fc1b',1,'AlgDij::MGraph::vexs()'],['../struct_alg_floyd_1_1_m_graph.html#a33f42dc42eb479028b214d96a60b7179',1,'AlgFloyd::MGraph::vexs()']]]
+  ['uglynumber_2ecpp',['UglyNumber.cpp',['../_ugly_number_8cpp.html',1,'']]],
+  ['uniquepaths',['uniquePaths',['../class_a062___unique_paths.html#a49ddc29da2380fefcce583abbb136da0',1,'A062_UniquePaths']]],
+  ['uniquepaths2',['uniquePaths2',['../class_a062___unique_paths.html#aeb50c8923563574766f91781174fdcaa',1,'A062_UniquePaths']]],
+  ['uniquepathswithobstacles',['uniquePathsWithObstacles',['../class_a063___unique_paths_i_i.html#a81bd4bb20ee4e66b5ce3c043b110f577',1,'A063_UniquePathsII']]]
 ];

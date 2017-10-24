@@ -1,12 +1,22 @@
 var searchData=
 [
-  ['patharc',['Patharc',['../class_alg_dij.html#aa19d2f5fb73bb739c3a957834df7470c',1,'AlgDij::Patharc()'],['../class_alg_floyd.html#aa1e6f0f19644b69f5a2f18dad0f3fc25',1,'AlgFloyd::Patharc()']]],
-  ['point',['Point',['../struct_sense_time2_1_1_point.html',1,'SenseTime2']]],
-  ['point',['Point',['../class_c_note4_1_1_point.html#a048e813345bca8979445184dc2c15bf7',1,'CNote4::Point::Point()'],['../class_c_note4_1_1_point.html#af81af6be4ff79008b2283e3b3f16d9f2',1,'CNote4::Point::Point(const Point &amp;p)']]],
-  ['point',['Point',['../class_c_note4_1_1_point.html',1,'CNote4']]],
-  ['print',['Print',['../class_c_note1.html#a79ff85e513dcf6c63eda538f5aaa74a3',1,'CNote1']]],
-  ['print_5fnums',['print_nums',['../class_c_sort_algo.html#a73fd2ee73bc017fdd76eb8bdab10c02d',1,'CSortAlgo']]],
-  ['printarray',['printArray',['../class_sense_time1.html#a6b879d23caa9d0f6160f86c8ba252a99',1,'SenseTime1']]],
-  ['printlist',['printList',['../class_c_sohu1.html#a93c412bf4112fd144818d2b64ca40cfe',1,'CSohu1']]],
-  ['printsortstr',['printSortStr',['../_q6___zig_zag_conversion_8h.html#a17087dc89575dce9c0d8a7e10d81ed95',1,'Q6_ZigZagConversion.h']]]
+  ['n1',['n1',['../class_c_note1.html#a878ca42c21d82d826f0543a4e9867c05',1,'CNote1']]],
+  ['n2',['n2',['../class_c_note1.html#a5929ff860da54dcb85807b7bf17bee22',1,'CNote1']]],
+  ['netease1_2ecpp',['NetEase1.cpp',['../_net_ease1_8cpp.html',1,'']]],
+  ['netease10_2ecpp',['NetEase10.cpp',['../_net_ease10_8cpp.html',1,'']]],
+  ['netease11_2ecpp',['NetEase11.cpp',['../_net_ease11_8cpp.html',1,'']]],
+  ['netease12_2ecpp',['NetEase12.cpp',['../_net_ease12_8cpp.html',1,'']]],
+  ['netease13_2ecpp',['NetEase13.cpp',['../_net_ease13_8cpp.html',1,'']]],
+  ['netease2_2ecpp',['NetEase2.cpp',['../_net_ease2_8cpp.html',1,'']]],
+  ['netease3_2ecpp',['NetEase3.cpp',['../_net_ease3_8cpp.html',1,'']]],
+  ['netease5_2ecpp',['NetEase5.cpp',['../_net_ease5_8cpp.html',1,'']]],
+  ['netease6_2ecpp',['NetEase6.cpp',['../_net_ease6_8cpp.html',1,'']]],
+  ['netease7_2ecpp',['NetEase7.cpp',['../_net_ease7_8cpp.html',1,'']]],
+  ['netease8_2ecpp',['NetEase8.cpp',['../_net_ease8_8cpp.html',1,'']]],
+  ['netease9_2ecpp',['NetEase9.cpp',['../_net_ease9_8cpp.html',1,'']]],
+  ['neteasedefs_2eh',['NetEaseDefs.h',['../_net_ease_defs_8h.html',1,'']]],
+  ['next',['next',['../struct_c_sohu1_1_1_list_node.html#ae793447337449ab518a1af2667381a24',1,'CSohu1::ListNode::next()'],['../struct_a160___intersection_of_two_linked_lists_1_1_list_node.html#ac0ed1adb192c4ac36c90eb6d4d51d197',1,'A160_IntersectionOfTwoLinkedLists::ListNode::next()'],['../struct_list_node.html#ad78b392c2ddc25c3243d0c2f30692fb1',1,'ListNode::next()']]],
+  ['numedges',['numEdges',['../struct_alg_dij_1_1_m_graph.html#a08838a6bb8b86ed17c023ccc63c74ef0',1,'AlgDij::MGraph::numEdges()'],['../struct_alg_floyd_1_1_m_graph.html#ad3c773e68f67590bd91eef996249122e',1,'AlgFloyd::MGraph::numEdges()']]],
+  ['nums_5f',['nums_',['../class_c_sort_algo.html#ae796c28480b9ea83543635bd13fd14fc',1,'CSortAlgo']]],
+  ['numvertexes',['numVertexes',['../struct_alg_dij_1_1_m_graph.html#ac51dbf1b703c85e0cbc42c08de58e425',1,'AlgDij::MGraph::numVertexes()'],['../struct_alg_floyd_1_1_m_graph.html#ab18e92e6b21e07e41e15bad7920fc015',1,'AlgFloyd::MGraph::numVertexes()']]]
 ];

@@ -159,6 +159,9 @@
     <ClCompile Include="src\Alg\MinNumber.cpp">
       <Filter>Alg</Filter>
     </ClCompile>
+    <ClCompile Include="src\Alg\MedianNumber.cpp">
+      <Filter>Alg</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Sort\sort_algo.h">
@@ -234,6 +237,9 @@
       <Filter>LeetCode</Filter>
     </ClInclude>
     <ClInclude Include="src\LeetCode\Q322_CoinChange.h">
+      <Filter>LeetCode</Filter>
+    </ClInclude>
+    <ClInclude Include="src\LeetCode\Q160_IntersectionOfTwoLinkedLists.h">
       <Filter>LeetCode</Filter>
     </ClInclude>
   </ItemGroup>

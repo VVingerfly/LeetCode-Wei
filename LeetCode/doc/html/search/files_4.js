@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['leastcommonmultiple_2ecpp',['LeastCommonMultiple.cpp',['../_least_common_multiple_8cpp.html',1,'']]],
-  ['leetcode_2eh',['LeetCode.h',['../_leet_code_8h.html',1,'']]],
-  ['leetcodemain_2ecpp',['LeetCodeMain.cpp',['../_leet_code_main_8cpp.html',1,'']]]
+  ['huawei1_2ecpp',['HuaWei1.cpp',['../_hua_wei1_8cpp.html',1,'']]],
+  ['huawei2_2ecpp',['HuaWei2.cpp',['../_hua_wei2_8cpp.html',1,'']]],
+  ['huaweidefs_2eh',['HuaWeiDefs.h',['../_hua_wei_defs_8h.html',1,'']]]
 ];

@@ -1,10 +1,13 @@
 var annotated_dup =
 [
     [ "A062_UniquePaths", "class_a062___unique_paths.html", "class_a062___unique_paths" ],
+    [ "A063_UniquePathsII", "class_a063___unique_paths_i_i.html", "class_a063___unique_paths_i_i" ],
     [ "A10_RegExpMatching", "class_a10___reg_exp_matching.html", "class_a10___reg_exp_matching" ],
     [ "A120_Triangle", "class_a120___triangle.html", "class_a120___triangle" ],
+    [ "A160_IntersectionOfTwoLinkedLists", "class_a160___intersection_of_two_linked_lists.html", "class_a160___intersection_of_two_linked_lists" ],
     [ "A1_TwoSum", "class_a1___two_sum.html", "class_a1___two_sum" ],
     [ "A2_AddTwoNums", "class_a2___add_two_nums.html", "class_a2___add_two_nums" ],
+    [ "A322_CoinChange", "class_a322___coin_change.html", "class_a322___coin_change" ],
     [ "A3_LongestSubstring", "class_a3___longest_substring.html", "class_a3___longest_substring" ],
     [ "A4_MedianOfTwoSortedArrays", "class_a4___median_of_two_sorted_arrays.html", "class_a4___median_of_two_sorted_arrays" ],
     [ "A5_LongestPalindromicSubstring", "class_a5___longest_palindromic_substring.html", "class_a5___longest_palindromic_substring" ],
@@ -17,6 +20,9 @@ var annotated_dup =
     [ "AlgFloyd", "class_alg_floyd.html", "class_alg_floyd" ],
     [ "AlgGCD", "class_alg_g_c_d.html", "class_alg_g_c_d" ],
     [ "AlgLCM", "class_alg_l_c_m.html", "class_alg_l_c_m" ],
+    [ "AlgMedianNum", "class_alg_median_num.html", "class_alg_median_num" ],
+    [ "AlgMinNum", "class_alg_min_num.html", "class_alg_min_num" ],
+    [ "AlgSecondMax", "class_alg_second_max.html", "class_alg_second_max" ],
     [ "AlgUglyNumber", "class_alg_ugly_number.html", "class_alg_ugly_number" ],
     [ "CNetEase11", "class_c_net_ease11.html", "class_c_net_ease11" ],
     [ "CNetEase12", "class_c_net_ease12.html", "class_c_net_ease12" ],

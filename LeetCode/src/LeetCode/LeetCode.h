@@ -16,4 +16,6 @@
 #include "Q085_MaximalRectangle.h"
 #include "Q120_Triangle.h"
 
+#include "Q160_IntersectionOfTwoLinkedLists.h"
+
 #include "Q322_CoinChange.h"

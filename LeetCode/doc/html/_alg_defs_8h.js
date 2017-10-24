@@ -1,4 +1,4 @@
 var _alg_defs_8h =
 [
-    [ "RUN_AlgFloyd", "_alg_defs_8h.html#a01be0936ba48d4de75fa6496aeb80e57", null ]
+    [ "RUN_AlgMedianNum", "_alg_defs_8h.html#a135d384c1af8dd4cd3ed92d0784c6253", null ]
 ];

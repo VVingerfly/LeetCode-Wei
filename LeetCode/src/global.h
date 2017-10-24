@@ -6,7 +6,7 @@
 //#define RUN_XiaoMi
 //#define RUN_SenseTime
 
-//#define RUN_Alg
+#define RUN_Alg
 //#define RUN_Sort
 //#define RUN_CNote
 //#define RUN_LeetCode

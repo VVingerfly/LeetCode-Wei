@@ -1,16 +1,19 @@
 var searchData=
 [
-  ['sensetime1_2ecpp',['SenseTime1.cpp',['../_sense_time1_8cpp.html',1,'']]],
-  ['sensetime2_2ecpp',['SenseTime2.cpp',['../_sense_time2_8cpp.html',1,'']]],
-  ['sensetimedefs_2eh',['SenseTimeDefs.h',['../_sense_time_defs_8h.html',1,'']]],
-  ['shortestpathdijkstra_2ecpp',['ShortestPathDijkstra.cpp',['../_shortest_path_dijkstra_8cpp.html',1,'']]],
-  ['shortestpathfloyd_2ecpp',['ShortestPathFloyd.cpp',['../_shortest_path_floyd_8cpp.html',1,'']]],
-  ['sohu1_2ecpp',['Sohu1.cpp',['../_sohu1_8cpp.html',1,'']]],
-  ['sohu2_2ecpp',['Sohu2.cpp',['../_sohu2_8cpp.html',1,'']]],
-  ['sohu3_2ecpp',['Sohu3.cpp',['../_sohu3_8cpp.html',1,'']]],
-  ['sohudefs_2eh',['SohuDefs.h',['../_sohu_defs_8h.html',1,'']]],
-  ['sort_5falgo_2ecpp',['sort_algo.cpp',['../sort__algo_8cpp.html',1,'']]],
-  ['sort_5falgo_2eh',['sort_algo.h',['../sort__algo_8h.html',1,'']]],
-  ['sort_5fmain_2ecpp',['sort_main.cpp',['../sort__main_8cpp.html',1,'']]],
-  ['stringmatchkmp_2ecpp',['StringMatchKMP.cpp',['../_string_match_k_m_p_8cpp.html',1,'']]]
+  ['q062_5funiquepaths_2eh',['Q062_UniquePaths.h',['../_q062___unique_paths_8h.html',1,'']]],
+  ['q063_5funiquepathsii_2eh',['Q063_UniquePathsII.h',['../_q063___unique_paths_i_i_8h.html',1,'']]],
+  ['q085_5fmaximalrectangle_2eh',['Q085_MaximalRectangle.h',['../_q085___maximal_rectangle_8h.html',1,'']]],
+  ['q10_5f_2eh',['Q10_.h',['../_q10___8h.html',1,'']]],
+  ['q120_5ftriangle_2eh',['Q120_Triangle.h',['../_q120___triangle_8h.html',1,'']]],
+  ['q160_5fintersectionoftwolinkedlists_2eh',['Q160_IntersectionOfTwoLinkedLists.h',['../_q160___intersection_of_two_linked_lists_8h.html',1,'']]],
+  ['q1_5ftwosum_2eh',['Q1_TwoSum.h',['../_q1___two_sum_8h.html',1,'']]],
+  ['q2_5faddtwonums_2eh',['Q2_AddTwoNums.h',['../_q2___add_two_nums_8h.html',1,'']]],
+  ['q322_5fcoinchange_2eh',['Q322_CoinChange.h',['../_q322___coin_change_8h.html',1,'']]],
+  ['q3_5flongestsubstring_2eh',['Q3_LongestSubstring.h',['../_q3___longest_substring_8h.html',1,'']]],
+  ['q4_5fmedianoftwosortedarrays_2eh',['Q4_MedianOfTwoSortedArrays.h',['../_q4___median_of_two_sorted_arrays_8h.html',1,'']]],
+  ['q5_5flongestpalindromicsubstring_2eh',['Q5_LongestPalindromicSubstring.h',['../_q5___longest_palindromic_substring_8h.html',1,'']]],
+  ['q6_5fzigzagconversion_2eh',['Q6_ZigZagConversion.h',['../_q6___zig_zag_conversion_8h.html',1,'']]],
+  ['q7_5freverseinteger_2eh',['Q7_ReverseInteger.h',['../_q7___reverse_integer_8h.html',1,'']]],
+  ['q8_5fstringtointeger_2eh',['Q8_StringToInteger.h',['../_q8___string_to_integer_8h.html',1,'']]],
+  ['q9_5fpalindromenumber_2eh',['Q9_PalindromeNumber.h',['../_q9___palindrome_number_8h.html',1,'']]]
 ];

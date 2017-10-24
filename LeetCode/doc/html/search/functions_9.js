@@ -1,7 +1,7 @@
 var searchData=
 [
   ['m3',['m3',['../class_xiao_mi3.html#ac6e121a6e3fecbfc732c77dd8adcad9f',1,'XiaoMi3']]],
-  ['main',['main',['../_leet_code_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;LeetCodeMain.cpp'],['../main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;main.cpp']]],
+  ['main',['main',['../_median_number_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;MedianNumber.cpp'],['../main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;main.cpp']]],
   ['maximalrectangle',['maximalRectangle',['../class_a85___maximal_rectangle.html#ae0d61f4ff9ec2622e730d2b93b2718d9',1,'A85_MaximalRectangle']]],
   ['merge',['merge',['../class_c_sort_algo.html#a148af9c8ca6ff69d7eead2464dbbffe5',1,'CSortAlgo']]],
   ['merge_5fsort',['merge_sort',['../class_c_sort_algo.html#a25109772bb378cf42f34813e06d8a9d1',1,'CSortAlgo']]],
