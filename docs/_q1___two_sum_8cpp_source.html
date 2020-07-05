@@ -112,66 +112,66 @@ $(document).ready(function(){initNavTree('_q1___two_sum_8cpp_source.html','');})
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">using</span> std::unordered_map;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">using</span> std::vector;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_a1___two_sum.html">   27</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_a1___two_sum.html">A1_TwoSum</a></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_a1___two_sum.html#a0880ed347006e7309ae96ef961e2ca2d">   30</a></span>&#160;    vector&lt;int&gt; <a class="code" href="class_a1___two_sum.html#a0880ed347006e7309ae96ef961e2ca2d">twoSum</a>(vector&lt;int&gt;&amp; nums, <span class="keywordtype">int</span> target)</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        vector&lt;int&gt; res;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        res.resize(2, 0);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        unordered_map&lt;int, int&gt; numsHash;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; nums.size(); ++i) {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="keywordtype">int</span> value1 = nums.at(i);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keyword">auto</span> it = numsHash.find(target - value1);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            <span class="keywordflow">if</span> (it != numsHash.end()) {</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                res[0] = i &lt; it-&gt;second ? i : it-&gt;second;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                res[1] = i &lt; it-&gt;second ? it-&gt;second : i;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            }</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            numsHash.insert(std::make_pair(nums.at(i), i));  <span class="comment">// if not found, store the &lt;value, index&gt; in hash for later searching</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        }</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordflow">return</span> res;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;};</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="_q1___two_sum_8cpp.html#a3d7b6814c0dfef59dfc324893580c99f">   49</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="_q1___two_sum_8cpp.html#a3d7b6814c0dfef59dfc324893580c99f">test</a>(vector&lt;int&gt;&amp; nums, <span class="keywordtype">int</span> target, vector&lt;int&gt;&amp; rlts)</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="class_a1___two_sum.html">A1_TwoSum</a> solution;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    vector&lt;int&gt; <a class="code" href="_net_ease10_8cpp.html#a0561fb23df46ddbb1741fc224414f484">result</a> = solution.<a class="code" href="class_a1___two_sum.html#a0880ed347006e7309ae96ef961e2ca2d">twoSum</a>(nums, target);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="_net_ease10_8cpp.html#a0561fb23df46ddbb1741fc224414f484">result</a>.size(); ++i)</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="_net_ease10_8cpp.html#a0561fb23df46ddbb1741fc224414f484">result</a>[i] != rlts[i])</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="_q1___two_sum_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">   59</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="_q1___two_sum_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>()</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="comment">// vector&lt;int&gt; nums = { 2, 7, 11, 15 };</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="comment">// int target = 9;</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="comment">// vector&lt;int&gt; nums = { 3, 2, 4 };</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="comment">// int target = 6;</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    vector&lt;int&gt; nums = { 3, 3 };</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">int</span> target = 6;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="class_a1___two_sum.html">A1_TwoSum</a> solution;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    vector&lt;int&gt; <a class="code" href="_net_ease10_8cpp.html#a0561fb23df46ddbb1741fc224414f484">result</a> = solution.<a class="code" href="class_a1___two_sum.html#a0880ed347006e7309ae96ef961e2ca2d">twoSum</a>(nums, target);</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_a1___two_sum.html">   30</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_a1___two_sum.html">A1_TwoSum</a></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_a1___two_sum.html#a0880ed347006e7309ae96ef961e2ca2d">   33</a></span>&#160;    vector&lt;int&gt; <a class="code" href="class_a1___two_sum.html#a0880ed347006e7309ae96ef961e2ca2d">twoSum</a>(vector&lt;int&gt;&amp; nums, <span class="keywordtype">int</span> target)</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        vector&lt;int&gt; res;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        res.resize(2, 0);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        unordered_map&lt;int, int&gt; numsHash;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; nums.size(); ++i) {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <span class="keywordtype">int</span> value1 = nums.at(i);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="keyword">auto</span> it = numsHash.find(target - value1);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keywordflow">if</span> (it != numsHash.end()) {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                res[0] = i &lt; it-&gt;second ? i : it-&gt;second;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                res[1] = i &lt; it-&gt;second ? it-&gt;second : i;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            numsHash.insert(std::make_pair(nums.at(i), i));  <span class="comment">// if not found, store the &lt;value, index&gt; in hash for later searching</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">return</span> res;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;};</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="_q1___two_sum_8cpp.html#a3d7b6814c0dfef59dfc324893580c99f">   52</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="_q1___two_sum_8cpp.html#a3d7b6814c0dfef59dfc324893580c99f">test</a>(vector&lt;int&gt;&amp; nums, <span class="keywordtype">int</span> target, vector&lt;int&gt;&amp; rlts)</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="class_a1___two_sum.html">A1_TwoSum</a> solution;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    vector&lt;int&gt; <a class="code" href="_net_ease10_8cpp.html#a0561fb23df46ddbb1741fc224414f484">result</a> = solution.<a class="code" href="class_a1___two_sum.html#a0880ed347006e7309ae96ef961e2ca2d">twoSum</a>(nums, target);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="_net_ease10_8cpp.html#a0561fb23df46ddbb1741fc224414f484">result</a>.size(); ++i)</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="_net_ease10_8cpp.html#a0561fb23df46ddbb1741fc224414f484">result</a>[i] != rlts[i])</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="_q1___two_sum_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">   62</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="_q1___two_sum_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>()</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;{</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="comment">// vector&lt;int&gt; nums = { 2, 7, 11, 15 };</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="comment">// int target = 9;</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="comment">// vector&lt;int&gt; nums = { 3, 2, 4 };</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="comment">// int target = 6;</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    vector&lt;int&gt; nums = { 3, 3 };</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">int</span> target = 6;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; <a class="code" href="_net_ease10_8cpp.html#a0561fb23df46ddbb1741fc224414f484">result</a>.size(); i++) {</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        std::cout &lt;&lt; <a class="code" href="_net_ease10_8cpp.html#a0561fb23df46ddbb1741fc224414f484">result</a>.at(i) &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    std::cout &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    std::cout &lt;&lt; nums[<a class="code" href="_net_ease10_8cpp.html#a0561fb23df46ddbb1741fc224414f484">result</a>[0]] &lt;&lt; <span class="stringliteral">&quot; + &quot;</span> &lt;&lt; nums[<a class="code" href="_net_ease10_8cpp.html#a0561fb23df46ddbb1741fc224414f484">result</a>[1]] &lt;&lt; <span class="stringliteral">&quot; = &quot;</span> &lt;&lt; target &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="class_a1___two_sum.html">A1_TwoSum</a> solution;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    vector&lt;int&gt; <a class="code" href="_net_ease10_8cpp.html#a0561fb23df46ddbb1741fc224414f484">result</a> = solution.<a class="code" href="class_a1___two_sum.html#a0880ed347006e7309ae96ef961e2ca2d">twoSum</a>(nums, target);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; <a class="code" href="_net_ease10_8cpp.html#a0561fb23df46ddbb1741fc224414f484">result</a>.size(); i++) {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        std::cout &lt;&lt; <a class="code" href="_net_ease10_8cpp.html#a0561fb23df46ddbb1741fc224414f484">result</a>.at(i) &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    std::cout &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    std::cout &lt;&lt; nums[<a class="code" href="_net_ease10_8cpp.html#a0561fb23df46ddbb1741fc224414f484">result</a>[0]] &lt;&lt; <span class="stringliteral">&quot; + &quot;</span> &lt;&lt; nums[<a class="code" href="_net_ease10_8cpp.html#a0561fb23df46ddbb1741fc224414f484">result</a>[1]] &lt;&lt; <span class="stringliteral">&quot; = &quot;</span> &lt;&lt; target &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="a_net_ease10_8cpp_html_a0561fb23df46ddbb1741fc224414f484"><div class="ttname"><a href="_net_ease10_8cpp.html#a0561fb23df46ddbb1741fc224414f484">result</a></div><div class="ttdeci">int result[50]</div><div class="ttdef"><b>Definition:</b> <a href="_net_ease10_8cpp_source.html#l00009">NetEase10.cpp:9</a></div></div>
-<div class="ttc" id="aclass_a1___two_sum_html_a0880ed347006e7309ae96ef961e2ca2d"><div class="ttname"><a href="class_a1___two_sum.html#a0880ed347006e7309ae96ef961e2ca2d">A1_TwoSum::twoSum</a></div><div class="ttdeci">vector&lt; int &gt; twoSum(vector&lt; int &gt; &amp;nums, int target)</div><div class="ttdef"><b>Definition:</b> <a href="_q1___two_sum_8cpp_source.html#l00030">Q1_TwoSum.cpp:30</a></div></div>
-<div class="ttc" id="a_q1___two_sum_8cpp_html_a3d7b6814c0dfef59dfc324893580c99f"><div class="ttname"><a href="_q1___two_sum_8cpp.html#a3d7b6814c0dfef59dfc324893580c99f">test</a></div><div class="ttdeci">int test(vector&lt; int &gt; &amp;nums, int target, vector&lt; int &gt; &amp;rlts)</div><div class="ttdef"><b>Definition:</b> <a href="_q1___two_sum_8cpp_source.html#l00049">Q1_TwoSum.cpp:49</a></div></div>
-<div class="ttc" id="a_q1___two_sum_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="_q1___two_sum_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition:</b> <a href="_q1___two_sum_8cpp_source.html#l00059">Q1_TwoSum.cpp:59</a></div></div>
-<div class="ttc" id="aclass_a1___two_sum_html"><div class="ttname"><a href="class_a1___two_sum.html">A1_TwoSum</a></div><div class="ttdoc">给定一个整数数组 nums&amp;#160;和一个目标值 target，请你在该数组中找出和为目标值的那&amp;#160;两个&amp;#160;整数，并返回他们的数组下标。 你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素...</div><div class="ttdef"><b>Definition:</b> <a href="_q1___two_sum_8cpp_source.html#l00027">Q1_TwoSum.cpp:27</a></div></div>
+<div class="ttc" id="aclass_a1___two_sum_html_a0880ed347006e7309ae96ef961e2ca2d"><div class="ttname"><a href="class_a1___two_sum.html#a0880ed347006e7309ae96ef961e2ca2d">A1_TwoSum::twoSum</a></div><div class="ttdeci">vector&lt; int &gt; twoSum(vector&lt; int &gt; &amp;nums, int target)</div><div class="ttdef"><b>Definition:</b> <a href="_q1___two_sum_8cpp_source.html#l00033">Q1_TwoSum.cpp:33</a></div></div>
+<div class="ttc" id="a_q1___two_sum_8cpp_html_a3d7b6814c0dfef59dfc324893580c99f"><div class="ttname"><a href="_q1___two_sum_8cpp.html#a3d7b6814c0dfef59dfc324893580c99f">test</a></div><div class="ttdeci">int test(vector&lt; int &gt; &amp;nums, int target, vector&lt; int &gt; &amp;rlts)</div><div class="ttdef"><b>Definition:</b> <a href="_q1___two_sum_8cpp_source.html#l00052">Q1_TwoSum.cpp:52</a></div></div>
+<div class="ttc" id="a_q1___two_sum_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="_q1___two_sum_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition:</b> <a href="_q1___two_sum_8cpp_source.html#l00062">Q1_TwoSum.cpp:62</a></div></div>
+<div class="ttc" id="aclass_a1___two_sum_html"><div class="ttname"><a href="class_a1___two_sum.html">A1_TwoSum</a></div><div class="ttdoc">两数之和</div><div class="ttdef"><b>Definition:</b> <a href="_q1___two_sum_8cpp_source.html#l00030">Q1_TwoSum.cpp:30</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

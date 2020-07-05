@@ -1,148 +1,122 @@
-//===============================================================
-// Author       : Wei Li (lw15@mail.ustc.edu.cn)
-// Created Date : 2017/Jan/5 19:46:00
-// Last Change  : 2017/Jan/5 19:46:03
-// Summary      : Use hash(unordered_map) for quick find operation
-//===============================================================
+/**
+ * @file Q2_AddTwoNums.cpp
+ * @author Wei LI (lw15@mail.ustc.edu.cn)
+ * @brief 两数相加
+ * @version 0.1
+ * @date 2017-01-05
+ *
+ */
 
 #include <iostream>
+#include <string>
+#include <vector>
+
 using namespace std;
 
+/**
+ * @brief Definition for singly-linked list.
+ * 
+ */
 struct ListNode
 {
     int val;
     ListNode* next;
-    ListNode(int x) : val(x), next(NULL) {}
+    ListNode(int x) : val(x), next(nullptr) {}
 };
 
 /**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode(int x) : val(x), next(NULL) {}
- * };
+ * @brief 两数相加
+ * 
+ * 给出两个 **非空** 的链表用来表示两个非负的整数。
+ * 其中，它们各自的位数是按照 **逆序** 的方式存储的，并且它们的每个节点只能存储 **一位** 数字。
+ * 如果，我们将这两个数相加起来，则会返回一个新的链表来表示它们的和。
+ * 您可以假设除了数字`0`之外，这两个数都不会以`0`开头。
+ * 
+ * 示例：
+ * - 输入：(2 -> 4 -> 3) + (5 -> 6 -> 4)
+ * - 输出：7 -> 0 -> 8
+ * - 原因：342 + 465 = 807
+ * 
+ * @note https://leetcode-cn.com/problems/add-two-numbers
+ * 
  */
 class A2_AddTwoNums
 {
 public:
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2)
     {
-        /*
-        ListNode* res;
-        ListNode* h1 = l1;
-        ListNode* h2 = l2;
-        while(h1!=NULL)
-        {
-        cout<<h1->val<<"  "<<h2->val<<endl;
-        h1 = h1->next;
-        h2 = h2->next;
-        }
-        res = new ListNode(3);
-        res->next = new ListNode(5);
-        cout<<"here"<<res->val<<endl;
-        cout<<"here"<<res->next->val<<endl;
-        */
-
-        int value0 = 0;
         int value1 = 0;
-        int value = 0;
-        ListNode* res = NULL;
+        int value2 = 0;
+        int valSum = 0;
+        int carry = 0;  // 进位，0或者1
         ListNode* h1 = l1;
         ListNode* h2 = l2;
-        ListNode* h3 = res;
-        int cnt = 0;
-        while (h1 != NULL && h2 != NULL) {
-            value0 = (h1->val + h2->val + value) % 10;
-            value1 = (h1->val + h2->val + value) / 10;
+        ListNode* res = new ListNode(0);  // 返回结果是res的下一个节点
+        ListNode* h = res;
+        while (h1 != nullptr || h2 != nullptr) 
+        {
+            value1 = (h1 != nullptr) ? h1->val : 0;  // 链表较短，假设值为0，不响应相加结果
+            value2 = (h2 != nullptr) ? h2->val : 0;
+            valSum = value1 + value2 + carry;
+            carry = valSum / 10;
+            // cout << "sum=" << valSum << "  carry=" << carry << endl;
+            h->next = new ListNode(valSum % 10);
+            h = h->next;
 
-            // cout<<"value "<<value1<<"  "<<value0<<endl;
-            if (cnt == 0)
-                h3 = new ListNode(value0);
-            else {
-                h3->next = new ListNode(value0);
-                h3 = h3->next;
-            }
-
-            if (value1 != 0)
-                value = value1;
-            else
-                value = 0;
-            // cout<<"val-"<<cnt<<" "<<h3->val<<endl;
-
-            h1 = h1->next;
-            h2 = h2->next;
-            cnt++;
+            if (h1 != nullptr) h1 = h1->next;
+            if (h2 != nullptr) h2 = h2->next;
         }
-
-        while (h1 != NULL) {
-            value1 = (h1->val + value) / 10;
-            value0 = (h1->val + value) % 10;
-            h3->next = new ListNode(value0);
-            if (value1 != 0)
-                value = value1;
-            else
-                value = 0;
-            h1 = h1->next;
-            h3 = h3->next;
-        }
-        while (h2 != NULL) {
-            value1 = (h2->val + value) / 10;
-            value0 = (h2->val + value) % 10;
-            h3->next = new ListNode(value0);
-            if (value1 != 0)
-                value = value1;
-            else
-                value = 0;
-            h2 = h2->next;
-            h3 = h3->next;
-        }
-        value1 = (value) / 10;
-        value0 = (value) % 10;
-        // cout<<"value here "<<value<<"  "<<value1<<"  "<<value0<<endl;
-        if (value1 != 0) {
-            h3->next = new ListNode(value0);
-            h3->next = new ListNode(value1);
-        }
-        else if (value0 != 0)
-            h3->next = new ListNode(value0);
-
-        ListNode* p1q = res;
-        while (p1q != NULL) {
-            cout << "value " << p1q->val << endl;
-            p1q = p1q->next;
-        }
-
-        return res;
+        if (carry == 1)  // 如果进位为1，需再增加一位数
+            h->next = new ListNode(carry);
+        
+        return res->next;
     }
 };
 
+
 int main()
 {
-    ListNode* l1 = new ListNode(2);
-    ListNode* l2 = new ListNode(5);
-    l1->next = new ListNode(4);
-    l2->next = new ListNode(6);
-    l1->next->next = new ListNode(3);
-    l2->next->next = new ListNode(4);
+    auto print_list = [](ListNode* it, const string& title) {
+        ListNode* l = it;
+        cout << title << " ";
+        while (l != nullptr) {
+            if (l->next == nullptr)
+                cout << l->val << endl;
+            else cout << l->val << " -> ";
+            l = l->next;
+        }
+    };
 
-    // int nums[2][3] = { {2, 4, 3}, {5, 6, 4} };
-    // for (int i = 0; i < 3; i++)
-    //{
-    //	l1->val = nums[0][i];
-    //	l2->val = nums[1][i];
-    //	l1 = l1->next;
-    //	l2 = l2->next;
-    //}
-    ListNode* it = NULL;
+    auto test_list = [&](ListNode* l1, ListNode* l2) {
+        print_list(l1, "list-1: ");
+        print_list(l2, "list-2: ");
+    
+        A2_AddTwoNums solution;
+        ListNode* res = solution.addTwoNumbers(l1, l2);
+    
+        print_list(res, "list-sum: ");
+    };
 
-    A2_AddTwoNums solution;
-    ListNode* res = solution.addTwoNumbers(l1, l2);
-    it = res;
-    while (it != NULL) {
-        cout << it->val << " -> ";
-        it = it->next;
+    {
+        ListNode* l1 = new ListNode(2);
+        l1->next = new ListNode(4);
+        l1->next->next = new ListNode(3);
+    
+        ListNode* l2 = new ListNode(5);
+        l2->next = new ListNode(6);
+        l2->next->next = new ListNode(4);
+
+        test_list(l1, l2);
     }
-    cout << endl;
+    {
+        ListNode* l1 = new ListNode(5);
+    
+        ListNode* l2 = new ListNode(5);
+        
+        test_list(l1, l2);
+    }
+
+    
+    
     return 0;
 }
