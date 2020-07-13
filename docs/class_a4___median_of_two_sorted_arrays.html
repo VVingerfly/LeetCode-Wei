@@ -108,15 +108,36 @@ $(document).ready(function(){initNavTree('class_a4___median_of_two_sorted_arrays
 <div class="title">A4_MedianOfTwoSortedArrays Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>寻找两个正序数组的中位数  
+ <a href="class_a4___median_of_two_sorted_arrays.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab093a00fda335f08798cf798d3f17099"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a4___median_of_two_sorted_arrays.html#ab093a00fda335f08798cf798d3f17099">findMedianSortedArrays</a> (vector&lt; int &gt; &amp;nums1, vector&lt; int &gt; &amp;nums2)</td></tr>
 <tr class="separator:ab093a00fda335f08798cf798d3f17099"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5016be9b77729691aa94b43a06a52dfb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a4___median_of_two_sorted_arrays.html#a5016be9b77729691aa94b43a06a52dfb">get_kth</a> (vector&lt; int &gt; &amp;nums1, int bgn1, int end1, vector&lt; int &gt; &amp;nums2, int bgn2, int end2, int k)</td></tr>
+<tr class="separator:a5016be9b77729691aa94b43a06a52dfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_q4___median_of_two_sorted_arrays_8cpp_source.html#l00026">26</a> of file <a class="el" href="_q4___median_of_two_sorted_arrays_8cpp_source.html">Q4_MedianOfTwoSortedArrays.cpp</a>.</p>
+<div class="textblock"><p>寻找两个正序数组的中位数 </p>
+<p>给定两个大小为 m 和 n 的正序（从小到大）数组&#160;<code>nums1</code> 和&#160;<code>nums2</code>。 请你找出这两个正序数组的中位数，并且要求算法的时间复杂度为&#160;O(log(m + n))。</p>
+<p>你可以假设&#160;<code>nums1</code>&#160;和&#160;<code>nums2</code>&#160;不会同时为空。</p>
+<p>示例 1:</p><ul>
+<li>nums1 = [1, 3]</li>
+<li>nums2 = [2] <br  />
+ 则中位数是 2.0</li>
+</ul>
+<p>示例 2:</p><ul>
+<li>nums1 = [1, 2]</li>
+<li>nums2 = [3, 4] <br  />
+ 则中位数是 (2 + 3)/2 = 2.5</li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd><a href="https://leetcode-cn.com/problems/median-of-two-sorted-arrays">https://leetcode-cn.com/problems/median-of-two-sorted-arrays</a> </dd>
+<dd>
+<a href="https://leetcode-cn.com/problems/median-of-two-sorted-arrays/solution/xiang-xi-tong-su-de-si-lu-fen-xi-duo-jie-fa-by-w-2/">https://leetcode-cn.com/problems/median-of-two-sorted-arrays/solution/xiang-xi-tong-su-de-si-lu-fen-xi-duo-jie-fa-by-w-2/</a> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_q4___median_of_two_sorted_arrays_8cpp_source.html#l00037">37</a> of file <a class="el" href="_q4___median_of_two_sorted_arrays_8cpp_source.html">Q4_MedianOfTwoSortedArrays.cpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ab093a00fda335f08798cf798d3f17099"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab093a00fda335f08798cf798d3f17099">&#9670;&nbsp;</a></span>findMedianSortedArrays()</h2>
@@ -152,7 +173,75 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_q4___median_of_two_sorted_arrays_8cpp_source.html#l00029">29</a> of file <a class="el" href="_q4___median_of_two_sorted_arrays_8cpp_source.html">Q4_MedianOfTwoSortedArrays.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_q4___median_of_two_sorted_arrays_8cpp_source.html#l00040">40</a> of file <a class="el" href="_q4___median_of_two_sorted_arrays_8cpp_source.html">Q4_MedianOfTwoSortedArrays.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a5016be9b77729691aa94b43a06a52dfb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5016be9b77729691aa94b43a06a52dfb">&#9670;&nbsp;</a></span>get_kth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int A4_MedianOfTwoSortedArrays::get_kth </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>nums1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>bgn1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>end1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>nums2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>bgn2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>end2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>k</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_q4___median_of_two_sorted_arrays_8cpp_source.html#l00049">49</a> of file <a class="el" href="_q4___median_of_two_sorted_arrays_8cpp_source.html">Q4_MedianOfTwoSortedArrays.cpp</a>.</p>
 
 </div>
 </div>

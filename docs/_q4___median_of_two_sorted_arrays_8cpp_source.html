@@ -105,103 +105,64 @@ $(document).ready(function(){initNavTree('_q4___median_of_two_sorted_arrays_8cpp
 <div class="title">Q4_MedianOfTwoSortedArrays.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="_q4___median_of_two_sorted_arrays_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//===============================================================</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// Author       : Wei Li (lw15@mail.ustc.edu.cn)</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// Created Date : 2017/Mar/21 12:44:05</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// Last Change  : 2017/Mar/21 12:44:08</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// Summary      :</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//===============================================================</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">/**************************************************************************</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">Description:</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    There are two sorted arrays nums1 and nums2 of size m and n respectively.</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    Find the median of the two sorted arrays.The overall run time complexity should be O(log(m + n)).</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">Example 1 :</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">    nums1 = [1, 3]</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">    nums2 = [2]</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">    The median is 2.0</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">Example 2 :</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">    nums1 = [1, 2]</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">    nums2 = [3, 4]</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">    The median is(2 + 3) / 2 = 2.5</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">Difficulty : Hard</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">***************************************************************************/</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">using namespace </span>std;</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_a4___median_of_two_sorted_arrays.html">   26</a></span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">class </span><a class="code" href="class_a4___median_of_two_sorted_arrays.html">A4_MedianOfTwoSortedArrays</a></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_a4___median_of_two_sorted_arrays.html#ab093a00fda335f08798cf798d3f17099">   29</a></span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">double</span> findMedianSortedArrays(vector&lt;int&gt;&amp; nums1, vector&lt;int&gt;&amp; nums2)</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordtype">size_t</span> i1 = 0;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordtype">size_t</span> len1 = nums1.size();</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordtype">size_t</span> i2 = 0;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordtype">size_t</span> len2 = nums2.size();</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordflow">if</span> (len1 == 0 &amp;&amp; len2 == 0) {</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        }</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordflow">if</span> (len1 == 0) {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="keywordflow">return</span> len2 % 2 == 0 ? 0.5 * (nums2.at(len2 / 2 - 1) + nums2.at(len2 / 2)) : nums2.at(len2 / 2);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        }</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordflow">if</span> (len2 == 0) {</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keywordflow">return</span> len1 % 2 == 0 ? 0.5 * (nums1.at(len1 / 2 - 1) + nums1.at(len1 / 2)) : nums1.at(len1 / 2);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        }</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        vector&lt;int&gt; numsSort;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keywordflow">if</span> (nums1.at(i1) &lt; nums2.at(i2)) {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                numsSort.push_back(nums1.at(i1));</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                i1++;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            }</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                numsSort.push_back(nums2.at(i2));</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                i2++;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            }</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="keywordflow">if</span> (i1 == len1 || i2 == len2)</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        }</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        cout &lt;&lt; i1 &lt;&lt; <span class="stringliteral">&quot;  &quot;</span> &lt;&lt; len1 &lt;&lt; endl;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        cout &lt;&lt; i2 &lt;&lt; <span class="stringliteral">&quot;  &quot;</span> &lt;&lt; len2 &lt;&lt; endl;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordflow">for</span> (; i1 &lt; len1; ++i1)</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            numsSort.push_back(nums1.at(i1));</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">for</span> (; i2 &lt; len2; ++i2)</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            numsSort.push_back(nums2.at(i2));</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; numsSort.size(); ++i) {</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            cout &lt;&lt; numsSort.at(i) &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<a href="_q4___median_of_two_sorted_arrays_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_a4___median_of_two_sorted_arrays.html">   37</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_a4___median_of_two_sorted_arrays.html">A4_MedianOfTwoSortedArrays</a></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_a4___median_of_two_sorted_arrays.html#ab093a00fda335f08798cf798d3f17099">   40</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_a4___median_of_two_sorted_arrays.html#ab093a00fda335f08798cf798d3f17099">findMedianSortedArrays</a>(vector&lt;int&gt;&amp; nums1, vector&lt;int&gt;&amp; nums2)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordtype">int</span> len1 = nums1.size();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordtype">int</span> len2 = nums2.size();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordtype">int</span> left = (len1 + len2 + 1) / 2;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordtype">int</span> right = (len1 + len2 + 2) / 2;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="comment">//将偶数和奇数的情况合并，如果是奇数，会求两次同样的 k 。</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">return</span> (get_kth(nums1, 0, len1 - 1, nums2, 0, len2 - 1, left) + get_kth(nums1, 0, len1 - 1, nums2, 0, len2 - 1, right)) * 0.5;  </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_a4___median_of_two_sorted_arrays.html#a5016be9b77729691aa94b43a06a52dfb">   49</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_a4___median_of_two_sorted_arrays.html#a5016be9b77729691aa94b43a06a52dfb">get_kth</a>(vector&lt;int&gt;&amp; nums1, <span class="keywordtype">int</span> bgn1, <span class="keywordtype">int</span> end1, vector&lt;int&gt;&amp; nums2, <span class="keywordtype">int</span> bgn2, <span class="keywordtype">int</span> end2, <span class="keywordtype">int</span> k)</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordtype">int</span> len1 = end1 - bgn1 + 1;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordtype">int</span> len2 = end2 - bgn2 + 1;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="comment">// 让 len1 的长度小于 len2，这样就能保证如果有数组空了，一定是 len1 </span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">if</span> (len1 &gt; len2) <span class="keywordflow">return</span> get_kth(nums2, bgn2, end2, nums1, bgn1, end1, k);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">if</span> (len1 == 0) <span class="keywordflow">return</span> nums2[bgn2 + k - 1];</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">if</span> (k == 1) <span class="keywordflow">return</span> <a class="code" href="_min_number_8cpp.html#abb702d8b501669a23aa0ab3b281b9384">std::min</a>(nums1[bgn1], nums2[bgn2]);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordtype">int</span> i = bgn1 + <a class="code" href="_min_number_8cpp.html#abb702d8b501669a23aa0ab3b281b9384">std::min</a>(len1, k / 2) - 1;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordtype">int</span> j = bgn2 + <a class="code" href="_min_number_8cpp.html#abb702d8b501669a23aa0ab3b281b9384">std::min</a>(len2, k / 2) - 1;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">if</span> (nums1[i] &gt; nums2[j]) {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="keywordflow">return</span> get_kth(nums1, bgn1, end1, nums2, j + 1, end2, k - (j + 1 - bgn2));</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordflow">return</span> get_kth(nums1, i + 1, end1, nums2, bgn2, end2, k - (i + 1 - bgn1));</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        }</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        cout &lt;&lt; endl;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordtype">int</span> len = numsSort.size();</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordflow">if</span> (len % 2 == 0) {</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="keywordflow">return</span> 0.5 * (numsSort.at(len / 2 - 1) + numsSort.at(len / 2));</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        }</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keywordflow">return</span> numsSort.at(len / 2);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        }</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;};</div>
-<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="_q4___median_of_two_sorted_arrays_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">   81</a></span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keywordtype">int</span> <a class="code" href="_q4___median_of_two_sorted_arrays_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>()</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;{</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">int</span> n1[] = { 1, 2 };</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">int</span> n2[] = { 3, 4 };</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    vector&lt;int&gt; nums1(n1, n1 + 2);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    vector&lt;int&gt; nums2(n2, n2 + 2);</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <a class="code" href="class_a4___median_of_two_sorted_arrays.html">A4_MedianOfTwoSortedArrays</a> solution;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">double</span> res = solution.<a class="code" href="class_a4___median_of_two_sorted_arrays.html#ab093a00fda335f08798cf798d3f17099">findMedianSortedArrays</a>(nums1, nums2);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;solution: &quot;</span> &lt;&lt; res &lt;&lt; endl;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;}</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;};</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="_q4___median_of_two_sorted_arrays_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">   72</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="_q4___median_of_two_sorted_arrays_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>()</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;{</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">int</span> n1[] = { 1, 2 };</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">int</span> n2[] = { 3, 4 };</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    vector&lt;int&gt; nums1(n1, n1 + 2);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    vector&lt;int&gt; nums2(n2, n2 + 2);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <a class="code" href="class_a4___median_of_two_sorted_arrays.html">A4_MedianOfTwoSortedArrays</a> solution;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">double</span> res = solution.<a class="code" href="class_a4___median_of_two_sorted_arrays.html#ab093a00fda335f08798cf798d3f17099">findMedianSortedArrays</a>(nums1, nums2);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;solution: &quot;</span> &lt;&lt; res &lt;&lt; endl;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="a_q4___median_of_two_sorted_arrays_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="_q4___median_of_two_sorted_arrays_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition:</b> <a href="_q4___median_of_two_sorted_arrays_8cpp_source.html#l00081">Q4_MedianOfTwoSortedArrays.cpp:81</a></div></div>
-<div class="ttc" id="aclass_a4___median_of_two_sorted_arrays_html"><div class="ttname"><a href="class_a4___median_of_two_sorted_arrays.html">A4_MedianOfTwoSortedArrays</a></div><div class="ttdef"><b>Definition:</b> <a href="_q4___median_of_two_sorted_arrays_8cpp_source.html#l00026">Q4_MedianOfTwoSortedArrays.cpp:26</a></div></div>
-<div class="ttc" id="aclass_a4___median_of_two_sorted_arrays_html_ab093a00fda335f08798cf798d3f17099"><div class="ttname"><a href="class_a4___median_of_two_sorted_arrays.html#ab093a00fda335f08798cf798d3f17099">A4_MedianOfTwoSortedArrays::findMedianSortedArrays</a></div><div class="ttdeci">double findMedianSortedArrays(vector&lt; int &gt; &amp;nums1, vector&lt; int &gt; &amp;nums2)</div><div class="ttdef"><b>Definition:</b> <a href="_q4___median_of_two_sorted_arrays_8cpp_source.html#l00029">Q4_MedianOfTwoSortedArrays.cpp:29</a></div></div>
+<div class="ttc" id="aclass_a4___median_of_two_sorted_arrays_html_a5016be9b77729691aa94b43a06a52dfb"><div class="ttname"><a href="class_a4___median_of_two_sorted_arrays.html#a5016be9b77729691aa94b43a06a52dfb">A4_MedianOfTwoSortedArrays::get_kth</a></div><div class="ttdeci">int get_kth(vector&lt; int &gt; &amp;nums1, int bgn1, int end1, vector&lt; int &gt; &amp;nums2, int bgn2, int end2, int k)</div><div class="ttdef"><b>Definition:</b> <a href="_q4___median_of_two_sorted_arrays_8cpp_source.html#l00049">Q4_MedianOfTwoSortedArrays.cpp:49</a></div></div>
+<div class="ttc" id="a_min_number_8cpp_html_abb702d8b501669a23aa0ab3b281b9384"><div class="ttname"><a href="_min_number_8cpp.html#abb702d8b501669a23aa0ab3b281b9384">min</a></div><div class="ttdeci">#define min(x, y)</div><div class="ttdef"><b>Definition:</b> <a href="_min_number_8cpp_source.html#l00030">MinNumber.cpp:30</a></div></div>
+<div class="ttc" id="a_q4___median_of_two_sorted_arrays_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="_q4___median_of_two_sorted_arrays_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition:</b> <a href="_q4___median_of_two_sorted_arrays_8cpp_source.html#l00072">Q4_MedianOfTwoSortedArrays.cpp:72</a></div></div>
+<div class="ttc" id="aclass_a4___median_of_two_sorted_arrays_html"><div class="ttname"><a href="class_a4___median_of_two_sorted_arrays.html">A4_MedianOfTwoSortedArrays</a></div><div class="ttdoc">寻找两个正序数组的中位数</div><div class="ttdef"><b>Definition:</b> <a href="_q4___median_of_two_sorted_arrays_8cpp_source.html#l00037">Q4_MedianOfTwoSortedArrays.cpp:37</a></div></div>
+<div class="ttc" id="aclass_a4___median_of_two_sorted_arrays_html_ab093a00fda335f08798cf798d3f17099"><div class="ttname"><a href="class_a4___median_of_two_sorted_arrays.html#ab093a00fda335f08798cf798d3f17099">A4_MedianOfTwoSortedArrays::findMedianSortedArrays</a></div><div class="ttdeci">double findMedianSortedArrays(vector&lt; int &gt; &amp;nums1, vector&lt; int &gt; &amp;nums2)</div><div class="ttdef"><b>Definition:</b> <a href="_q4___median_of_two_sorted_arrays_8cpp_source.html#l00040">Q4_MedianOfTwoSortedArrays.cpp:40</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

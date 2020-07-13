@@ -108,89 +108,86 @@ $(document).ready(function(){initNavTree('_q5___longest_palindromic_substring_8c
 <a href="_q5___longest_palindromic_substring_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">using namespace </span>std;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_a5___longest_palindromic_substring.html">   33</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_a5___longest_palindromic_substring.html">A5_LongestPalindromicSubstring</a></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_a5___longest_palindromic_substring.html#aef25c5f7204d18ecd7857ec58c067825">   36</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="class_a5___longest_palindromic_substring.html#aef25c5f7204d18ecd7857ec58c067825">longestPalindrome</a>(<span class="keywordtype">string</span> s)</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    {</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="comment">// 从中间向两端出发，比较两侧的字符来判断以该中心点的最大回文字符</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="comment">// 计算每个字符的最大回文字符串</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="comment">// 在每两个字符之间插入特殊字符来避免奇偶分类问题 aba 与 aa</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="comment">// aba -&gt; a#b#a</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="comment">// aa  -&gt; a#a</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordtype">string</span> str;  <span class="comment">// string after insert # in s</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_a5___longest_palindromic_substring.html">   32</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_a5___longest_palindromic_substring.html">A5_LongestPalindromicSubstring</a></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_a5___longest_palindromic_substring.html#aef25c5f7204d18ecd7857ec58c067825">   35</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="class_a5___longest_palindromic_substring.html#aef25c5f7204d18ecd7857ec58c067825">longestPalindrome</a>(<span class="keywordtype">string</span> s)</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="comment">// 从中间向两端出发，比较两侧的字符来判断以该中心点的最大回文字符</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="comment">// 计算每个字符的最大回文字符串</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="comment">// 在每两个字符之间插入特殊字符来避免奇偶分类问题 aba 与 aa</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="comment">// aba -&gt; a#b#a</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="comment">// aa  -&gt; a#a</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordtype">string</span> str;  <span class="comment">// string after insert # in s</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        str.reserve(2 * s.length());</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; s.length(); ++i) {</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            str += s.at(i);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <span class="keywordflow">if</span> (i + 1 == s.length()) {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <span class="keywordflow">if</span> (i + 1 == s.length())</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            }</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            str += <span class="stringliteral">&quot;#&quot;</span>;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        }</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="comment">// cout &lt;&lt; &quot;input str = &quot; &lt;&lt; s &lt;&lt; endl;</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="comment">// cout &lt;&lt; &quot;new str   = &quot; &lt;&lt; str &lt;&lt; endl;</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordtype">int</span> len_max = 0;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordtype">string</span> str_res;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordtype">int</span> str_len = str.length();</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; str_len; ++i) {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="keywordtype">int</span> lenHalf = 0;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keywordflow">while</span> (<span class="keyword">true</span>)  <span class="comment">// find palindrome in str with middle char i</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                <span class="keywordflow">if</span> (i - lenHalf &lt; 0 || i + lenHalf &gt;= str_len) {</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                }</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                <span class="comment">// cout &lt;&lt; &quot; &quot; &lt;&lt; i &lt;&lt; &quot; &quot; &lt;&lt; lenHalf &lt;&lt; &quot; : &quot; &lt;&lt; str.at(i - lenHalf) &lt;&lt; &quot; = &quot; &lt;&lt; str.at(i + lenHalf) &lt;&lt; endl;</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                <span class="keywordflow">if</span> (str.at(i - lenHalf) != str.at(i + lenHalf)) {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                }</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                lenHalf++;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            }</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            lenHalf--;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <span class="comment">// cout &lt;&lt; i &lt;&lt; &quot; &quot; &lt;&lt; lenHalf &lt;&lt; &quot; substr = &quot; &lt;&lt; str.substr(i - lenHalf, 2 * lenHalf + 1) &lt;&lt; endl;</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keywordtype">int</span> len_i = 0;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="keywordtype">int</span> pos_i = 0;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="keywordflow">if</span> (str.at(i) == <span class="charliteral">&#39;#&#39;</span>)  <span class="comment">// calculate the len and pos of maximal palindrome in input string s</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            {</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                len_i = 2 * ((lenHalf + 1) / 2);  <span class="comment">//   b#a#a#b</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                <span class="keywordflow">if</span> (len_i != 0) {</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                    pos_i = (i - 1) / 2 - len_i / 2 + 1;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            str += <span class="stringliteral">&quot;#&quot;</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="comment">// cout &lt;&lt; &quot;input str = &quot; &lt;&lt; s &lt;&lt; endl;</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="comment">// cout &lt;&lt; &quot;new str   = &quot; &lt;&lt; str &lt;&lt; endl;</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordtype">int</span> len_max = 0;  <span class="comment">// length of longest palindrome</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordtype">int</span> pos_max = 0;  <span class="comment">// position of longest palindrome</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordtype">int</span> str_len = str.length();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; str_len; ++i) {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keywordtype">int</span> len_half = 0;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="keywordflow">while</span> (<span class="keyword">true</span>)  <span class="comment">// find palindrome in str with middle char i</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                <span class="keywordflow">if</span> (i - len_half &lt; 0 || i + len_half &gt;= str_len)</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                <span class="keywordflow">if</span> (str.at(i - len_half) != str.at(i + len_half))</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                len_half++;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            len_half--;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="comment">// cout &lt;&lt; i &lt;&lt; &quot; &quot; &lt;&lt; lenHalf &lt;&lt; &quot; substr = &quot; &lt;&lt; str.substr(i - lenHalf, 2 * lenHalf + 1) &lt;&lt; endl;</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="keywordtype">int</span> len_i = 0;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="keywordtype">int</span> pos_i = 0;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <span class="keywordflow">if</span> (str.at(i) == <span class="charliteral">&#39;#&#39;</span>)  <span class="comment">// calculate the len and pos of maximal palindrome in input string s</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                                                      <span class="comment">//  b # a # a # b        </span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                len_i = 2 * ((len_half + 1) / 2);     <span class="comment">//  0 1 2 3 4 5 6</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                pos_i = i / 2 - len_i / 2 + 1;        <span class="comment">//  0   1   2   3</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                                                     <span class="comment">//   b # a # b</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                len_i = 2 * (len_half / 2) + 1;      <span class="comment">//   0 1 2 3 4</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                pos_i = i / 2 - len_i / 2;           <span class="comment">//   0   1   2</span></div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            }</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                len_i = 2 * (lenHalf / 2) + 1;  <span class="comment">//   b#a#b</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                pos_i = i / 2 - len_i / 2;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            }</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <span class="comment">// cout &lt;&lt; &quot;  &quot; &lt;&lt; i &lt;&lt; &quot; &quot; &lt;&lt; str.at(i) &lt;&lt; &quot; len = &quot; &lt;&lt; len_i &lt;&lt; &quot; pos = &quot; &lt;&lt; pos_i &lt;&lt; endl;</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="keywordflow">if</span> (len_max &lt; len_i) {</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                len_max = len_i;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                str_res = s.substr(pos_i, len_i);</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            }</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <span class="comment">// cout &lt;&lt; endl;</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        }</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordflow">return</span> str_res;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    }</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;};</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
-<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="_q5___longest_palindromic_substring_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">   97</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="_q5___longest_palindromic_substring_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>()</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;{</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">string</span> str1 = <span class="stringliteral">&quot;babad&quot;</span>;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordtype">string</span> str2 = <span class="stringliteral">&quot;bbb&quot;</span>;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordtype">string</span> str3 = <span class="stringliteral">&quot;cbbd&quot;</span>;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordtype">string</span> str = str3;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <a class="code" href="class_a5___longest_palindromic_substring.html">A5_LongestPalindromicSubstring</a> solution;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">string</span> res = solution.<a class="code" href="class_a5___longest_palindromic_substring.html#aef25c5f7204d18ecd7857ec58c067825">longestPalindrome</a>(str);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;input str : &quot;</span> &lt;&lt; str &lt;&lt; endl;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;solution  : &quot;</span> &lt;&lt; res &lt;&lt; endl;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <span class="comment">// cout &lt;&lt; &quot;  &quot; &lt;&lt; i &lt;&lt; &quot; &quot; &lt;&lt; str.at(i) &lt;&lt; &quot; len = &quot; &lt;&lt; len_i &lt;&lt; &quot; pos = &quot; &lt;&lt; pos_i &lt;&lt; endl;</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <span class="keywordflow">if</span> (len_max &lt; len_i) {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                len_max = len_i;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                pos_max = pos_i;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordflow">return</span> s.substr(pos_max, len_max);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;};</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="_q5___longest_palindromic_substring_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">   91</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="_q5___longest_palindromic_substring_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>()</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;{</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    vector&lt;string&gt; strs = {<span class="stringliteral">&quot;babad&quot;</span>, <span class="stringliteral">&quot;bbb&quot;</span>, <span class="stringliteral">&quot;cbbd&quot;</span>};</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; strs.size(); i++)</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <a class="code" href="class_a5___longest_palindromic_substring.html">A5_LongestPalindromicSubstring</a> solution;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordtype">string</span> res = solution.<a class="code" href="class_a5___longest_palindromic_substring.html#aef25c5f7204d18ecd7857ec58c067825">longestPalindrome</a>(strs[i]);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;-------- &quot;</span> &lt;&lt; i &lt;&lt; endl;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;input str : &quot;</span> &lt;&lt; strs[i] &lt;&lt; endl;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;solution  : &quot;</span> &lt;&lt; res &lt;&lt; endl;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclass_a5___longest_palindromic_substring_html"><div class="ttname"><a href="class_a5___longest_palindromic_substring.html">A5_LongestPalindromicSubstring</a></div><div class="ttdoc">最长回文子串</div><div class="ttdef"><b>Definition:</b> <a href="_q5___longest_palindromic_substring_8cpp_source.html#l00033">Q5_LongestPalindromicSubstring.cpp:33</a></div></div>
-<div class="ttc" id="a_q5___longest_palindromic_substring_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="_q5___longest_palindromic_substring_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition:</b> <a href="_q5___longest_palindromic_substring_8cpp_source.html#l00097">Q5_LongestPalindromicSubstring.cpp:97</a></div></div>
-<div class="ttc" id="aclass_a5___longest_palindromic_substring_html_aef25c5f7204d18ecd7857ec58c067825"><div class="ttname"><a href="class_a5___longest_palindromic_substring.html#aef25c5f7204d18ecd7857ec58c067825">A5_LongestPalindromicSubstring::longestPalindrome</a></div><div class="ttdeci">string longestPalindrome(string s)</div><div class="ttdef"><b>Definition:</b> <a href="_q5___longest_palindromic_substring_8cpp_source.html#l00036">Q5_LongestPalindromicSubstring.cpp:36</a></div></div>
+<div class="ttc" id="aclass_a5___longest_palindromic_substring_html"><div class="ttname"><a href="class_a5___longest_palindromic_substring.html">A5_LongestPalindromicSubstring</a></div><div class="ttdoc">最长回文子串</div><div class="ttdef"><b>Definition:</b> <a href="_q5___longest_palindromic_substring_8cpp_source.html#l00032">Q5_LongestPalindromicSubstring.cpp:32</a></div></div>
+<div class="ttc" id="a_q5___longest_palindromic_substring_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="_q5___longest_palindromic_substring_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition:</b> <a href="_q5___longest_palindromic_substring_8cpp_source.html#l00091">Q5_LongestPalindromicSubstring.cpp:91</a></div></div>
+<div class="ttc" id="aclass_a5___longest_palindromic_substring_html_aef25c5f7204d18ecd7857ec58c067825"><div class="ttname"><a href="class_a5___longest_palindromic_substring.html#aef25c5f7204d18ecd7857ec58c067825">A5_LongestPalindromicSubstring::longestPalindrome</a></div><div class="ttdeci">string longestPalindrome(string s)</div><div class="ttdef"><b>Definition:</b> <a href="_q5___longest_palindromic_substring_8cpp_source.html#l00035">Q5_LongestPalindromicSubstring.cpp:35</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

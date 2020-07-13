@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['heap_5fadjust_413',['heap_adjust',['../class_c_sort_algo.html#a4e914cae14c15e8a75c7cea33ed9b439',1,'CSortAlgo']]],
-  ['heap_5fsort_414',['heap_sort',['../class_c_sort_algo.html#ad81a03f9e4a3d1d0a3690485c35acd44',1,'CSortAlgo']]]
+  ['heap_5fadjust_415',['heap_adjust',['../class_c_sort_algo.html#a4e914cae14c15e8a75c7cea33ed9b439',1,'CSortAlgo']]],
+  ['heap_5fsort_416',['heap_sort',['../class_c_sort_algo.html#ad81a03f9e4a3d1d0a3690485c35acd44',1,'CSortAlgo']]]
 ];
