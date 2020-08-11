@@ -14,8 +14,7 @@ var searchData=
   ['q5_5flongestpalindromicsubstring_2ecpp_174',['Q5_LongestPalindromicSubstring.cpp',['../_q5___longest_palindromic_substring_8cpp.html',1,'']]],
   ['q6_5fzigzagconversion_2ecpp_175',['Q6_ZigZagConversion.cpp',['../_q6___zig_zag_conversion_8cpp.html',1,'']]],
   ['q7_5freverseinteger_2ecpp_176',['Q7_ReverseInteger.cpp',['../_q7___reverse_integer_8cpp.html',1,'']]],
-  ['q7_5freverseinteger_5fh_5f_5f_177',['Q7_ReverseInteger_h__',['../_q7___reverse_integer_8cpp.html#aebf1dd9a8875b75eaa3d6bc8eecaee0f',1,'Q7_ReverseInteger.cpp']]],
-  ['q8_5fstringtointeger_2ecpp_178',['Q8_StringToInteger.cpp',['../_q8___string_to_integer_8cpp.html',1,'']]],
-  ['q9_5fpalindromenumber_2ecpp_179',['Q9_PalindromeNumber.cpp',['../_q9___palindrome_number_8cpp.html',1,'']]],
-  ['quick_5fsort_180',['quick_sort',['../class_alg_median_num.html#a2101318ca15c6498ad8589543e0ca628',1,'AlgMedianNum::quick_sort()'],['../class_c_sort_algo.html#ad37a6f012070a0a39dcdb5d6beed4c93',1,'CSortAlgo::quick_sort()']]]
+  ['q8_5fstringtointeger_2ecpp_177',['Q8_StringToInteger.cpp',['../_q8___string_to_integer_8cpp.html',1,'']]],
+  ['q9_5fpalindromenumber_2ecpp_178',['Q9_PalindromeNumber.cpp',['../_q9___palindrome_number_8cpp.html',1,'']]],
+  ['quick_5fsort_179',['quick_sort',['../class_alg_median_num.html#a2101318ca15c6498ad8589543e0ca628',1,'AlgMedianNum::quick_sort()'],['../class_c_sort_algo.html#ad37a6f012070a0a39dcdb5d6beed4c93',1,'CSortAlgo::quick_sort()']]]
 ];

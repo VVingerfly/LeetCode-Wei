@@ -1,57 +1,77 @@
-//===============================================================
-// Author       : Wei Li (lw15@mail.ustc.edu.cn)
-// Created Date : 2017/Apr/3 17:00:55
-// Last Change  : 2017/Apr/3 17:00:58
-// Summary      :
-//===============================================================
+/**
+ * @file Q7_ReverseInteger.cpp
+ * @author Wei LI (wei587me@163.com)
+ * @brief
+ * @version 0.1
+ * @date 2017-04-03
+ *
+ */
 
-/****************************************************************
-Description:
-    Reverse digits of an integer.
-
-Example1: x = 123, return 321
-Example2: x = -123, return -321
-
-click to show spoilers.
-Have you thought about this?
-Here are some good questions to ask before coding. Bonus points for you if you have already thought through this!
-If the integer's last digit is 0, what should the output be? ie, cases such as 10, 100.
-Did you notice that the reversed integer might overflow? Assume the input is a 32-bit integer,
-then the reverse of 1000000003 overflows. How should you handle such cases?
-For the purpose of this problem, assume that your function returns 0 when the reversed integer overflows.
-
-Note:
-    The input is assumed to be a 32-bit signed integer.
-    Your function should return 0 when the reversed integer overflows.
-
-Difficulty : Easy
-******************************************************************/
 
 #include <iostream>
 #include <string>
+#include <vector>
 using namespace std;
 
-#ifndef Q7_ReverseInteger_h__
-#    define Q7_ReverseInteger_h__
+
+/**
+ * @brief 整数反转
+ *
+ * 给出一个 32 位的有符号整数，你需要将这个整数中每位上的数字进行反转。
+ *
+ * 示例 1:
+ * - 输入: 123
+ * - 输出: 321
+ *
+ * 示例 2:
+ * - 输入: -123
+ * - 输出: -321
+ *
+ * 示例 3:
+ * - 输入: 120
+ * - 输出: 21
+ *
+ * 注意:
+ * 假设我们的环境只能存储得下 32 位的有符号整数，则其数值范围为 [−2^31,  2^31 − 1]。请根据这个假设，如果反转后整数溢出那么就返回 0。
+ *
+ * @note https://leetcode-cn.com/problems/reverse-integer
+ *
+ */
 class A7_ReverseInteger
 {
 public:
     int reverse(int x)
     {
-        // cout << INT_MAX << endl;
-        // cout << INT_MIN << endl;
+        // -1234  ->  4321
+        const int maxi_10 = INT_MAX / 10;    // INT_MAX = 2147483647
+        const int mini_10 = INT_MIN / 10;    // INT_MIN = -2147483648
+        int ans = 0;
+        int pop = 0;
+        while (x != 0) {
+            pop = x % 10;
+            // ans = ans * 10 + pop; // wrong
+            // std::cout << x << " " << pop << " " << ans <<endl;
+            if (ans > maxi_10 || (ans == maxi_10 && pop > 7)) 
+                return 0;
+            if (ans < mini_10 || (ans == mini_10 && pop < -8))
+                return 0;
+            ans = ans * 10 + pop;
+            x /= 10;
+        }
+        return ans;
+    }
+    int reverse_(int x)
+    {
         bool is_positive = x >= 0 ? true : false;
         string s_max = to_string(INT_MAX);
         string s_min = to_string(INT_MIN);
         s_min = s_min.substr(1, s_min.length() - 1);
-        cout << "s_max = " << s_max << endl;
-        cout << "s_min = " << s_min << endl;
+
         string x_str = to_string(x);
         cout << "x_str = " << x_str << endl;
         if (x < 0) {
             x_str = x_str.substr(1, x_str.length());
         }
-
         cout << "x_str = " << x_str << endl;
         string x_str_inv(x_str.rbegin(), x_str.rend());
         cout << "x_str reverse = " << x_str_inv << endl;
@@ -68,16 +88,18 @@ public:
     }
 };
 
-void TestQ7()
+int main()
 {
-    int num1 = 123;
-    int num2 = -123;
-    int num3 = -2147483648;
-    int num = num3;
-    A7_ReverseInteger solution;
-    int res = solution.reverse(num);
-    cout << "input number : " << num << endl;
-    cout << "solution     : " << res << endl;
-}
+    vector<int> nums = { 123, -123, -3648, 120, INT_MAX, INT_MIN, -2147483412};
+    vector<int> rlts = { 321, -321, -8463, 21, 0, 0, -2143847412};
+    for (int i = 0; i < nums.size(); ++i) {
+        A7_ReverseInteger solution;
+        int res = solution.reverse(nums[i]);
+        cout << ((res == rlts[i]) ? "Pass" : "Failed") << endl;
+        cout << "  input  : " << nums[i] << endl;
+        cout << "  result : " << res << endl;
+        cout << "  answer : " << rlts[i] << endl;
+    }
 
-#endif  // Q7_ReverseInteger_h__
+    return 0;
+}

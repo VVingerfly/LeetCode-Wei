@@ -5,9 +5,8 @@ var searchData=
   ['testcnt_480',['testCnt',['../class_c_net_ease12.html#ad20daef3cff124600d198056f6fc8879',1,'CNetEase12']]],
   ['testfind_481',['testFind',['../class_c_net_ease12.html#a31e5b5782f50e2c2f1cfca9aa371af35',1,'CNetEase12']]],
   ['testq10_482',['TestQ10',['../_q10___8cpp.html#a851f0e8985206cdb79492fc1093d7762',1,'Q10_.cpp']]],
-  ['testq7_483',['TestQ7',['../_q7___reverse_integer_8cpp.html#a383b3ebdb465e75332e407c4cec68820',1,'Q7_ReverseInteger.cpp']]],
-  ['testq8_484',['TestQ8',['../_q8___string_to_integer_8cpp.html#afffb86c5d125829d0d0fdede7ff067cb',1,'Q8_StringToInteger.cpp']]],
-  ['testq9_485',['TestQ9',['../_q9___palindrome_number_8cpp.html#a1c18f5ac813d2d41f39acc032ca75ac5',1,'Q9_PalindromeNumber.cpp']]],
-  ['testsizecapacity_486',['testSizeCapacity',['../class_c_note4.html#a1e24241c70cca91b5ad963bed99b9800',1,'CNote4']]],
-  ['twosum_487',['twoSum',['../class_a1___two_sum.html#a0880ed347006e7309ae96ef961e2ca2d',1,'A1_TwoSum']]]
+  ['testq8_483',['TestQ8',['../_q8___string_to_integer_8cpp.html#afffb86c5d125829d0d0fdede7ff067cb',1,'Q8_StringToInteger.cpp']]],
+  ['testq9_484',['TestQ9',['../_q9___palindrome_number_8cpp.html#a1c18f5ac813d2d41f39acc032ca75ac5',1,'Q9_PalindromeNumber.cpp']]],
+  ['testsizecapacity_485',['testSizeCapacity',['../class_c_note4.html#a1e24241c70cca91b5ad963bed99b9800',1,'CNote4']]],
+  ['twosum_486',['twoSum',['../class_a1___two_sum.html#a0880ed347006e7309ae96ef961e2ca2d',1,'A1_TwoSum']]]
 ];
