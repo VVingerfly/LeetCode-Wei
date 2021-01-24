@@ -1,0 +1,80 @@
+Q1:
+  id: 1
+  title: "两数之和"
+  title_en: "Two Sum"
+  level: "简单"
+  link: "https://leetcode-cn.com/problems/two-sum"
+  tag: ["数组", "哈希表"]
+  hint: ""
+
+Q2:
+  id: 2
+  title: "两数相加"
+  title_en: "Add Two Numbers"
+  level: "中等"
+  link: "https://leetcode-cn.com/problems/add-two-numbers"
+  tag: ["链表", "数学"]
+  hint: ""
+
+Q3:
+  id: 3
+  title: "无重复字符的最长子串"
+  title_en: "Longest Substring Without Repeating Characters"
+  level: "中等"
+  link: "https://leetcode-cn.com/problems/longest-substring-without-repeating-characters"
+  tag: ["滑动窗口", "哈希表", "字符串"]
+  hint: ""
+
+Q4:
+  id: 4
+  title: "寻找两个正序数组的中位数"
+  title_en: "Median of Two Sorted Arrays"
+  level: "困难"
+  link: "https://leetcode-cn.com/problems/median-of-two-sorted-arrays"
+  tag: ["数组", “二分查找”, “分治算法”]
+  hint: ""
+    
+Q5:
+  id: 5
+  title: "最长回文子串"
+  title_en: "Longest Palindromic Substring"
+  level: "中等"
+  link: "https://leetcode-cn.com/problems/longest-palindromic-substring"
+  tag: ["字符串", “动态规划”]
+  hint: "在每两个字符之间插入特殊字符如#，来避免奇偶分类问题如 aba 与 aa。再从中间向两端出发，比较两侧的字符来判断以该中心点的最大回文字符。"
+
+Q6:
+  id: 6
+  title: "Z字形变换"
+  title_en: "ZigZag Conversion"
+  level: "中等"
+  link: "https://leetcode-cn.com/problems/zigzag-conversion"
+  tag: ["字符串"]
+  hint: "见代码注解"
+
+Q7:
+  id: 7
+  title: "整数反转"
+  title_en: "Reverse Integer"
+  level: "简单"
+  link: "https://leetcode-cn.com/problems/reverse-integer"
+  tag: ["数学"]
+  hint: "注意溢出"
+
+Q14:
+  id: 14
+  title: "最长公共前缀"
+  title_en: "Longest Common Prefix"
+  level: "简单"
+  link: "https://leetcode-cn.com/problems/longest-common-prefix"
+  tag: ["字符串"]
+  hint: ""
+
+Q350:
+  id: 350
+  title: "两个数组的交集 II"
+  title_en: "Intersection of Two Arrays II"
+  level: "简单"
+  link: "https://leetcode-cn.com/problems/intersection-of-two-arrays-ii"
+  tag: ["排序", "哈希表"]
+  hint: ""

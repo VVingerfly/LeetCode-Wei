@@ -51,7 +51,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_c_note1_8cpp.html",
-"class_alg_floyd.html#a3895ced1a5b2c7e469f033d9c8250032"
+"class_a4___median_of_two_sorted_arrays.html#ab093a00fda335f08798cf798d3f17099"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

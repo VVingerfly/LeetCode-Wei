@@ -14,4 +14,5 @@ LeetCode: [https://leetcode-cn.com](https://leetcode-cn.com)
 |  5  |  最长回文子串  |  中等  |  [Longest Palindromic Substring](https://leetcode-cn.com/problems/longest-palindromic-substring) |
 |  6  |  Z字形变换  |  中等  |  [ZigZag Conversion](https://leetcode-cn.com/problems/zigzag-conversion) |
 |  7  |  整数反转  |  简单  |  [Reverse Integer](https://leetcode-cn.com/problems/reverse-integer) |
-
+|  11  |  盛最多水的容器  |  中等  |  [Container With Most Water](https://leetcode-cn.com/problems/container-with-most-water) |
+|  15  |  三数之和  |  中等  |  [3Sum](https://leetcode-cn.com/problems/3sum) |

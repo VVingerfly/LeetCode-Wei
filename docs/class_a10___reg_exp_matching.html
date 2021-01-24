@@ -105,6 +105,9 @@ $(document).ready(function(){initNavTree('class_a10___reg_exp_matching.html','')
 <div class="title">A10_RegExpMatching Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>正则表达式匹配  
+ <a href="class_a10___reg_exp_matching.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -112,8 +115,41 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a244cacbced6c595d6f134b2531192a12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_q10___8cpp_source.html#l00034">34</a> of file <a class="el" href="_q10___8cpp_source.html">Q10_.cpp</a>.</p>
+<div class="textblock"><p>正则表达式匹配 </p>
+<p>给你一个字符串&#160;s&#160;和一个字符规律&#160;p，请你来实现一个支持 '.'&#160;和&#160;'*'&#160;的正则表达式匹配。</p>
+<p>'.' 匹配任意单个字符 '*' 匹配零个或多个前面的那一个元素 所谓匹配，是要涵盖&#160;整个&#160;字符串&#160;s的，而不是部分字符串。</p>
+<p>示例 1：</p><ul>
+<li>输入：s = "aa" p = "a"</li>
+<li>输出：false</li>
+<li>解释："a" 无法匹配 "aa" 整个字符串。</li>
+</ul>
+<p>示例 2:</p><ul>
+<li>输入：s = "aa" p = "a*"</li>
+<li>输出：true</li>
+<li>解释：因为 '*' 代表可以匹配零个或多个前面的那一个元素, 在这里前面的元素就是 'a'。因此，字符串 "aa" 可被视为 'a' 重复了一次。</li>
+</ul>
+<p>示例&#160;3：</p><ul>
+<li>输入：s = "ab" p = ".*"</li>
+<li>输出：true</li>
+<li>解释：".*" 表示可匹配零个或多个（'*'）任意字符（'.'）。</li>
+</ul>
+<p>示例 4：</p><ul>
+<li>输入：s = "aab" p = "c*a*b"</li>
+<li>输出：true</li>
+<li>解释：因为 '*' 表示零个或多个，这里 'c' 为 0 个, 'a' 被重复一次。因此可以匹配字符串 "aab"。</li>
+</ul>
+<p>示例 5：</p><ul>
+<li>输入：s = "mississippi" p = "mis*is*p*."</li>
+<li>输出：false &#160;* 提示：</li>
+<li><code>0 &lt;= s.length&#160;&lt;= 20</code></li>
+<li><code>0 &lt;= p.length&#160;&lt;= 30</code></li>
+<li><code>s</code>&#160;可能为空，且只包含从&#160;<code>a-z</code>&#160;的小写字母。</li>
+<li><code>p</code>&#160;可能为空，且只包含从&#160;<code>a-z</code>&#160;的小写字母，以及字符&#160;<code>.</code>&#160;和&#160;<code>*</code>。</li>
+<li>保证每次出现字符&#160;* 时，前面都匹配到有效的字符</li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd>: <a href="https://leetcode-cn.com/problems/regular-expression-matching">https://leetcode-cn.com/problems/regular-expression-matching</a> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_q10___reg_exp_matching_8cpp_source.html#l00079">79</a> of file <a class="el" href="_q10___reg_exp_matching_8cpp_source.html">Q10_RegExpMatching.cpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a244cacbced6c595d6f134b2531192a12"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a244cacbced6c595d6f134b2531192a12">&#9670;&nbsp;</a></span>isMatch()</h2>
@@ -149,12 +185,12 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_q10___8cpp_source.html#l00037">37</a> of file <a class="el" href="_q10___8cpp_source.html">Q10_.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_q10___reg_exp_matching_8cpp_source.html#l00082">82</a> of file <a class="el" href="_q10___reg_exp_matching_8cpp_source.html">Q10_RegExpMatching.cpp</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/Users/liwei/Documents/myStudy/GitWei/LeetCode-Wei/src/LeetCode/<a class="el" href="_q10___8cpp_source.html">Q10_.cpp</a></li>
+<li>/Users/liwei/Documents/myStudy/GitWei/LeetCode-Wei/src/LeetCode/<a class="el" href="_q10___reg_exp_matching_8cpp_source.html">Q10_RegExpMatching.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
