@@ -1,5 +1,8 @@
 var annotated_dup =
 [
+    [ "A03", "class_a03.html", "class_a03" ],
+    [ "A04", "class_a04.html", "class_a04" ],
+    [ "A05", "class_a05.html", "class_a05" ],
     [ "A062_UniquePaths", "class_a062___unique_paths.html", "class_a062___unique_paths" ],
     [ "A063_UniquePathsII", "class_a063___unique_paths_i_i.html", "class_a063___unique_paths_i_i" ],
     [ "A10_RegExpMatching", "class_a10___reg_exp_matching.html", "class_a10___reg_exp_matching" ],
@@ -9,7 +12,13 @@ var annotated_dup =
     [ "A122_BestTimeToBuyAndSellStockII", "class_a122___best_time_to_buy_and_sell_stock_i_i.html", "class_a122___best_time_to_buy_and_sell_stock_i_i" ],
     [ "A14_LongestCommonPrefix", "class_a14___longest_common_prefix.html", "class_a14___longest_common_prefix" ],
     [ "A160_IntersectionOfTwoLinkedLists", "class_a160___intersection_of_two_linked_lists.html", "class_a160___intersection_of_two_linked_lists" ],
+    [ "A17_LetterCombinationsOfPhoneNumber", "class_a17___letter_combinations_of_phone_number.html", "class_a17___letter_combinations_of_phone_number" ],
+    [ "A19_RemoveNthNodeFromEndOfList", "class_a19___remove_nth_node_from_end_of_list.html", "class_a19___remove_nth_node_from_end_of_list" ],
     [ "A1_TwoSum", "class_a1___two_sum.html", "class_a1___two_sum" ],
+    [ "A20_ValidParentheses", "class_a20___valid_parentheses.html", "class_a20___valid_parentheses" ],
+    [ "A21_MergeTwoSortedLists", "class_a21___merge_two_sorted_lists.html", "class_a21___merge_two_sorted_lists" ],
+    [ "A22_GenerateParentheses", "class_a22___generate_parentheses.html", "class_a22___generate_parentheses" ],
+    [ "A22_MergeKSortedLists", "class_a22___merge_k_sorted_lists.html", "class_a22___merge_k_sorted_lists" ],
     [ "A2_AddTwoNums", "class_a2___add_two_nums.html", "class_a2___add_two_nums" ],
     [ "A322_CoinChange", "class_a322___coin_change.html", "class_a322___coin_change" ],
     [ "A350_IntersectionOfTwoArraysII", "class_a350___intersection_of_two_arrays_i_i.html", "class_a350___intersection_of_two_arrays_i_i" ],

@@ -80,6 +80,7 @@
         "list": "cpp",
         "unordered_set": "cpp",
         "valarray": "cpp",
-        "*.ipp": "cpp"
+        "*.ipp": "cpp",
+        "stack": "cpp"
     }
 }

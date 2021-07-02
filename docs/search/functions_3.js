@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['elegentnum_422',['elegentNum',['../_hua_wei1_8cpp.html#a2006e2107143b31319d65083d09b8bae',1,'elegentNum(int num):&#160;HuaWei1.cpp'],['../_net_ease2_8cpp.html#a2006e2107143b31319d65083d09b8bae',1,'elegentNum(int num):&#160;NetEase2.cpp']]],
-  ['evalsqrtnbisection_423',['evalSqrtNBisection',['../class_c_sohu3.html#aa9916a88ffb06e04c96dd81f7b03ce49',1,'CSohu3']]],
-  ['evalsqrtnnewton_424',['evalSqrtNNewton',['../class_c_sohu3.html#a1b44455066c2840f9cfc40675a8dd12f',1,'CSohu3']]]
+  ['dfs_474',['dfs',['../class_a17___letter_combinations_of_phone_number.html#a16d18e3d5860b29da4d5d8272eccd2c6',1,'A17_LetterCombinationsOfPhoneNumber']]]
 ];

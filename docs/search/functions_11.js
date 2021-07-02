@@ -1,8 +1,12 @@
 var searchData=
 [
-  ['unionfind2d_517',['UnionFind2D',['../class_union_find2_d.html#a611ae9ce24b81509a0c48e403e275ff7',1,'UnionFind2D']]],
-  ['uniquepaths_518',['uniquePaths',['../class_a062___unique_paths.html#a49ddc29da2380fefcce583abbb136da0',1,'A062_UniquePaths']]],
-  ['uniquepaths2_519',['uniquePaths2',['../class_a062___unique_paths.html#aeb50c8923563574766f91781174fdcaa',1,'A062_UniquePaths']]],
-  ['uniquepathswithobstacles_520',['uniquePathsWithObstacles',['../class_a063___unique_paths_i_i.html#a81bd4bb20ee4e66b5ce3c043b110f577',1,'A063_UniquePathsII']]],
-  ['unite_521',['unite',['../class_union_find2_d.html#a8ddf53223c734d1ee2832a9339baf272',1,'UnionFind2D']]]
+  ['test_574',['test',['../class_c_note2.html#a3dcb8c88f10a459456ae5118fd9b5630',1,'CNote2::test()'],['../class_c_note3.html#a33b9bf4cdba045d0369ae3a7bcfe8829',1,'CNote3::test()'],['../class_c_note4.html#a2a87ba8f13ab4e16d057ad49481c5024',1,'CNote4::test()'],['../class_c_note5_1_1_c_note5__base.html#a17ca5e784f16e11096782e6b0895458e',1,'CNote5::CNote5_base::test()'],['../_q1___two_sum_8cpp.html#a3d7b6814c0dfef59dfc324893580c99f',1,'test():&#160;Q1_TwoSum.cpp']]],
+  ['test_5fsort_575',['test_sort',['../class_c_sort_algo.html#a2eb6522682aab00c1df2eb3798912c97',1,'CSortAlgo']]],
+  ['testcnt_576',['testCnt',['../class_c_net_ease12.html#ad20daef3cff124600d198056f6fc8879',1,'CNetEase12']]],
+  ['testfind_577',['testFind',['../class_c_net_ease12.html#a31e5b5782f50e2c2f1cfca9aa371af35',1,'CNetEase12']]],
+  ['testq8_578',['TestQ8',['../_q8___string_to_integer_8cpp.html#afffb86c5d125829d0d0fdede7ff067cb',1,'Q8_StringToInteger.cpp']]],
+  ['testq9_579',['TestQ9',['../_q9___palindrome_number_8cpp.html#a1c18f5ac813d2d41f39acc032ca75ac5',1,'Q9_PalindromeNumber.cpp']]],
+  ['testsizecapacity_580',['testSizeCapacity',['../class_c_note4.html#a1e24241c70cca91b5ad963bed99b9800',1,'CNote4']]],
+  ['threesum_581',['threeSum',['../class_a11__3_sum.html#af417b61117b35a86d71cff95cbee5bfe',1,'A11_3Sum']]],
+  ['twosum_582',['twoSum',['../class_a1___two_sum.html#a0880ed347006e7309ae96ef961e2ca2d',1,'A1_TwoSum']]]
 ];

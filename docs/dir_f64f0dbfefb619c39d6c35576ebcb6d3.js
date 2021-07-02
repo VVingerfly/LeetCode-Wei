@@ -17,7 +17,13 @@ var dir_f64f0dbfefb619c39d6c35576ebcb6d3 =
       [ "A160_IntersectionOfTwoLinkedLists", "class_a160___intersection_of_two_linked_lists.html", "class_a160___intersection_of_two_linked_lists" ],
       [ "ListNode", "struct_a160___intersection_of_two_linked_lists_1_1_list_node.html", "struct_a160___intersection_of_two_linked_lists_1_1_list_node" ]
     ] ],
+    [ "Q17_LetterCombinationsOfPhoneNumber.cpp", "_q17___letter_combinations_of_phone_number_8cpp.html", "_q17___letter_combinations_of_phone_number_8cpp" ],
+    [ "Q19_RemoveNthNodeFromEndOfList.cpp", "_q19___remove_nth_node_from_end_of_list_8cpp.html", "_q19___remove_nth_node_from_end_of_list_8cpp" ],
     [ "Q1_TwoSum.cpp", "_q1___two_sum_8cpp.html", "_q1___two_sum_8cpp" ],
+    [ "Q20_ValidParentheses.cpp", "_q20___valid_parentheses_8cpp.html", "_q20___valid_parentheses_8cpp" ],
+    [ "Q21_MergeTwoSortedLists.cpp", "_q21___merge_two_sorted_lists_8cpp.html", "_q21___merge_two_sorted_lists_8cpp" ],
+    [ "Q22_GenerateParentheses.cpp", "_q22___generate_parentheses_8cpp.html", "_q22___generate_parentheses_8cpp" ],
+    [ "Q23_MergeKSortedLists.cpp", "_q23___merge_k_sorted_lists_8cpp.html", "_q23___merge_k_sorted_lists_8cpp" ],
     [ "Q2_AddTwoNums.cpp", "_q2___add_two_nums_8cpp.html", "_q2___add_two_nums_8cpp" ],
     [ "Q322_CoinChange.cpp", "_q322___coin_change_8cpp.html", "_q322___coin_change_8cpp" ],
     [ "Q350_IntersectionOfTwoArraysII.cpp", "_q350___intersection_of_two_arrays_i_i_8cpp.html", "_q350___intersection_of_two_arrays_i_i_8cpp" ],

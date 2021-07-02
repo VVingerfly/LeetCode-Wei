@@ -1,7 +1,7 @@
 /**
  * @file Q5_LongestPalindromicSubstring.cpp
  * @author Wei LI (wei587me@163.com)
- * @brief
+ * @brief 最长回文子串
  * @version 0.1
  * @date 2017-03-22
  *

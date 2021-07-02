@@ -13,10 +13,17 @@ add_answer(Q4_MedianOfTwoSortedArrays)
 add_answer(Q5_LongestPalindromicSubstring)
 add_answer(Q6_ZigZagConversion)
 add_answer(Q7_ReverseInteger)
+add_answer(Q19_RemoveNthNodeFromEndOfList)
+add_answer(Q20_ValidParentheses)
+add_answer(Q21_MergeTwoSortedLists)
+add_answer(Q22_GenerateParentheses)
+# add_answer()
+# add_answer()
 # add_answer()
 
 add_answer(Q11_ContainerWithMostWater)
 add_answer(Q15_3Sum)
+add_answer(Q17_LetterCombinationsOfPhoneNumber)
 
 
 add_answer(Q14_LongestCommonPrefix)

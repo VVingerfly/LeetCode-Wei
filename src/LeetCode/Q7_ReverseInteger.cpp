@@ -1,7 +1,7 @@
 /**
  * @file Q7_ReverseInteger.cpp
  * @author Wei LI (wei587me@163.com)
- * @brief
+ * @brief 整数反转
  * @version 0.1
  * @date 2017-04-03
  *

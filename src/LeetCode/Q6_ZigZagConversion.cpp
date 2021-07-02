@@ -1,7 +1,7 @@
 /**
  * @file Q6_ZigZagConversion.cpp
  * @author Wei LI (wei587me@163.com)
- * @brief
+ * @brief Z字形变换
  * @version 0.1
  * @date 2017-03-22
  *
